@@ -1527,7 +1527,6 @@
 		CAFC5B1318051C7000169F5A /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zutil.c; path = "../ThirdParty/zlib-1.2.8/zutil.c"; sourceTree = "<group>"; };
 		CAFC5B1418051C7000169F5A /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zutil.h; path = "../ThirdParty/zlib-1.2.8/zutil.h"; sourceTree = "<group>"; };
 		CAFC5B291805210000169F5A /* gzguts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gzguts.h; path = "../ThirdParty/zlib-1.2.8/gzguts.h"; sourceTree = "<group>"; };
-		E40616B91ADE3FFD008BDAEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		E40D8B141AD868920041A617 /* NptCocoaEnviroment.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NptCocoaEnviroment.mm; sourceTree = "<group>"; };
 		E40D8B161AD868A80041A617 /* NptAutomaticCleaner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NptAutomaticCleaner.cpp; sourceTree = "<group>"; };
 		E40D8B171AD868A80041A617 /* NptAutomaticCleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NptAutomaticCleaner.h; sourceTree = "<group>"; };
@@ -1535,7 +1534,6 @@
 		E40D8B9C1AD86D3A0041A617 /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40D8B9F1AD86D3A0041A617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E40D8BA01AD86D3A0041A617 /* Neptune.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Neptune.h; sourceTree = "<group>"; };
-		E40D8C221AD874560041A617 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E40D8D671ADB808A0041A617 /* NptTlsDefaultTrustAnchorsBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsBase.h; sourceTree = "<group>"; };
 		E40D8D681ADB808A0041A617 /* NptTlsDefaultTrustAnchorsExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsExtended.h; sourceTree = "<group>"; };
 		E44E2B1B1AE75CD20092347B /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2543,13 +2541,11 @@
 		F912B6850B8EB12700C1E90D = {
 			isa = PBXGroup;
 			children = (
-				E40616B91ADE3FFD008BDAEB /* SystemConfiguration.framework */,
 				F912B6A50B8EB27400C1E90D /* Source */,
 				CAE417A50E0DC16300A530D1 /* Apps */,
 				CAA979D50CF1648300C01909 /* Tests */,
 				E40D8B9D1AD86D3A0041A617 /* Neptune-Framework */,
 				F912B6A00B8EB1C700C1E90D /* Products */,
-				E40D8C221AD874560041A617 /* UIKit.framework */,
 				CA16FE6511C6C954006E2A86 /* CoreFoundation.framework */,
 			);
 			sourceTree = "<group>";
@@ -6313,6 +6309,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 			};
 			name = Debug;
 		};
@@ -6321,6 +6318,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 			};
 			name = Release;
 		};
