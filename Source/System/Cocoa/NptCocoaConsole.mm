@@ -22,7 +22,6 @@
 void
 NPT_Console::Output(const char* message)
 {
-    printf("%s", message);
-    NSLog(@"%s", message);
+    NSLog(@"%@", [@(message) stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]]);
 }
 
