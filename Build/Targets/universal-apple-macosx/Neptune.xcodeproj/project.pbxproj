@@ -3758,6 +3758,7 @@
 		F912B6870B8EB12700C1E90D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+<<<<<<< acdd48e814ce32282186e52162ba6975b9823429
 				LastUpgradeCheck = 0620;
 				TargetAttributes = {
 					E40D8B9B1AD86D3A0041A617 = {
@@ -3767,6 +3768,9 @@
 						CreatedOnToolsVersion = 6.3;
 					};
 				};
+=======
+				LastUpgradeCheck = 0630;
+>>>>>>> Coverity fixes
 			};
 			buildConfigurationList = F912B6880B8EB12700C1E90D /* Build configuration list for PBXProject "Neptune" */;
 			compatibilityVersion = "Xcode 3.2";

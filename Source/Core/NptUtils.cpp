@@ -642,9 +642,11 @@ NPT_ParseInteger(const char* str, long& value, bool relaxed, NPT_Cardinal* chars
     NPT_Result result = NPT_ParseInteger64(str, value_64, relaxed, chars_used);
     value = 0;
     if (NPT_SUCCEEDED(result)) {
+#if NPT_ULONG_MAX != NPT_UINT64_MAX
         if (value_64 < NPT_LONG_MIN || value_64 > NPT_LONG_MAX) {
             return NPT_ERROR_OVERFLOW;
         }
+#endif
         value = (long)value_64;
     }
     return result;
@@ -660,9 +662,11 @@ NPT_ParseInteger(const char* str, unsigned long& value, bool relaxed, NPT_Cardin
     NPT_Result result = NPT_ParseInteger64(str, value_64, relaxed, chars_used);
     value = 0;
     if (NPT_SUCCEEDED(result)) {
+#if NPT_ULONG_MAX != NPT_UINT64_MAX
         if (value_64 > NPT_ULONG_MAX) {
             return NPT_ERROR_OVERFLOW;
         }
+#endif
         value = (unsigned long)value_64;
     }
     return result;

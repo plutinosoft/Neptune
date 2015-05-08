@@ -11,3 +11,5 @@ Build/Targets/arm-android-linux/Debug
 Build/Targets/arm-android-linux/Release
 Build/Targets/x86-unknown-linux/Debug
 Build/Targets/arm-unknown-linux/Debug
+Build/Targets/universal-apple-macosx/Neptune.xcodeproj/xcuserdata
+Build/Targets/universal-apple-macosx/cov-int
