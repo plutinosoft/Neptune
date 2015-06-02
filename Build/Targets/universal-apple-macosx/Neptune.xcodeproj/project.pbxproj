@@ -6142,8 +6142,7 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					UIKit,
-					"-lib",
-					axTLS.a,
+					"-laxTLS",
 				);
 				PRODUCT_NAME = Neptune;
 				SDKROOT = iphoneos;
