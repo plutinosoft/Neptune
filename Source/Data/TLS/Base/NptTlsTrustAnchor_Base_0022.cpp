@@ -31,7 +31,6 @@
 |
  ****************************************************************/
 
-#include "NptConfig.h"
 #if defined(NPT_CONFIG_ENABLE_TLS)
 
  /* ValiCert Class 1 VA */

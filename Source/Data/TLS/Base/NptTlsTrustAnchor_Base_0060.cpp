@@ -31,7 +31,6 @@
 |
  ****************************************************************/
 
-#include "NptConfig.h"
 #if defined(NPT_CONFIG_ENABLE_TLS)
 
  /* America Online Root Certification Authority 2 */

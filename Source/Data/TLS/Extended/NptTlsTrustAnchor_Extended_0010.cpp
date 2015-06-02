@@ -31,7 +31,6 @@
 |
  ****************************************************************/
 
-#include "NptConfig.h"
 #if defined(NPT_CONFIG_ENABLE_TLS)
 
  /* TUBITAK UEKAE Kok Sertifika Hizmet Saglayicisi - Surum 3 */
