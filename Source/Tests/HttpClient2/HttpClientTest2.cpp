@@ -216,9 +216,11 @@ main(int argc, char** argv)
             NPT_ParseInteger(*++argv, verbosity);
         } else if (NPT_StringsEqual(*argv, "--threads")) {
             NPT_ParseInteger(*++argv, threads);
+#if defined(NPT_CONFIG_ENABLE_TLS)
         } else if (NPT_StringsEqual(*argv, "--no-cert-check")) {
             TlsContext = new NPT_TlsContext(NPT_TlsContext::OPTION_VERIFY_LATER | NPT_TlsContext::OPTION_ADD_DEFAULT_TRUST_ANCHORS);
             HttpConnector = new NPT_HttpTlsConnector(*TlsContext, NPT_HttpTlsConnector::OPTION_ACCEPT_SELF_SIGNED_CERTS | NPT_HttpTlsConnector::OPTION_ACCEPT_HOSTNAME_MISMATCH);
+#endif
         } else {
             break;
         }

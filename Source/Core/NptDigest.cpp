@@ -34,7 +34,7 @@
  that was released into public domain by Tom St Denis. 
 */
 
-#if !defined(NPT_CONFIG_NO_CRYPTO)
+#if defined(NPT_CONFIG_ENABLE_CRYPTO)
 
 /*----------------------------------------------------------------------
 |   includes

@@ -52,10 +52,12 @@ public:
         m_Done(false),
         m_ShouldStop(false)
     {
+#if defined(NPT_CONFIG_ENABLE_TLS)
         if (tls_context) {
             m_Connector = new NPT_HttpTlsConnector(*tls_context, tls_options);
             m_Client.SetConnector(m_Connector);
         }
+#endif
     }
     
     ~Worker() {
@@ -154,6 +156,7 @@ main(int argc, char** argv)
    
     // load a client cert if needed
     NPT_TlsContext* tls_context = NULL;
+#if defined(NPT_CONFIG_ENABLE_TLS)
     if (tls_options || tls_cert_filename) {
         tls_context = new NPT_TlsContext(NPT_TlsContext::OPTION_VERIFY_LATER | NPT_TlsContext::OPTION_ADD_DEFAULT_TRUST_ANCHORS/* | NPT_TlsContext::OPTION_NO_SESSION_CACHE*/);
         if (tls_cert_filename) {
@@ -170,7 +173,8 @@ main(int argc, char** argv)
             }
         }
     }
-    
+#endif
+
     NPT_Array<Worker*> workers;
     for (unsigned int i=0; i<threads; i++) {
         Worker* worker = new Worker(url, tls_context, tls_options);
