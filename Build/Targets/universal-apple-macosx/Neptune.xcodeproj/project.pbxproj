@@ -65,6 +65,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				E4FCC8621B1E464B00CCA327 /* PBXTargetDependency */,
 				CA7848420F3B6E71009E84AD /* PBXTargetDependency */,
 				CAE417E40E0DC1FD00A530D1 /* PBXTargetDependency */,
 				CAE417E60E0DC1FD00A530D1 /* PBXTargetDependency */,
@@ -1266,6 +1267,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E4FCC83B1B1E3EB500CCA327;
 			remoteInfo = "axTLS-iOS";
+		};
+		E4FCC8611B1E464B00CCA327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAC8F0A016AB54EA00C49741;
+			remoteInfo = NetBench;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -4852,6 +4860,11 @@
 			target = E4FCC83B1B1E3EB500CCA327 /* axTLS-iOS */;
 			targetProxy = E4FCC85F1B1E3ECD00CCA327 /* PBXContainerItemProxy */;
 		};
+		E4FCC8621B1E464B00CCA327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAC8F0A016AB54EA00C49741 /* NetBench */;
+			targetProxy = E4FCC8611B1E464B00CCA327 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -5836,6 +5849,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5848,6 +5862,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -6534,6 +6549,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7286,6 +7302,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};

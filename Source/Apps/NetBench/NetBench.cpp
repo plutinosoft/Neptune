@@ -52,6 +52,8 @@ public:
         m_Done(false),
         m_ShouldStop(false)
     {
+		NPT_COMPILER_UNUSED(tls_context);
+		NPT_COMPILER_UNUSED(tls_options);
 #if defined(NPT_CONFIG_ENABLE_TLS)
         if (tls_context) {
             m_Connector = new NPT_HttpTlsConnector(*tls_context, tls_options);
@@ -114,10 +116,14 @@ main(int argc, char** argv)
         return 1;
     }
 
-    // init options
+	// init options
+#if defined(NPT_CONFIG_ENABLE_TLS)
+	unsigned int tls_options = NPT_HttpTlsConnector::OPTION_ACCEPT_SELF_SIGNED_CERTS | NPT_HttpTlsConnector::OPTION_ACCEPT_HOSTNAME_MISMATCH;
+#else
+	unsigned int tls_options = 0;
+#endif
     const char*  tls_cert_filename = NULL;
     const char*  tls_cert_password = NULL;
-    unsigned int tls_options       = NPT_HttpTlsConnector::OPTION_ACCEPT_SELF_SIGNED_CERTS | NPT_HttpTlsConnector::OPTION_ACCEPT_HOSTNAME_MISMATCH;
     const char*  url               = NULL;
     unsigned int threads           = 1;
     unsigned int max_requests      = 0;
