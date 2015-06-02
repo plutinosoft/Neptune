@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Entrust Root Certification Authority */
 const unsigned char NptTlsTrustAnchor_Base_0045_Data[1173] = {
 0x30,0x82,0x04,0x91,0x30,0x82,0x03,0x79
@@ -181,3 +184,5 @@ const unsigned char NptTlsTrustAnchor_Base_0045_Data[1173] = {
 ,0x28,0xaf,0x71,0x25,0x85,0x5b,0x13,0xfe
 ,0x1e,0x7f,0x5a,0xb4,0x3c};
 const unsigned int  NptTlsTrustAnchor_Base_0045_Size = 1173;
+
+#endif

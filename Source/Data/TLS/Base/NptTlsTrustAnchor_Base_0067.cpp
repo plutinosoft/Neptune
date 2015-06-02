@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Comodo Trusted Services root */
 const unsigned char NptTlsTrustAnchor_Base_0067_Data[1095] = {
 0x30,0x82,0x04,0x43,0x30,0x82,0x03,0x2b
@@ -171,3 +174,5 @@ const unsigned char NptTlsTrustAnchor_Base_0067_Data[1095] = {
 ,0x18,0xcf,0x4e,0xf7,0x2e,0x57,0xb7,0x98
 ,0x70,0x5e,0xc8,0xc4,0x78,0xb0,0x62};
 const unsigned int  NptTlsTrustAnchor_Base_0067_Size = 1095;
+
+#endif

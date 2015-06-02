@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* NetLock Qualified (Class QA) Root */
 const unsigned char NptTlsTrustAnchor_Base_0090_Data[1749] = {
 0x30,0x82,0x06,0xd1,0x30,0x82,0x05,0xb9
@@ -253,3 +256,5 @@ const unsigned char NptTlsTrustAnchor_Base_0090_Data[1749] = {
 ,0xad,0xef,0x89,0xcb,0x60,0xa9,0x06,0x12
 ,0xc6,0x94,0x47,0xe9,0x28};
 const unsigned int  NptTlsTrustAnchor_Base_0090_Size = 1749;
+
+#endif

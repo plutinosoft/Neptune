@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Certplus Class 2 Primary CA */
 const unsigned char NptTlsTrustAnchor_Base_0105_Data[918] = {
 0x30,0x82,0x03,0x92,0x30,0x82,0x02,0x7a
@@ -149,3 +152,5 @@ const unsigned char NptTlsTrustAnchor_Base_0105_Data[918] = {
 ,0x16,0xe9,0xb1,0xd6,0xb6,0x10,0xd5,0xbb
 ,0x97,0xbf,0xa2,0x8e,0xb4,0x54};
 const unsigned int  NptTlsTrustAnchor_Base_0105_Size = 918;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Starfield Class 2 CA */
 const unsigned char NptTlsTrustAnchor_Base_0096_Data[1043] = {
 0x30,0x82,0x04,0x0f,0x30,0x82,0x02,0xf7
@@ -165,3 +168,5 @@ const unsigned char NptTlsTrustAnchor_Base_0096_Data[1043] = {
 ,0x0e,0x62,0xbf,0x0f,0x97,0xec,0xe0,0x2f
 ,0x1f,0x17,0x94};
 const unsigned int  NptTlsTrustAnchor_Base_0096_Size = 1043;
+
+#endif

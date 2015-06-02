@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* SwissSign Platinum CA - G2 */
 const unsigned char NptTlsTrustAnchor_Base_0108_Data[1477] = {
 0x30,0x82,0x05,0xc1,0x30,0x82,0x03,0xa9
@@ -219,3 +222,5 @@ const unsigned char NptTlsTrustAnchor_Base_0108_Data[1477] = {
 ,0x1f,0xdf,0xc2,0x66,0x37,0xd3,0x93,0xa9
 ,0x85,0x86,0x79,0x65,0xd2};
 const unsigned int  NptTlsTrustAnchor_Base_0108_Size = 1477;
+
+#endif

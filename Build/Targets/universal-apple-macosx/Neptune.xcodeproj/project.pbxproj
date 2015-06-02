@@ -572,40 +572,6 @@
 		E44E2B151AE75CD20092347B /* NptTlsDefaultTrustAnchorsExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = E40D8D681ADB808A0041A617 /* NptTlsDefaultTrustAnchorsExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44E2B161AE75CD20092347B /* NptZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CA84EC7A0C7E5A7000CC9622 /* NptZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44E2B931AE764E80092347B /* libNeptune.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F912B69F0B8EB1C700C1E90D /* libNeptune.a */; };
-		E44E2B941AE7662B0092347B /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E670EC0145900A9040C /* aes.c */; };
-		E44E2B951AE7662B0092347B /* bigint.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E680EC0145900A9040C /* bigint.c */; };
-		E44E2B961AE7662B0092347B /* crypto_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6C0EC0145900A9040C /* crypto_misc.c */; };
-		E44E2B971AE7662B0092347B /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6D0EC0145900A9040C /* hmac.c */; };
-		E44E2B981AE7662B0092347B /* md2.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6E0EC0145900A9040C /* md2.c */; };
-		E44E2B991AE7662B0092347B /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6F0EC0145900A9040C /* md5.c */; };
-		E44E2B9A1AE7662B0092347B /* rc4.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E700EC0145900A9040C /* rc4.c */; };
-		E44E2B9B1AE7662B0092347B /* rsa.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E710EC0145900A9040C /* rsa.c */; };
-		E44E2B9C1AE7662B0092347B /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E720EC0145900A9040C /* sha1.c */; };
-		E44E2B9D1AE7662B0092347B /* asn1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E750EC0145900A9040C /* asn1.c */; };
-		E44E2B9E1AE7662B0092347B /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E790EC0145900A9040C /* loader.c */; };
-		E44E2B9F1AE7662B0092347B /* p12.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E7D0EC0145900A9040C /* p12.c */; };
-		E44E2BA01AE7662B0092347B /* tls1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E800EC0145900A9040C /* tls1.c */; };
-		E44E2BA11AE7662B0092347B /* tls1_clnt.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E820EC0145900A9040C /* tls1_clnt.c */; };
-		E44E2BA21AE7662B0092347B /* tls1_svr.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E830EC0145900A9040C /* tls1_svr.c */; };
-		E44E2BA31AE7662B0092347B /* x509.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E850EC0145900A9040C /* x509.c */; };
-		E44E2BA61AE7681D0092347B /* gen_cert.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E780EC0145900A9040C /* gen_cert.c */; };
-		E44E2BA71AE768AB0092347B /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E670EC0145900A9040C /* aes.c */; };
-		E44E2BA81AE768AB0092347B /* bigint.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E680EC0145900A9040C /* bigint.c */; };
-		E44E2BA91AE768AB0092347B /* crypto_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6C0EC0145900A9040C /* crypto_misc.c */; };
-		E44E2BAA1AE768AB0092347B /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6D0EC0145900A9040C /* hmac.c */; };
-		E44E2BAB1AE768AB0092347B /* md2.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6E0EC0145900A9040C /* md2.c */; };
-		E44E2BAC1AE768AB0092347B /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6F0EC0145900A9040C /* md5.c */; };
-		E44E2BAD1AE768AB0092347B /* rc4.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E700EC0145900A9040C /* rc4.c */; };
-		E44E2BAE1AE768AB0092347B /* rsa.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E710EC0145900A9040C /* rsa.c */; };
-		E44E2BAF1AE768AB0092347B /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E720EC0145900A9040C /* sha1.c */; };
-		E44E2BB01AE768AB0092347B /* asn1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E750EC0145900A9040C /* asn1.c */; };
-		E44E2BB11AE768AB0092347B /* gen_cert.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E780EC0145900A9040C /* gen_cert.c */; };
-		E44E2BB21AE768AB0092347B /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E790EC0145900A9040C /* loader.c */; };
-		E44E2BB31AE768AB0092347B /* p12.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E7D0EC0145900A9040C /* p12.c */; };
-		E44E2BB41AE768AB0092347B /* tls1.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E800EC0145900A9040C /* tls1.c */; };
-		E44E2BB51AE768AB0092347B /* tls1_clnt.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E820EC0145900A9040C /* tls1_clnt.c */; };
-		E44E2BB61AE768AB0092347B /* tls1_svr.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E830EC0145900A9040C /* tls1_svr.c */; };
-		E44E2BB71AE768AB0092347B /* x509.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E850EC0145900A9040C /* x509.c */; };
 		F912B7480B8EB27400C1E90D /* Neptune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F912B6B00B8EB27400C1E90D /* Neptune.cpp */; };
 		F912B7490B8EB27400C1E90D /* Neptune.h in Headers */ = {isa = PBXBuildFile; fileRef = F912B6B10B8EB27400C1E90D /* Neptune.h */; };
 		F912B74A0B8EB27400C1E90D /* NptArray.h in Headers */ = {isa = PBXBuildFile; fileRef = F912B6B20B8EB27400C1E90D /* NptArray.h */; };
@@ -1261,6 +1227,20 @@
 			remoteGlobalIDString = E44E2BB81AE7691C0092347B;
 			remoteInfo = Frameworks;
 		};
+		E47C644D1B1E104F00BBDDD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1A5EA80EC0152A00A9040C;
+			remoteInfo = axTLS;
+		};
+		E47C644F1B1E106300BBDDD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1A5EA80EC0152A00A9040C;
+			remoteInfo = axTLS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1537,6 +1517,8 @@
 		E40D8D671ADB808A0041A617 /* NptTlsDefaultTrustAnchorsBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsBase.h; sourceTree = "<group>"; };
 		E40D8D681ADB808A0041A617 /* NptTlsDefaultTrustAnchorsExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsExtended.h; sourceTree = "<group>"; };
 		E44E2B1B1AE75CD20092347B /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E47C64D21B1E12E900BBDDD6 /* Neptune-iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Neptune-iOS copy-Info.plist"; path = "/Users/sylvain/dev/Plutinosoft/neptune-github/Build/Targets/universal-apple-macosx/Neptune-iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		E47C65531B1E14F000BBDDD6 /* Neptune-Mac copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Neptune-Mac copy-Info.plist"; path = "/Users/sylvain/dev/Plutinosoft/neptune-github/Build/Targets/universal-apple-macosx/Neptune-Mac copy-Info.plist"; sourceTree = "<absolute>"; };
 		F912B69F0B8EB1C700C1E90D /* libNeptune.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNeptune.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F912B6B00B8EB27400C1E90D /* Neptune.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Neptune.cpp; sourceTree = "<group>"; };
 		F912B6B10B8EB27400C1E90D /* Neptune.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Neptune.h; sourceTree = "<group>"; };
@@ -2547,6 +2529,8 @@
 				E40D8B9D1AD86D3A0041A617 /* Neptune-Framework */,
 				F912B6A00B8EB1C700C1E90D /* Products */,
 				CA16FE6511C6C954006E2A86 /* CoreFoundation.framework */,
+				E47C64D21B1E12E900BBDDD6 /* Neptune-iOS copy-Info.plist */,
+				E47C65531B1E14F000BBDDD6 /* Neptune-Mac copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3651,6 +3635,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E47C644E1B1E104F00BBDDD6 /* PBXTargetDependency */,
 			);
 			name = "Neptune-iOS";
 			productName = "Neptune-iOS";
@@ -3669,6 +3654,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E47C64501B1E106300BBDDD6 /* PBXTargetDependency */,
 			);
 			name = "Neptune-Mac";
 			productName = "Neptune-iOS";
@@ -3729,8 +3715,10 @@
 				CAE417DF0E0DC1F600A530D1 /* Apps */,
 				CAE4176C0E0DC0FE00A530D1 /* Tests */,
 				E44E2BB81AE7691C0092347B /* Frameworks */,
-				F912B69E0B8EB1C700C1E90D /* Neptune */,
 				CA1A5EA80EC0152A00A9040C /* axTLS */,
+				F912B69E0B8EB1C700C1E90D /* Neptune */,
+				E40D8B9B1AD86D3A0041A617 /* Neptune-iOS */,
+				E44E2A9C1AE75CD20092347B /* Neptune-Mac */,
 				CA78483C0F3B6E69009E84AD /* MiniHttpServer */,
 				CAE4179C0E0DC13A00A530D1 /* NetPump */,
 				CAE417BA0E0DC19400A530D1 /* NetEcho */,
@@ -3770,8 +3758,6 @@
 				CA8066481187BD08009D099D /* DigestsTest1 */,
 				CA8069D8118B577E009D099D /* CryptoTest1 */,
 				CAF26E9E18C7FF630015ABB9 /* ZipHttpServer */,
-				E40D8B9B1AD86D3A0041A617 /* Neptune-iOS */,
-				E44E2A9C1AE75CD20092347B /* Neptune-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -4136,23 +4122,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44E2BA61AE7681D0092347B /* gen_cert.c in Sources */,
-				E44E2B941AE7662B0092347B /* aes.c in Sources */,
-				E44E2B951AE7662B0092347B /* bigint.c in Sources */,
-				E44E2B961AE7662B0092347B /* crypto_misc.c in Sources */,
-				E44E2B971AE7662B0092347B /* hmac.c in Sources */,
-				E44E2B981AE7662B0092347B /* md2.c in Sources */,
-				E44E2B991AE7662B0092347B /* md5.c in Sources */,
-				E44E2B9A1AE7662B0092347B /* rc4.c in Sources */,
-				E44E2B9B1AE7662B0092347B /* rsa.c in Sources */,
-				E44E2B9C1AE7662B0092347B /* sha1.c in Sources */,
-				E44E2B9D1AE7662B0092347B /* asn1.c in Sources */,
-				E44E2B9E1AE7662B0092347B /* loader.c in Sources */,
-				E44E2B9F1AE7662B0092347B /* p12.c in Sources */,
-				E44E2BA01AE7662B0092347B /* tls1.c in Sources */,
-				E44E2BA11AE7662B0092347B /* tls1_clnt.c in Sources */,
-				E44E2BA21AE7662B0092347B /* tls1_svr.c in Sources */,
-				E44E2BA31AE7662B0092347B /* x509.c in Sources */,
 				E40D8C241AD8747E0041A617 /* adler32.c in Sources */,
 				E40D8C251AD8747E0041A617 /* compress.c in Sources */,
 				E40D8C261AD8747E0041A617 /* crc32.c in Sources */,
@@ -4226,23 +4195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44E2BA71AE768AB0092347B /* aes.c in Sources */,
-				E44E2BA81AE768AB0092347B /* bigint.c in Sources */,
-				E44E2BA91AE768AB0092347B /* crypto_misc.c in Sources */,
-				E44E2BAA1AE768AB0092347B /* hmac.c in Sources */,
-				E44E2BAB1AE768AB0092347B /* md2.c in Sources */,
-				E44E2BAC1AE768AB0092347B /* md5.c in Sources */,
-				E44E2BAD1AE768AB0092347B /* rc4.c in Sources */,
-				E44E2BAE1AE768AB0092347B /* rsa.c in Sources */,
-				E44E2BAF1AE768AB0092347B /* sha1.c in Sources */,
-				E44E2BB01AE768AB0092347B /* asn1.c in Sources */,
-				E44E2BB11AE768AB0092347B /* gen_cert.c in Sources */,
-				E44E2BB21AE768AB0092347B /* loader.c in Sources */,
-				E44E2BB31AE768AB0092347B /* p12.c in Sources */,
-				E44E2BB41AE768AB0092347B /* tls1.c in Sources */,
-				E44E2BB51AE768AB0092347B /* tls1_clnt.c in Sources */,
-				E44E2BB61AE768AB0092347B /* tls1_svr.c in Sources */,
-				E44E2BB71AE768AB0092347B /* x509.c in Sources */,
 				E44E2AA01AE75CD20092347B /* adler32.c in Sources */,
 				E44E2AA11AE75CD20092347B /* compress.c in Sources */,
 				E44E2AA21AE75CD20092347B /* crc32.c in Sources */,
@@ -4801,6 +4753,16 @@
 			target = E44E2BB81AE7691C0092347B /* Frameworks */;
 			targetProxy = E44E2BC01AE7692F0092347B /* PBXContainerItemProxy */;
 		};
+		E47C644E1B1E104F00BBDDD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1A5EA80EC0152A00A9040C /* axTLS */;
+			targetProxy = E47C644D1B1E104F00BBDDD6 /* PBXContainerItemProxy */;
+		};
+		E47C64501B1E106300BBDDD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1A5EA80EC0152A00A9040C /* axTLS */;
+			targetProxy = E47C644F1B1E106300BBDDD6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -4833,6 +4795,7 @@
 		CA1A5EAA0EC0152C00A9040C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -4848,7 +4811,6 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
-				"VALID_ARCHS[sdk=iphoneos*]" = "armv7 arm64";
 				WARNING_CFLAGS = "";
 			};
 			name = Debug;
@@ -4856,6 +4818,7 @@
 		CA1A5EAC0EC0152C00A9040C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
@@ -4871,7 +4834,6 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
-				"VALID_ARCHS[sdk=iphoneos*]" = "armv7 arm64";
 				WARNING_CFLAGS = "";
 			};
 			name = Release;
@@ -6000,7 +5962,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.1.3;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -6025,6 +5987,7 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					UIKit,
+					"-laxTLS",
 				);
 				PRODUCT_NAME = Neptune;
 				SDKROOT = iphoneos;
@@ -6055,7 +6018,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.1.3;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -6079,6 +6042,7 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					UIKit,
+					"-laxTLS",
 				);
 				PRODUCT_NAME = Neptune;
 				SDKROOT = iphoneos;
@@ -6135,6 +6099,7 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SystemConfiguration,
+					"-laxTLS",
 				);
 				PRODUCT_NAME = Neptune;
 				SDKROOT = macosx;
@@ -6190,6 +6155,7 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SystemConfiguration,
+					"-laxTLS",
 				);
 				PRODUCT_NAME = Neptune;
 				SDKROOT = macosx;
@@ -6216,53 +6182,7 @@
 			};
 			name = Release;
 		};
-		F912B6890B8EB12700C1E90D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					NPT_DEBUG,
-					NPT_CONFIG_ENABLE_LOGGING,
-					NPT_CONFIG_ENABLE_ZIP,
-					NPT_CONFIG_ENABLE_TLS,
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				WARNING_CFLAGS = (
-					"-Wall",
-					"-Wextra",
-					"-Wno-long-long",
-				);
-			};
-			name = Debug;
-		};
-		F912B68A0B8EB12700C1E90D /* Release */ = {
+		E47C65541B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -6270,7 +6190,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NPT_CONFIG_ENABLE_LOGGING,
 					NPT_CONFIG_ENABLE_ZIP,
-					NPT_CONFIG_ENABLE_TLS,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
@@ -6296,6 +6215,1577 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-long-long",
+				);
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65551B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65561B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = Apps;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65571B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = Tests;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65581B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65591B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				PRODUCT_NAME = axTLS;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				WARNING_CFLAGS = "";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C655A1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = Neptune;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C655B1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					NPT_CONFIG_HAVE_SYSTEM_LOG_CONFIG,
+					NPT_CONFIG_HAVE_SYSTEM_MACHINE_NAME,
+					NPT_CONFIG_NO_CRYPTO,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Neptune-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					UIKit,
+				);
+				PRODUCT_NAME = Neptune;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C655D1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					NPT_CONFIG_HAVE_SYSTEM_LOG_CONFIG,
+					NPT_CONFIG_HAVE_SYSTEM_MACHINE_NAME,
+					NPT_CONFIG_NO_CRYPTO,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Neptune-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = Neptune;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C655F1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = minihttpserver;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65601B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetPump;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65611B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetEcho;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65621B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetConfig;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65631B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetPing;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65641B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetGet;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65651B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65661B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetResolve;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65671B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ArraysTest1;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65681B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = BufferedStreamsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65691B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpServerTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656A1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpClientTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656B1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ListsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656C1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = LoggingTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656D1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = LoggingTest2;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656E1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MapsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C656F1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MessagesTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65701B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MessagesTest2;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65711B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MiscTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65721B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65731B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = QueueTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65741B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = RingBufferTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65751B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StringsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65761B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ThreadsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65771B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = UdpTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65781B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = UrlTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65791B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = XmlTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657A1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ZipTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657B1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657C1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StreamsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657D1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FileTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657E1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = TlsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C657F1B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpClientTest2;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65801B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = TimeTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65811B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FileTest2;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65821B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = SocketsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65831B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = DigestsTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65841B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = CryptoTest1;
+				ZERO_LINK = NO;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65851B1E1ADA00BBDDD6 /* Release-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				PRODUCT_NAME = ziphttpserver;
+			};
+			name = "Release-NoCrypto";
+		};
+		E47C65861B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NPT_DEBUG,
+					NPT_CONFIG_ENABLE_LOGGING,
+					NPT_CONFIG_ENABLE_ZIP,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-long-long",
+				);
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65871B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65881B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Apps;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65891B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Tests;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658A1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658B1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				PRODUCT_NAME = axTLS;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				WARNING_CFLAGS = "";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658C1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_NAME = Neptune;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658D1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					NPT_CONFIG_HAVE_SYSTEM_LOG_CONFIG,
+					NPT_CONFIG_HAVE_SYSTEM_MACHINE_NAME,
+					NPT_CONFIG_NO_CRYPTO,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Neptune-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					UIKit,
+				);
+				PRODUCT_NAME = Neptune;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658E1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1.1.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					NPT_CONFIG_HAVE_SYSTEM_LOG_CONFIG,
+					NPT_CONFIG_HAVE_SYSTEM_MACHINE_NAME,
+					NPT_CONFIG_NO_CRYPTO,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Neptune-Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SystemConfiguration,
+				);
+				PRODUCT_NAME = Neptune;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C658F1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = minihttpserver;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65901B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetPump;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65911B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetEcho;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65921B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetConfig;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65931B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetPing;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65941B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetGet;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65951B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65961B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = NetResolve;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65971B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = ArraysTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65981B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = BufferedStreamsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65991B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpServerTest1;
+				ZERO_LINK = YES;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659A1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpClientTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659B1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ListsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659C1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = LoggingTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659D1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = LoggingTest2;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659E1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MapsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C659F1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MessagesTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A01B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MessagesTest2;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A11B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = MiscTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A21B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A31B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = QueueTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A41B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = RingBufferTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A51B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StringsTest1;
+				ZERO_LINK = YES;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A61B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ThreadsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A71B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = UdpTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A81B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = UrlTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65A91B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = XmlTest1;
+				ZERO_LINK = YES;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AA1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = ZipTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AB1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AC1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = StreamsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AD1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FileTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AE1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = TlsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65AF1B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = HttpClientTest2;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B01B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = TimeTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B11B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FileTest2;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B21B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = SocketsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B31B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = DigestsTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B41B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = CryptoTest1;
+			};
+			name = "Debug-NoCrypto";
+		};
+		E47C65B51B1E211C00BBDDD6 /* Debug-NoCrypto */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				PRODUCT_NAME = ziphttpserver;
+			};
+			name = "Debug-NoCrypto";
+		};
+		F912B6890B8EB12700C1E90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NPT_DEBUG,
+					NPT_CONFIG_ENABLE_LOGGING,
+					NPT_CONFIG_ENABLE_ZIP,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-long-long",
+				);
+			};
+			name = Debug;
+		};
+		F912B68A0B8EB12700C1E90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NPT_CONFIG_ENABLE_LOGGING,
+					NPT_CONFIG_ENABLE_ZIP,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wextra",
@@ -6307,6 +7797,7 @@
 		F912B6A20B8EB1C800C1E90D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
@@ -6316,6 +7807,7 @@
 		F912B6A30B8EB1C800C1E90D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
@@ -6329,7 +7821,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA197D200E1AE4360018E87C /* Debug */,
+				E47C65A31B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA197D220E1AE4360018E87C /* Release */,
+				E47C65731B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6338,7 +7832,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA1A5EAA0EC0152C00A9040C /* Debug */,
+				E47C658B1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA1A5EAC0EC0152C00A9040C /* Release */,
+				E47C65591B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6347,7 +7843,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA289DB910E31601001BC817 /* Debug */,
+				E47C65B21B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA289DBA10E31601001BC817 /* Release */,
+				E47C65821B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6356,7 +7854,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA2F54260EC115E600AEBC12 /* Debug */,
+				E47C65AE1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA2F54280EC115E600AEBC12 /* Release */,
+				E47C657E1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6365,7 +7865,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA30B76D0F0DCE9A0085B46E /* Debug */,
+				E47C659D1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA30B76F0F0DCE9A0085B46E /* Release */,
+				E47C656D1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6374,7 +7876,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA4090C610AA257C00ED81C5 /* Debug */,
+				E47C65B01B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA4090C710AA257C00ED81C5 /* Release */,
+				E47C65801B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6383,7 +7887,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA550D520D20A37E00B22D72 /* Debug */,
+				E47C65991B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA550D540D20A37E00B22D72 /* Release */,
+				E47C65691B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6392,7 +7898,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA77C0C214C0BC7700442B97 /* Debug */,
+				E47C65A21B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA77C0C314C0BC7700442B97 /* Release */,
+				E47C65721B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6401,7 +7909,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA78483F0F3B6E6A009E84AD /* Debug */,
+				E47C658F1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA7848400F3B6E6A009E84AD /* Release */,
+				E47C655F1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6410,7 +7920,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA790DAB1233BDC100875081 /* Debug */,
+				E47C65941B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA790DAC1233BDC100875081 /* Release */,
+				E47C65641B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6419,7 +7931,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA80664B1187BD09009D099D /* Debug */,
+				E47C65B31B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA80664C1187BD09009D099D /* Release */,
+				E47C65831B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6428,7 +7942,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA8069DB118B5780009D099D /* Debug */,
+				E47C65B41B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA8069DC118B5780009D099D /* Release */,
+				E47C65841B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6437,7 +7953,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA97E0220E2FDFB30090CC9B /* Debug */,
+				E47C65AC1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA97E0240E2FDFB30090CC9B /* Release */,
+				E47C657C1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6446,7 +7964,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA9958A21046FFC80073F34A /* Debug */,
+				E47C65AF1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA9958A31046FFC80073F34A /* Release */,
+				E47C657F1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6455,7 +7975,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA9DDC6810AE3DD7008B871E /* Debug */,
+				E47C65B11B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CA9DDC6910AE3DD7008B871E /* Release */,
+				E47C65811B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6464,7 +7986,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAA97A030CF164A800C01909 /* Debug */,
+				E47C65A91B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAA97A040CF164A800C01909 /* Release */,
+				E47C65791B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6473,7 +7997,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAA97A190CF1654A00C01909 /* Debug */,
+				E47C65A51B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAA97A1A0CF1654A00C01909 /* Release */,
+				E47C65751B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6482,7 +8008,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAAAA07E12FF824F00ABC84B /* Debug */,
+				E47C65961B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAAAA07F12FF824F00ABC84B /* Release */,
+				E47C65661B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6491,7 +8019,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAC8F0A916AB54EA00C49741 /* Debug */,
+				E47C65951B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAC8F0AA16AB54EA00C49741 /* Release */,
+				E47C65651B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6500,7 +8030,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE4169D0E0DBD6700A530D1 /* Debug */,
+				E47C65A11B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE4169F0E0DBD6700A530D1 /* Release */,
+				E47C65711B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6509,7 +8041,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416BB0E0DBDF800A530D1 /* Debug */,
+				E47C65971B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416BD0E0DBDF800A530D1 /* Release */,
+				E47C65671B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6518,7 +8052,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416C80E0DBE3000A530D1 /* Debug */,
+				E47C65981B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416CA0E0DBE3000A530D1 /* Release */,
+				E47C65681B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6527,7 +8063,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416D50E0DBE5A00A530D1 /* Debug */,
+				E47C659A1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416D70E0DBE5A00A530D1 /* Release */,
+				E47C656A1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6536,7 +8074,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416E20E0DBE8000A530D1 /* Debug */,
+				E47C659B1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416E40E0DBE8000A530D1 /* Release */,
+				E47C656B1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6545,7 +8085,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416EF0E0DBEAF00A530D1 /* Debug */,
+				E47C659C1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416F10E0DBEAF00A530D1 /* Release */,
+				E47C656C1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6554,7 +8096,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE416FC0E0DBEDD00A530D1 /* Debug */,
+				E47C659E1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE416FE0E0DBEDD00A530D1 /* Release */,
+				E47C656E1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6563,7 +8107,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417090E0DBF0900A530D1 /* Debug */,
+				E47C659F1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE4170B0E0DBF0900A530D1 /* Release */,
+				E47C656F1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6572,7 +8118,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417160E0DBF2800A530D1 /* Debug */,
+				E47C65A01B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417180E0DBF2800A530D1 /* Release */,
+				E47C65701B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6581,7 +8129,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE4172F0E0DC03600A530D1 /* Debug */,
+				E47C65A41B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417310E0DC03600A530D1 /* Release */,
+				E47C65741B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6590,7 +8140,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE4173C0E0DC06700A530D1 /* Debug */,
+				E47C65A61B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE4173E0E0DC06700A530D1 /* Release */,
+				E47C65761B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6599,7 +8151,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417490E0DC08D00A530D1 /* Debug */,
+				E47C65A71B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE4174B0E0DC08D00A530D1 /* Release */,
+				E47C65771B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6608,7 +8162,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417560E0DC0A800A530D1 /* Debug */,
+				E47C65A81B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417580E0DC0A800A530D1 /* Release */,
+				E47C65781B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6617,7 +8173,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417630E0DC0D200A530D1 /* Debug */,
+				E47C65AA1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417650E0DC0D200A530D1 /* Release */,
+				E47C657A1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6626,7 +8184,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE4176D0E0DC0FE00A530D1 /* Debug */,
+				E47C65891B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE4176F0E0DC0FE00A530D1 /* Release */,
+				E47C65571B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6635,7 +8195,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417930E0DC11800A530D1 /* Debug */,
+				E47C65871B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417950E0DC11800A530D1 /* Release */,
+				E47C65551B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6644,7 +8206,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE4179F0E0DC13A00A530D1 /* Debug */,
+				E47C65901B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417A10E0DC13A00A530D1 /* Release */,
+				E47C65601B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6653,7 +8217,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417BD0E0DC19400A530D1 /* Debug */,
+				E47C65911B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417BF0E0DC19400A530D1 /* Release */,
+				E47C65611B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6662,7 +8228,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417CA0E0DC1B500A530D1 /* Debug */,
+				E47C65921B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417CC0E0DC1B500A530D1 /* Release */,
+				E47C65621B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6671,7 +8239,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417D70E0DC1D600A530D1 /* Debug */,
+				E47C65931B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417D90E0DC1D600A530D1 /* Release */,
+				E47C65631B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6680,7 +8250,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAE417E00E0DC1F600A530D1 /* Debug */,
+				E47C65881B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAE417E20E0DC1F600A530D1 /* Release */,
+				E47C65561B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6689,7 +8261,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAF26E9418C74A2F0015ABB9 /* Debug */,
+				E47C65AB1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAF26E9518C74A2F0015ABB9 /* Release */,
+				E47C657B1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6698,7 +8272,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAF26EA618C7FF630015ABB9 /* Debug */,
+				E47C65B51B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAF26EA718C7FF630015ABB9 /* Release */,
+				E47C65851B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6707,7 +8283,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAF2EFD90E64A27300948C04 /* Debug */,
+				E47C65AD1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				CAF2EFDB0E64A27300948C04 /* Release */,
+				E47C657D1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6716,7 +8294,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E40D8BB01AD86D3A0041A617 /* Debug */,
+				E47C658D1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				E40D8BB11AD86D3A0041A617 /* Release */,
+				E47C655B1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6725,7 +8305,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E44E2B191AE75CD20092347B /* Debug */,
+				E47C658E1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				E44E2B1A1AE75CD20092347B /* Release */,
+				E47C655D1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6734,7 +8316,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E44E2BBA1AE7691C0092347B /* Debug */,
+				E47C658A1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				E44E2BBB1AE7691C0092347B /* Release */,
+				E47C65581B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6743,7 +8327,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F912B6890B8EB12700C1E90D /* Debug */,
+				E47C65861B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				F912B68A0B8EB12700C1E90D /* Release */,
+				E47C65541B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6752,7 +8338,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F912B6A20B8EB1C800C1E90D /* Debug */,
+				E47C658C1B1E211C00BBDDD6 /* Debug-NoCrypto */,
 				F912B6A30B8EB1C800C1E90D /* Release */,
+				E47C655A1B1E1ADA00BBDDD6 /* Release-NoCrypto */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

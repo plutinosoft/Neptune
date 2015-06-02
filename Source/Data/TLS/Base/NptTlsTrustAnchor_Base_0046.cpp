@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* AOL Time Warner Root Certification Authority 1 */
 const unsigned char NptTlsTrustAnchor_Base_0046_Data[1002] = {
 0x30,0x82,0x03,0xe6,0x30,0x82,0x02,0xce
@@ -160,3 +163,5 @@ const unsigned char NptTlsTrustAnchor_Base_0046_Data[1002] = {
 ,0x39,0x28,0x68,0x0e,0x73,0xdd,0x25,0x9a
 ,0xde,0x12};
 const unsigned int  NptTlsTrustAnchor_Base_0046_Size = 1002;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* beTRUSTed Root CA - Entrust Implementation */
 const unsigned char NptTlsTrustAnchor_Base_0050_Data[1621] = {
 0x30,0x82,0x06,0x51,0x30,0x82,0x05,0x39
@@ -237,3 +240,5 @@ const unsigned char NptTlsTrustAnchor_Base_0050_Data[1621] = {
 ,0x74,0xfe,0xd3,0x6d,0x7d,0xd2,0x25,0xdc
 ,0xac,0x62,0x57,0xa9,0xf7};
 const unsigned int  NptTlsTrustAnchor_Base_0050_Size = 1621;
+
+#endif

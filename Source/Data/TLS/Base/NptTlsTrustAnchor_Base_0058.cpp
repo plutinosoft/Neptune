@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* UTN-USER First-Network Applications */
 const unsigned char NptTlsTrustAnchor_Base_0058_Data[1128] = {
 0x30,0x82,0x04,0x64,0x30,0x82,0x03,0x4c
@@ -176,3 +179,5 @@ const unsigned char NptTlsTrustAnchor_Base_0058_Data[1128] = {
 ,0x6a,0xfa,0xa6,0x38,0xac,0x1f,0xc4,0x84
 };
 const unsigned int  NptTlsTrustAnchor_Base_0058_Size = 1128;
+
+#endif

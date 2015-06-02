@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* WellsSecure Public Root Certificate Authority */
 const unsigned char NptTlsTrustAnchor_Base_0119_Data[1217] = {
 0x30,0x82,0x04,0xbd,0x30,0x82,0x03,0xa5
@@ -187,3 +190,5 @@ const unsigned char NptTlsTrustAnchor_Base_0119_Data[1217] = {
 ,0x07,0x87,0xce,0x2f,0x59,0xdc,0x3e,0x58
 ,0xdb};
 const unsigned int  NptTlsTrustAnchor_Base_0119_Size = 1217;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* ValiCert Class 2 VA */
 const unsigned char NptTlsTrustAnchor_Base_0023_Data[747] = {
 0x30,0x82,0x02,0xe7,0x30,0x82,0x02,0x50
@@ -128,3 +131,5 @@ const unsigned char NptTlsTrustAnchor_Base_0023_Data[747] = {
 ,0xbe,0xed,0x74,0x4c,0xbc,0x5b,0xd5,0x62
 ,0x1f,0x43,0xdd};
 const unsigned int  NptTlsTrustAnchor_Base_0023_Size = 747;
+
+#endif

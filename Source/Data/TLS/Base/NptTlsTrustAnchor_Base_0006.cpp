@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Thawte Server CA */
 const unsigned char NptTlsTrustAnchor_Base_0006_Data[791] = {
 0x30,0x82,0x03,0x13,0x30,0x82,0x02,0x7c
@@ -133,3 +136,5 @@ const unsigned char NptTlsTrustAnchor_Base_0006_Data[791] = {
 ,0xf2,0xef,0xc7,0xf2,0x18,0xf9,0x89,0xbc
 ,0xa3,0xff,0x8a,0x23,0x2e,0x70,0x47};
 const unsigned int  NptTlsTrustAnchor_Base_0006_Size = 791;
+
+#endif

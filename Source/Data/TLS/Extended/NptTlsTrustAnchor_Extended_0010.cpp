@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* TUBITAK UEKAE Kok Sertifika Hizmet Saglayicisi - Surum 3 */
 const unsigned char NptTlsTrustAnchor_Extended_0010_Data[1307] = {
 0x30,0x82,0x05,0x17,0x30,0x82,0x03,0xff
@@ -198,3 +201,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0010_Data[1307] = {
 ,0xc9,0x9c,0x90,0xda,0xec,0xa9,0x42,0x3c
 ,0xad,0xb6,0x02};
 const unsigned int  NptTlsTrustAnchor_Extended_0010_Size = 1307;
+
+#endif

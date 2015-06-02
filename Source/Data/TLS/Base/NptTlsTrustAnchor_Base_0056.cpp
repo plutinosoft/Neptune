@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* GeoTrust Universal CA */
 const unsigned char NptTlsTrustAnchor_Base_0056_Data[1388] = {
 0x30,0x82,0x05,0x68,0x30,0x82,0x03,0x50
@@ -208,3 +211,5 @@ const unsigned char NptTlsTrustAnchor_Base_0056_Data[1388] = {
 ,0xa4,0xe6,0x8e,0xd8,0xf9,0x29,0x48,0x8a
 ,0xce,0x73,0xfe,0x2c};
 const unsigned int  NptTlsTrustAnchor_Base_0056_Size = 1388;
+
+#endif

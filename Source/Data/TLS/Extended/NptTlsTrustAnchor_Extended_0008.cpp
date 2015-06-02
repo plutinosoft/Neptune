@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* AC Ra\xC3\xADz Certic\xC3\xA1mara S.A. */
 const unsigned char NptTlsTrustAnchor_Extended_0008_Data[1642] = {
 0x30,0x82,0x06,0x66,0x30,0x82,0x04,0x4e
@@ -240,3 +243,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0008_Data[1642] = {
 ,0x05,0x89,0xfc,0x78,0xd6,0x5c,0x2c,0x26
 ,0x43,0xa9};
 const unsigned int  NptTlsTrustAnchor_Extended_0008_Size = 1642;
+
+#endif

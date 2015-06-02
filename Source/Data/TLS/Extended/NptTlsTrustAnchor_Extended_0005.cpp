@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* S-TRUST Authentication and Encryption Root CA 2005 PN */
 const unsigned char NptTlsTrustAnchor_Extended_0005_Data[1151] = {
 0x30,0x82,0x04,0x7b,0x30,0x82,0x03,0x63
@@ -178,3 +181,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0005_Data[1151] = {
 ,0xa1,0xf1,0x0f,0x1b,0x1f,0x3d,0x9e,0x04
 ,0x83,0xdd,0x96,0xd9,0x1d,0x3a,0x94};
 const unsigned int  NptTlsTrustAnchor_Extended_0005_Size = 1151;
+
+#endif

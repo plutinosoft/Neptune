@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* TURKTRUST Certificate Services Provider Root 1 */
 const unsigned char NptTlsTrustAnchor_Extended_0002_Data[1023] = {
 0x30,0x82,0x03,0xfb,0x30,0x82,0x02,0xe3
@@ -162,3 +165,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0002_Data[1023] = {
 ,0x44,0x64,0x03,0x25,0xea,0xde,0x5b,0x6e
 ,0x9f,0xc9,0xf2,0x4e,0xac,0xdd,0xc7};
 const unsigned int  NptTlsTrustAnchor_Extended_0002_Size = 1023;
+
+#endif

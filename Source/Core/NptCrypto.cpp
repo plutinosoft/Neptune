@@ -34,6 +34,8 @@
  that was released into public domain by Tom St Denis. 
 */
 
+#if !defined(NPT_CONFIG_NO_CRYPTO)
+
 /*----------------------------------------------------------------------
 |   includes
 +---------------------------------------------------------------------*/
@@ -831,3 +833,4 @@ NPT_BlockCipher::ProcessCbc(const NPT_UInt8* input, NPT_Size input_size, const N
     return NPT_SUCCESS;
 }
 
+#endif

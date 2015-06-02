@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* XRamp Global CA Root */
 const unsigned char NptTlsTrustAnchor_Base_0094_Data[1076] = {
 0x30,0x82,0x04,0x30,0x30,0x82,0x03,0x18
@@ -169,3 +172,5 @@ const unsigned char NptTlsTrustAnchor_Base_0094_Data[1076] = {
 ,0x42,0xc2,0x74,0x7c,0x82,0x8a,0x09,0xc9
 ,0xb4,0x03,0x25,0xbc};
 const unsigned int  NptTlsTrustAnchor_Base_0094_Size = 1076;
+
+#endif

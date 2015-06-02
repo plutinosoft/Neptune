@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* TDC Internet Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0082_Data[1071] = {
 0x30,0x82,0x04,0x2b,0x30,0x82,0x03,0x13
@@ -168,3 +171,5 @@ const unsigned char NptTlsTrustAnchor_Base_0082_Data[1071] = {
 ,0x69,0x03,0x62,0xb8,0x99,0x05,0x05,0x3d
 ,0x6b,0x78,0x12,0xbd,0xb0,0x6f,0x65};
 const unsigned int  NptTlsTrustAnchor_Base_0082_Size = 1071;
+
+#endif

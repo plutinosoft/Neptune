@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* IPS CLASE3 root */
 const unsigned char NptTlsTrustAnchor_Base_0070_Data[2030] = {
 0x30,0x82,0x07,0xea,0x30,0x82,0x07,0x53
@@ -288,3 +291,5 @@ const unsigned char NptTlsTrustAnchor_Base_0070_Data[2030] = {
 ,0xaf,0x7d,0xc8,0xea,0xe9,0xd4,0x56,0xd9
 ,0x0e,0x13,0xb2,0xc5,0x45,0x50};
 const unsigned int  NptTlsTrustAnchor_Base_0070_Size = 2030;
+
+#endif

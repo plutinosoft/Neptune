@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* ComSign Secured CA */
 const unsigned char NptTlsTrustAnchor_Base_0127_Data[943] = {
 0x30,0x82,0x03,0xab,0x30,0x82,0x02,0x93
@@ -152,3 +155,5 @@ const unsigned char NptTlsTrustAnchor_Base_0127_Data[943] = {
 ,0xce,0x65,0x06,0x2e,0x5d,0xd2,0x2a,0x53
 ,0x74,0x5e,0xd3,0x6e,0x27,0x9e,0x8f};
 const unsigned int  NptTlsTrustAnchor_Base_0127_Size = 943;
+
+#endif

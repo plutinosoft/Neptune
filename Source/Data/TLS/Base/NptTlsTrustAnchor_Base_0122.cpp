@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* TC TrustCenter Class 2 CA II */
 const unsigned char NptTlsTrustAnchor_Base_0122_Data[1198] = {
 0x30,0x82,0x04,0xaa,0x30,0x82,0x03,0x92
@@ -184,3 +187,5 @@ const unsigned char NptTlsTrustAnchor_Base_0122_Data[1198] = {
 ,0xdc,0x64,0x27,0x17,0x8c,0x5a,0xb7,0xda
 ,0x74,0x28,0xcd,0x97,0xe4,0xbd};
 const unsigned int  NptTlsTrustAnchor_Base_0122_Size = 1198;
+
+#endif

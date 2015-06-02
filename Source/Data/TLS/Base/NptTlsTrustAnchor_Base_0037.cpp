@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* AddTrust Low-Value Services Root */
 const unsigned char NptTlsTrustAnchor_Base_0037_Data[1052] = {
 0x30,0x82,0x04,0x18,0x30,0x82,0x03,0x00
@@ -166,3 +169,5 @@ const unsigned char NptTlsTrustAnchor_Base_0037_Data[1052] = {
 ,0x35,0xe1,0x1d,0x16,0x1c,0xd0,0xbc,0x2b
 ,0x8e,0xd6,0x71,0xd9};
 const unsigned int  NptTlsTrustAnchor_Base_0037_Size = 1052;
+
+#endif

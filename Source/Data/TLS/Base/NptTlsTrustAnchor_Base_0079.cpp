@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Sonera Class 1 Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0079_Data[804] = {
 0x30,0x82,0x03,0x20,0x30,0x82,0x02,0x08
@@ -135,3 +138,5 @@ const unsigned char NptTlsTrustAnchor_Base_0079_Data[804] = {
 ,0xff,0x81,0x8c,0x0f,0x0f,0x59,0x21,0x19
 ,0x57,0xbd,0x55,0x9a};
 const unsigned int  NptTlsTrustAnchor_Base_0079_Size = 804;
+
+#endif

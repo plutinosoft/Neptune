@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Buypass Class 3 CA 1 */
 const unsigned char NptTlsTrustAnchor_Base_0130_Data[855] = {
 0x30,0x82,0x03,0x53,0x30,0x82,0x02,0x3b
@@ -141,3 +144,5 @@ const unsigned char NptTlsTrustAnchor_Base_0130_Data[855] = {
 ,0x93,0xcf,0x90,0x42,0xd4,0xb8,0x5b,0x16
 ,0xa6,0xe7,0xcb,0x40,0x03,0xdd,0x79};
 const unsigned int  NptTlsTrustAnchor_Base_0130_Size = 855;
+
+#endif

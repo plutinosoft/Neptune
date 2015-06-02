@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* EBG Elektronik Sertifika Hizmet Saglayicisi */
 const unsigned char NptTlsTrustAnchor_Extended_0012_Data[1515] = {
 0x30,0x82,0x05,0xe7,0x30,0x82,0x03,0xcf
@@ -224,3 +227,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0012_Data[1515] = {
 ,0xd0,0xea,0x49,0xa2,0x1c,0x8d,0x52,0x14
 ,0xa6,0x0a,0x93};
 const unsigned int  NptTlsTrustAnchor_Extended_0012_Size = 1515;
+
+#endif

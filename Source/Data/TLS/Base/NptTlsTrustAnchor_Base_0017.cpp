@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Verisign Class 2 Public Primary Certification Authority - G2 */
 const unsigned char NptTlsTrustAnchor_Base_0017_Data[775] = {
 0x30,0x82,0x03,0x03,0x30,0x82,0x02,0x6c
@@ -131,3 +134,5 @@ const unsigned char NptTlsTrustAnchor_Base_0017_Data[775] = {
 ,0xad,0x32,0x64,0x5e,0xb1,0x46,0x72,0x27
 ,0x8c,0x12,0x7b,0xc5,0x44,0xb4,0xae};
 const unsigned int  NptTlsTrustAnchor_Base_0017_Size = 775;
+
+#endif

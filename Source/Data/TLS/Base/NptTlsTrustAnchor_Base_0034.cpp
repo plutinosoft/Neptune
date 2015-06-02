@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Equifax Secure eBusiness CA 1 */
 const unsigned char NptTlsTrustAnchor_Base_0034_Data[646] = {
 0x30,0x82,0x02,0x82,0x30,0x82,0x01,0xeb
@@ -115,3 +118,5 @@ const unsigned char NptTlsTrustAnchor_Base_0034_Data[646] = {
 ,0xa6,0xa6,0x3d,0xbd,0x7f,0x92,0x59,0xcd
 ,0x5a,0x2a,0x82,0xb2,0x37,0x79};
 const unsigned int  NptTlsTrustAnchor_Base_0034_Size = 646;
+
+#endif

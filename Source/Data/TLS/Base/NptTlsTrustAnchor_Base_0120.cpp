@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* IGC/A */
 const unsigned char NptTlsTrustAnchor_Base_0120_Data[1030] = {
 0x30,0x82,0x04,0x02,0x30,0x82,0x02,0xea
@@ -163,3 +166,5 @@ const unsigned char NptTlsTrustAnchor_Base_0120_Data[1030] = {
 ,0x71,0xb3,0xf1,0x59,0x4c,0x46,0x18,0x28
 ,0xab,0x85,0xd2,0x60,0x56,0x5a};
 const unsigned int  NptTlsTrustAnchor_Base_0120_Size = 1030;
+
+#endif

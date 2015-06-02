@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* certSIGN ROOT CA */
 const unsigned char NptTlsTrustAnchor_Base_0131_Data[828] = {
 0x30,0x82,0x03,0x38,0x30,0x82,0x02,0x20
@@ -138,3 +141,5 @@ const unsigned char NptTlsTrustAnchor_Base_0131_Data[828] = {
 ,0xf6,0xee,0xb0,0x5a,0x4e,0x49,0x44,0x54
 ,0x58,0x5f,0x42,0x83};
 const unsigned int  NptTlsTrustAnchor_Base_0131_Size = 828;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Certum Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0064_Data[784] = {
 0x30,0x82,0x03,0x0c,0x30,0x82,0x01,0xf4
@@ -133,3 +136,5 @@ const unsigned char NptTlsTrustAnchor_Base_0064_Data[784] = {
 ,0x6b,0x8a,0x24,0xec,0x06,0x16,0x2c,0x73
 };
 const unsigned int  NptTlsTrustAnchor_Base_0064_Size = 784;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* QuoVadis Root CA 2 */
 const unsigned char NptTlsTrustAnchor_Base_0076_Data[1467] = {
 0x30,0x82,0x05,0xb7,0x30,0x82,0x03,0x9f
@@ -218,3 +221,5 @@ const unsigned char NptTlsTrustAnchor_Base_0076_Data[1467] = {
 ,0x10,0x05,0x65,0xd5,0x82,0x10,0xea,0xc2
 ,0x31,0xcd,0x2e};
 const unsigned int  NptTlsTrustAnchor_Base_0076_Size = 1467;
+
+#endif

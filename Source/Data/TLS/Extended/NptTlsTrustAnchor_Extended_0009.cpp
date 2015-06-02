@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* ePKI Root Certification Authority */
 const unsigned char NptTlsTrustAnchor_Extended_0009_Data[1460] = {
 0x30,0x82,0x05,0xb0,0x30,0x82,0x03,0x98
@@ -217,3 +220,5 @@ const unsigned char NptTlsTrustAnchor_Extended_0009_Data[1460] = {
 ,0x2b,0x9c,0xfd,0x2a,0x0a,0x09,0x4d,0xea
 ,0x81,0xf8,0x11,0x9c};
 const unsigned int  NptTlsTrustAnchor_Extended_0009_Size = 1460;
+
+#endif

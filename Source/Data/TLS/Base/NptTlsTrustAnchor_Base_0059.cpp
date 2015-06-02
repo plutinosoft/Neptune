@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* America Online Root Certification Authority 1 */
 const unsigned char NptTlsTrustAnchor_Base_0059_Data[936] = {
 0x30,0x82,0x03,0xa4,0x30,0x82,0x02,0x8c
@@ -152,3 +155,5 @@ const unsigned char NptTlsTrustAnchor_Base_0059_Data[936] = {
 ,0x80,0x3a,0x99,0xed,0x75,0xcc,0x46,0x7b
 };
 const unsigned int  NptTlsTrustAnchor_Base_0059_Size = 936;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* DigiNotar Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0117_Data[1422] = {
 0x30,0x82,0x05,0x8a,0x30,0x82,0x03,0x72
@@ -212,3 +215,5 @@ const unsigned char NptTlsTrustAnchor_Base_0117_Data[1422] = {
 ,0xb2,0xe5,0x8c,0xf0,0x86,0x99,0xb8,0xe5
 ,0xc5,0xdf,0x84,0xc1,0xb7,0xeb};
 const unsigned int  NptTlsTrustAnchor_Base_0117_Size = 1422;
+
+#endif

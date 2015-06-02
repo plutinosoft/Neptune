@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Go Daddy Class 2 CA */
 const unsigned char NptTlsTrustAnchor_Base_0095_Data[1028] = {
 0x30,0x82,0x04,0x00,0x30,0x82,0x02,0xe8
@@ -163,3 +166,5 @@ const unsigned char NptTlsTrustAnchor_Base_0095_Data[1028] = {
 ,0x2a,0x5a,0x57,0xad,0x37,0x0f,0xaf,0x1d
 ,0x7f,0xdb,0xbd,0x9f};
 const unsigned int  NptTlsTrustAnchor_Base_0095_Size = 1028;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Swisscom Root CA 1 */
 const unsigned char NptTlsTrustAnchor_Base_0101_Data[1501] = {
 0x30,0x82,0x05,0xd9,0x30,0x82,0x03,0xc1
@@ -222,3 +225,5 @@ const unsigned char NptTlsTrustAnchor_Base_0101_Data[1501] = {
 ,0x30,0x1a,0xf5,0x9a,0x6c,0xf4,0x0e,0x53
 ,0xf9,0x3a,0x5b,0xd1,0x1c};
 const unsigned int  NptTlsTrustAnchor_Base_0101_Size = 1501;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Staat der Nederlanden Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0081_Data[958] = {
 0x30,0x82,0x03,0xba,0x30,0x82,0x02,0xa2
@@ -154,3 +157,5 @@ const unsigned char NptTlsTrustAnchor_Base_0081_Data[958] = {
 ,0x15,0xc1,0x24,0x7c,0x32,0x7c,0x03,0x1d
 ,0x3b,0xa1,0x58,0x45,0x32,0x93};
 const unsigned int  NptTlsTrustAnchor_Base_0081_Size = 958;
+
+#endif

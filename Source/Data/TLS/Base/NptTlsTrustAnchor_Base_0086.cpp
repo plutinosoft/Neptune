@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* UTN USERFirst Hardware Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0086_Data[1144] = {
 0x30,0x82,0x04,0x74,0x30,0x82,0x03,0x5c
@@ -178,3 +181,5 @@ const unsigned char NptTlsTrustAnchor_Base_0086_Data[1144] = {
 ,0x32,0x9c,0x1e,0xbb,0x9d,0xf8,0x66,0xa8
 };
 const unsigned int  NptTlsTrustAnchor_Base_0086_Size = 1144;
+
+#endif

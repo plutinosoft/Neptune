@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* RSA Security 1024 v3 */
 const unsigned char NptTlsTrustAnchor_Base_0053_Data[608] = {
 0x30,0x82,0x02,0x5c,0x30,0x82,0x01,0xc5
@@ -111,3 +114,5 @@ const unsigned char NptTlsTrustAnchor_Base_0053_Data[608] = {
 ,0x46,0x3e,0x91,0x3f,0x8b,0xeb,0xf7,0x71
 };
 const unsigned int  NptTlsTrustAnchor_Base_0053_Size = 608;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Camerfirma Global Chambersign Root */
 const unsigned char NptTlsTrustAnchor_Base_0089_Data[1225] = {
 0x30,0x82,0x04,0xc5,0x30,0x82,0x03,0xad
@@ -188,3 +191,5 @@ const unsigned char NptTlsTrustAnchor_Base_0089_Data[1225] = {
 ,0x76,0x5d,0x75,0x90,0x1a,0xf5,0x26,0x8f
 ,0xf0};
 const unsigned int  NptTlsTrustAnchor_Base_0089_Size = 1225;
+
+#endif

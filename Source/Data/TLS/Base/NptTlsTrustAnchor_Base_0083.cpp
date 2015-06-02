@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* TDC OCES Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0083_Data[1309] = {
 0x30,0x82,0x05,0x19,0x30,0x82,0x04,0x01
@@ -198,3 +201,5 @@ const unsigned char NptTlsTrustAnchor_Base_0083_Data[1309] = {
 ,0x04,0xa3,0x43,0x2d,0xda,0xfc,0x0b,0x62
 ,0xea,0x2f,0x5f,0x62,0x53};
 const unsigned int  NptTlsTrustAnchor_Base_0083_Size = 1309;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Visa eCommerce Root */
 const unsigned char NptTlsTrustAnchor_Base_0061_Data[934] = {
 0x30,0x82,0x03,0xa2,0x30,0x82,0x02,0x8a
@@ -151,3 +154,5 @@ const unsigned char NptTlsTrustAnchor_Base_0061_Data[934] = {
 ,0x8e,0xd4,0x8e,0xe6,0x4f,0x51,0xaf,0x16
 ,0x92,0xe0,0x5c,0xf6,0x07,0x0f};
 const unsigned int  NptTlsTrustAnchor_Base_0061_Size = 934;
+
+#endif

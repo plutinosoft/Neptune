@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* RSA Root Certificate 1 */
 const unsigned char NptTlsTrustAnchor_Base_0024_Data[747] = {
 0x30,0x82,0x02,0xe7,0x30,0x82,0x02,0x50
@@ -128,3 +131,5 @@ const unsigned char NptTlsTrustAnchor_Base_0024_Data[747] = {
 ,0x20,0x0f,0x45,0x7e,0x6b,0xa2,0x7f,0xa3
 ,0x8c,0x15,0xee};
 const unsigned int  NptTlsTrustAnchor_Base_0024_Size = 747;
+
+#endif

@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Camerfirma Chambers of Commerce Root */
 const unsigned char NptTlsTrustAnchor_Base_0088_Data[1217] = {
 0x30,0x82,0x04,0xbd,0x30,0x82,0x03,0xa5
@@ -187,3 +190,5 @@ const unsigned char NptTlsTrustAnchor_Base_0088_Data[1217] = {
 ,0x98,0xbc,0x38,0xb5,0x73,0x3c,0x8b,0xf8
 ,0xdc};
 const unsigned int  NptTlsTrustAnchor_Base_0088_Size = 1217;
+
+#endif

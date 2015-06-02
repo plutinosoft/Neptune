@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* Security Communication EV RootCA1 */
 const unsigned char NptTlsTrustAnchor_Base_0121_Data[897] = {
 0x30,0x82,0x03,0x7d,0x30,0x82,0x02,0x65
@@ -147,3 +150,5 @@ const unsigned char NptTlsTrustAnchor_Base_0121_Data[897] = {
 ,0xa3,0x2a,0xe7,0x88,0x83,0xed,0x77,0x8f
 ,0x74};
 const unsigned int  NptTlsTrustAnchor_Base_0121_Size = 897;
+
+#endif

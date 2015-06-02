@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* AddTrust Qualified Certificates Root */
 const unsigned char NptTlsTrustAnchor_Base_0040_Data[1058] = {
 0x30,0x82,0x04,0x1e,0x30,0x82,0x03,0x06
@@ -167,3 +170,5 @@ const unsigned char NptTlsTrustAnchor_Base_0040_Data[1058] = {
 ,0xcf,0xf0,0x30,0xb1,0xff,0x4b,0x99,0xe8
 ,0xc6,0xa1};
 const unsigned int  NptTlsTrustAnchor_Base_0040_Size = 1058;
+
+#endif

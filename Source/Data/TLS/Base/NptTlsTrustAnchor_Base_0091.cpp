@@ -31,6 +31,9 @@
 |
  ****************************************************************/
 
+#include "NptConfig.h"
+#if defined(NPT_CONFIG_ENABLE_TLS)
+
  /* NetLock Notary (Class A) Root */
 const unsigned char NptTlsTrustAnchor_Base_0091_Data[1665] = {
 0x30,0x82,0x06,0x7d,0x30,0x82,0x05,0x65
@@ -243,3 +246,5 @@ const unsigned char NptTlsTrustAnchor_Base_0091_Data[1665] = {
 ,0xad,0x3c,0x17,0x66,0x88,0xb5,0xfd,0xb6
 ,0x88};
 const unsigned int  NptTlsTrustAnchor_Base_0091_Size = 1665;
+
+#endif
