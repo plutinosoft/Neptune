@@ -6,3 +6,4 @@ Build/Targets/universal-apple-macosx/build
 xcuserdata
 *.pyc
 Carthage
+Scripts/apple_wwdr.cer
