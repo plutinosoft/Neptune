@@ -4,3 +4,5 @@
 Neptune.xccheckout
 Build/Targets/universal-apple-macosx/build
 xcuserdata
+*.pyc
+Carthage
