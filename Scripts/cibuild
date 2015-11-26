@@ -17,7 +17,6 @@ main ()
 {
     import_certs
 
-    carthage bootstrap --platform ios
 	carthage build --platform ios --no-skip-current
     local status=$?
 
