@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 export SCRIPT_DIR=$(dirname "$0")
 
@@ -22,10 +22,9 @@ main ()
 {
     import_certs
 
-	carthage build --verbose --platform ios --no-skip-current
+	carthage build --platform ios --no-skip-current
+    carthage archive Neptune
     local status=$?
-
-    delete_keychain
     exit $status
 }
 

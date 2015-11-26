@@ -3,3 +3,10 @@ language: objective-c
 before_install: brew install carthage
 install: true
 script: Scripts/cibuild
+deploy:
+  provider: releases
+  api_key:
+    secure: eTh9QSqyqlwO3CjyCeidjhwK7ajYdNBLDnouggWYLMVy2mD78jY4j8fh5Yh8Heoqn0a2P4bq16o7gD2bxf8dxmh5nXTv8UmWN8r20mqtxzW6j97Ma0mSlIgTaMhDzaK1YTN3SiK/M322kd9Vu4Hi67VH4+m7PNzHhVR5jVAq26MoCdmZkeX9VOVf5ObXifH5DLDhuvHWMxf3YZ7YbjhzZ06LPVge+GMctR2rSnHErGbsuQmwNet9rLfVRzs6TDyrwGhHzc+7G0179/BvOuovWSixdkE2/oUqJ992FHr7jpO0LFTveIWp+vSRqf4oJ1Jd/Aga+yfN1cgx17fEtF5XOKbrAwlGVDPHGRnzRxzzlh30Yr6Snyb2syuDBrd+RQgw1YHD2xIVVR3MKSnnf+ksG5y/yNAZi1BhAHGSvN2mpKIBO3FX8lClJrlj4S/IQlCDT69/lU8s867XiadFirSwbjVIJ7zgZYlVIRyfv6ZyfGn+2XjnVDuwrp+SAV3V9004SRPNWPwksoJkamJ7vV6kRu5vkZ5daxs2szn3WnZJSnBzQyCSG85EFyHLygc64TnPXL9njmxJ0+covAtzIIaVXNQgwkOr35kMSt+GeryzHkP/tiitU9V8W+TrHcGDFZIPdO5iZA66eNjQIJQjC9dLjQLvpKv8A8BdbA2ReAjrRvg=
+  file: Neptune.framework.zip
+  on:
+    tags: true
