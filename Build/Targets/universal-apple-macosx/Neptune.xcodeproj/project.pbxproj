@@ -7976,6 +7976,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NPT_DEBUG,
+					NPT_CONFIG_ENABLE_LOGGING,
+					NPT_CONFIG_ENABLE_ZIP,
+					NPT_CONFIG_ENABLE_TLS,
+					NPT_CONFIG_ENABLE_IPV6,
+				);
 				PRODUCT_NAME = Neptune;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 			};
@@ -7985,6 +7992,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NPT_CONFIG_ENABLE_LOGGING,
+					NPT_CONFIG_ENABLE_ZIP,
+					NPT_CONFIG_ENABLE_TLS,
+					NPT_CONFIG_ENABLE_IPV6,
+				);
 				PRODUCT_NAME = Neptune;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 			};

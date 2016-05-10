@@ -101,7 +101,7 @@
 #define NPT_CONFIG_HAVE_NEW_H
 
 /*----------------------------------------------------------------------
-|   sockets
+|   defaults
 +---------------------------------------------------------------------*/
 #define NPT_CONFIG_HAVE_SOCKADDR_SA_LEN
 
@@ -134,6 +134,9 @@
 #if defined(__linux__)
 #define NPT_CONFIG_HAVE_GETADDRINFO
 #undef NPT_CONFIG_HAVE_SOCKADDR_SA_LEN
+#define NPT_CONFIG_HAVE_ARPA_INET_H
+#define NPT_CONFIG_HAVE_INET_NTOP
+#define NPT_CONFIG_HAVE_INET_PTON
 #endif
 
 /* symbian */
@@ -146,6 +149,9 @@
 #if defined(ANDROID)
 #define NPT_CONFIG_HAVE_GETADDRINFO
 #undef NPT_CONFIG_HAVE_SOCKADDR_SA_LEN
+#define NPT_CONFIG_HAVE_ARPA_INET_H
+#define NPT_CONFIG_HAVE_INET_NTOP
+#define NPT_CONFIG_HAVE_INET_PTON
 #endif
 
 /* OSX and iOS */
@@ -153,6 +159,9 @@
 #define NPT_CONFIG_HAVE_GETADDRINFO
 #define NPT_CONFIG_HAVE_AUTORELEASE_POOL
 #define NPT_CONFIG_HAVE_SOCKADDR_IN_SIN_LEN
+#define NPT_CONFIG_HAVE_ARPA_INET_H
+#define NPT_CONFIG_HAVE_INET_NTOP
+#define NPT_CONFIG_HAVE_INET_PTON
 #endif
 
 /*----------------------------------------------------------------------
@@ -321,6 +330,10 @@ typedef long NPT_PointerLong;
 
 #if !defined(NPT_LocalFunctionName)
 #define NPT_LocalFunctionName (NULL)
+#endif
+
+#if !defined(NPT_CONFIG_THREAD_STACK_SIZE)
+#define NPT_CONFIG_THREAD_STACK_SIZE 0
 #endif
 
 #if !defined(NPT_fseek)
