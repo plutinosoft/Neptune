@@ -7,3 +7,5 @@ xcuserdata
 *.pyc
 Carthage
 Scripts/apple_wwdr.cer
+Build/Targets/arm-android-linux/Debug
+Build/Targets/arm-android-linux/Release
