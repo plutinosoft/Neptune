@@ -370,9 +370,10 @@ SocketAddressToInetAddress(const NPT_SocketAddress& socket_address,
     
     // setup the structure
     inet_address_length = sizeof(sockaddr_in6);
-    inet_address.sa_in6.sin6_len    = inet_address_length;
-    inet_address.sa_in6.sin6_family = AF_INET6;
-    inet_address.sa_in6.sin6_port   = htons(socket_address.GetPort());
+    inet_address.sa_in6.sin6_len      = inet_address_length;
+    inet_address.sa_in6.sin6_family   = AF_INET6;
+    inet_address.sa_in6.sin6_port     = htons(socket_address.GetPort());
+    inet_address.sa_in6.sin6_scope_id = socket_address.GetIpAddress().GetScopeId();
 
     NPT_IpAddress::Type type = socket_address.GetIpAddress().GetType();
     if (type == NPT_IpAddress::IPV6) {
@@ -1914,6 +1915,34 @@ NPT_Result
 NPT_BsdUdpMulticastSocket::JoinGroup(const NPT_IpAddress& group,
                                      const NPT_IpAddress& iface)
 {
+#if defined(NPT_CONFIG_ENABLE_IPV6)
+    struct ipv6_mreq mreq;
+
+    // set the interface index
+    mreq.ipv6mr_interface = 0; // FIXME: hardcoded to 0 for now
+    
+    // set the group address
+    if (group.GetType() == NPT_IpAddress::IPV6) {
+        NPT_CopyMemory(&mreq.ipv6mr_multiaddr.s6_addr[0], group.AsBytes(), 16);
+    } else {
+        NPT_SetMemory(&mreq.ipv6mr_multiaddr.s6_addr[0], 0, 10);
+        mreq.ipv6mr_multiaddr.s6_addr[10] = 0xFF;
+        mreq.ipv6mr_multiaddr.s6_addr[11] = 0xFF;
+        NPT_CopyMemory(&mreq.ipv6mr_multiaddr.s6_addr[12], group.AsBytes(), 4);
+    }
+
+    // set socket option
+    NPT_LOG_FINE_2("joining multicast addr %s group %s",
+                   iface.ToString().GetChars(), group.ToString().GetChars());
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IPV6, IPV6_JOIN_GROUP,
+                   (SocketOption)&mreq, sizeof(mreq))) {
+        NPT_Result result = MapErrorCode(GetSocketError());
+        NPT_LOG_FINE_1("setsockopt error %d", result);
+        return result;
+    }
+    return NPT_SUCCESS;
+#else
     struct ip_mreq mreq;
 
     // set the interface address
@@ -1923,7 +1952,7 @@ NPT_BsdUdpMulticastSocket::JoinGroup(const NPT_IpAddress& group,
     mreq.imr_multiaddr.s_addr = htonl(group.AsLong());
 
     // set socket option
-    NPT_LOG_FINE_2("joining multicast addr %s group %s", 
+    NPT_LOG_FINE_2("joining multicast addr %s group %s",
                    iface.ToString().GetChars(), group.ToString().GetChars());
     int io_result = setsockopt(m_SocketFdReference->m_SocketFd, 
                                IPPROTO_IP, IP_ADD_MEMBERSHIP, 
@@ -1936,6 +1965,7 @@ NPT_BsdUdpMulticastSocket::JoinGroup(const NPT_IpAddress& group,
         return result;
     }
     return NPT_SUCCESS;
+#endif
 }
 #endif
 
@@ -1957,6 +1987,33 @@ NPT_Result
 NPT_BsdUdpMulticastSocket::LeaveGroup(const NPT_IpAddress& group,
                                       const NPT_IpAddress& iface)
 {
+#if defined(NPT_CONFIG_ENABLE_IPV6)
+    struct ipv6_mreq mreq;
+
+    // set the interface index
+    mreq.ipv6mr_interface = 0; // FIXME: hardcoded to 0 for now
+    
+    // set the group address
+    if (group.GetType() == NPT_IpAddress::IPV6) {
+        NPT_CopyMemory(&mreq.ipv6mr_multiaddr.s6_addr[0], group.AsBytes(), 16);
+    } else {
+        NPT_SetMemory(&mreq.ipv6mr_multiaddr.s6_addr[0], 0, 10);
+        mreq.ipv6mr_multiaddr.s6_addr[10] = 0xFF;
+        mreq.ipv6mr_multiaddr.s6_addr[11] = 0xFF;
+        NPT_CopyMemory(&mreq.ipv6mr_multiaddr.s6_addr[12], group.AsBytes(), 4);
+    }
+
+    // set socket option
+    NPT_LOG_FINE_2("leaving multicast addr %s group %s",
+                   iface.ToString().GetChars(), group.ToString().GetChars());
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IPV6, IPV6_LEAVE_GROUP,
+                   (SocketOption)&mreq, sizeof(mreq))) {
+        NPT_Result result = MapErrorCode(GetSocketError());
+        NPT_LOG_FINE_1("setsockopt error %d", result);
+        return result;
+    }
+#else
     struct ip_mreq mreq;
 
     // set the interface address
@@ -1966,7 +2023,7 @@ NPT_BsdUdpMulticastSocket::LeaveGroup(const NPT_IpAddress& group,
     mreq.imr_multiaddr.s_addr = htonl(group.AsLong());
 
     // set socket option
-    NPT_LOG_FINE_2("leaving multicast addr %s group %s", 
+    NPT_LOG_FINE_2("leaving multicast addr %s group %s",
                    iface.ToString().GetChars(), group.ToString().GetChars());
     int io_result = setsockopt(m_SocketFdReference->m_SocketFd, 
                                IPPROTO_IP, IP_DROP_MEMBERSHIP, 
@@ -1978,6 +2035,7 @@ NPT_BsdUdpMulticastSocket::LeaveGroup(const NPT_IpAddress& group,
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
     }
+#endif
     
     return NPT_SUCCESS;
 }
@@ -1999,6 +2057,19 @@ NPT_BsdUdpMulticastSocket::SetInterface(const NPT_IpAddress& iface)
 NPT_Result
 NPT_BsdUdpMulticastSocket::SetInterface(const NPT_IpAddress& iface)
 {
+#if defined(NPT_CONFIG_ENABLE_IPV6)
+    unsigned int ifindex = 0; // FIXME: hardcoded to 0 for now
+    
+    // set socket option
+    NPT_LOG_FINE_1("setting multicast interface %s", iface.ToString().GetChars());
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IPV6, IPV6_MULTICAST_IF,
+                   (char*)&ifindex, sizeof(ifindex))) {
+        NPT_Result result = MapErrorCode(GetSocketError());
+        NPT_LOG_FINE_1("setsockopt error %d", result);
+        return result;
+    }
+#else
     struct in_addr iface_addr;
     // set the interface address
     iface_addr.s_addr = htonl(iface.AsLong());
@@ -2015,6 +2086,7 @@ NPT_BsdUdpMulticastSocket::SetInterface(const NPT_IpAddress& iface)
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
     }
+#endif
     
     return NPT_SUCCESS;
 }
@@ -2036,13 +2108,20 @@ NPT_BsdUdpMulticastSocket::SetTimeToLive(unsigned char ttl)
 NPT_Result
 NPT_BsdUdpMulticastSocket::SetTimeToLive(unsigned char ttl)
 {
-    unsigned char ttl_opt = ttl;
 
     // set socket option
     NPT_LOG_FINE_1("setting multicast TTL to %d", (int)ttl); 
+#if defined(NPT_CONFIG_ENABLE_IPV6)
+    int ttl_opt = ttl;
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IPV6, IPV6_MULTICAST_HOPS,
+                   (SocketOption)&ttl_opt, sizeof(ttl_opt))) {
+#else
+    unsigned char ttl_opt = ttl;
     if (setsockopt(m_SocketFdReference->m_SocketFd,
                    IPPROTO_IP, IP_MULTICAST_TTL,
                    (SocketOption)&ttl_opt, sizeof(ttl_opt))) {
+#endif
         NPT_Result result = MapErrorCode(GetSocketError());
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
