@@ -50,6 +50,7 @@ options = Variables()
 options.AddVariables(
     EnumVariable('target', 'Build Target', DefaultTarget(), allowed_values=TARGET_PLATFORMS),
     BoolVariable('stop_on_warning', 'Stop the build on warnings', False),
+    BoolVariable('shared', 'Build a shared library', False),
     ListVariable('build_config', 'build configurations', 'Debug', names=['Debug', 'Release'])
 )
 
