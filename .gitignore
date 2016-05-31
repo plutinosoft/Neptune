@@ -9,3 +9,5 @@ Carthage
 Scripts/apple_wwdr.cer
 Build/Targets/arm-android-linux/Debug
 Build/Targets/arm-android-linux/Release
+Build/Targets/x86-unknown-linux/Debug
+Build/Targets/arm-unknown-linux/Debug
