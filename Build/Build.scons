@@ -166,13 +166,18 @@ if os.path.exists(target_config_file):
 # modules
 #######################################################
 
+build_shared_libraries = False
+if env.has_key('NPT_CONFIG_SHARED_LIB'):
+	build_shared_libraries = True
+
 neptune_extra_linked_modules = []
 if not env.has_key('NPT_CONFIG_NO_ZIP'):
     env.AppendUnique(CPPDEFINES=['NPT_CONFIG_ENABLE_ZIP'])
     neptune_extra_linked_modules += ['Zlib']
     LibraryModule(name                  = 'Zlib',
                   source_root           = '.',
-                  build_source_dirs     = ['ThirdParty/zlib-1.2.3'])
+                  build_source_dirs     = ['ThirdParty/zlib-1.2.3'],
+                  shared                = build_shared_libraries)
 
 if not env.has_key('NPT_CONFIG_NO_SSL'):
     env.AppendUnique(CPPDEFINES=['NPT_CONFIG_ENABLE_TLS'])
@@ -197,7 +202,8 @@ LibraryModule(name                  = 'Neptune',
               build_source_dirs     = ['Core']+tls_data_dirs,
               build_source_files    = env['NPT_SYSTEM_SOURCES'],
               excluded_files        = neptune_excluded_files,
-              linked_modules        = env['NPT_EXTRA_LIBS']+neptune_extra_linked_modules)
+              linked_modules        = env['NPT_EXTRA_LIBS']+neptune_extra_linked_modules,
+              shared                = build_shared_libraries)
 
 for app in ['NetPump', 'NetConfig', 'NetPing', 'NetEcho', 'NetGet', 'NetResolve', 'NetBench', 'MiniHttpServer', 'ZipHttpServer']:
     Application(app, 'Source/Apps/'+app)
