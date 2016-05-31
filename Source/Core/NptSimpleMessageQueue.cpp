@@ -44,15 +44,11 @@ NPT_SET_LOCAL_LOGGER("neptune.message-queue")
 /*----------------------------------------------------------------------
 |   NPT_SimpleMessageCapsule
 +---------------------------------------------------------------------*/
-class NPT_SimpleMessageCapsule
+struct NPT_SimpleMessageCapsule
 {
 public:
     NPT_SimpleMessageCapsule(NPT_Message* message, 
                              NPT_MessageHandler* handler);
-        m_Message(message), m_Handler(handler), m_Proxy(NULL) {
-        m_Proxy = NPT_DYNAMIC_CAST(NPT_MessageHandlerProxy, m_Handler);
-        if (m_Proxy) m_Proxy->AddReference();
-    }
     ~NPT_SimpleMessageCapsule();
 
     NPT_Message*             m_Message;

@@ -54,7 +54,6 @@
 				E44E2BC11AE7692F0092347B /* PBXTargetDependency */,
 				CAE417EC0E0DC20400A530D1 /* PBXTargetDependency */,
 				CAE417970E0DC11F00A530D1 /* PBXTargetDependency */,
-				CAE417990E0DC11F00A530D1 /* PBXTargetDependency */,
 			);
 			name = All;
 			productName = All;
@@ -1149,13 +1148,6 @@
 			remoteGlobalIDString = CAE4176C0E0DC0FE00A530D1;
 			remoteInfo = Tests;
 		};
-		CAE417980E0DC11F00A530D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F912B69E0B8EB1C700C1E90D;
-			remoteInfo = Neptune;
-		};
 		CAE417A20E0DC13E00A530D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
@@ -1225,6 +1217,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F912B69E0B8EB1C700C1E90D;
 			remoteInfo = Neptune;
+		};
+		E42F6F0F1CFD56F50012006E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F912B6870B8EB12700C1E90D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4FCC83B1B1E3EB500CCA327;
+			remoteInfo = "axTLS-iOS";
 		};
 		E44E2B911AE7649D0092347B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -3745,6 +3744,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E42F6F101CFD56F50012006E /* PBXTargetDependency */,
 				CA451F691252BE110045CF69 /* PBXTargetDependency */,
 			);
 			name = Neptune;
@@ -3758,8 +3758,7 @@
 		F912B6870B8EB12700C1E90D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-<<<<<<< acdd48e814ce32282186e52162ba6975b9823429
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					E40D8B9B1AD86D3A0041A617 = {
 						CreatedOnToolsVersion = 6.2;
@@ -3768,9 +3767,6 @@
 						CreatedOnToolsVersion = 6.3;
 					};
 				};
-=======
-				LastUpgradeCheck = 0630;
->>>>>>> Coverity fixes
 			};
 			buildConfigurationList = F912B6880B8EB12700C1E90D /* Build configuration list for PBXProject "Neptune" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -4779,11 +4775,6 @@
 			target = CAE4176C0E0DC0FE00A530D1 /* Tests */;
 			targetProxy = CAE417960E0DC11F00A530D1 /* PBXContainerItemProxy */;
 		};
-		CAE417990E0DC11F00A530D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F912B69E0B8EB1C700C1E90D /* Neptune */;
-			targetProxy = CAE417980E0DC11F00A530D1 /* PBXContainerItemProxy */;
-		};
 		CAE417A30E0DC13E00A530D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F912B69E0B8EB1C700C1E90D /* Neptune */;
@@ -4834,6 +4825,11 @@
 			target = F912B69E0B8EB1C700C1E90D /* Neptune */;
 			targetProxy = CAF2EFDC0E64A28000948C04 /* PBXContainerItemProxy */;
 		};
+		E42F6F101CFD56F50012006E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4FCC83B1B1E3EB500CCA327 /* axTLS-iOS */;
+			targetProxy = E42F6F0F1CFD56F50012006E /* PBXContainerItemProxy */;
+		};
 		E44E2B921AE7649D0092347B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F912B69E0B8EB1C700C1E90D /* Neptune */;
@@ -4882,7 +4878,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = QueueTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4895,7 +4891,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = QueueTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -4917,7 +4913,6 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
 			name = Debug;
@@ -4939,7 +4934,6 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
 			name = Release;
@@ -4954,7 +4948,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SocketsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4967,7 +4961,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SocketsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -4982,7 +4976,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TlsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4995,7 +4989,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TlsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5010,7 +5004,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5023,7 +5017,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5038,7 +5032,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TimeTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5051,7 +5045,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TimeTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5065,7 +5059,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpServerTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -5078,7 +5072,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpServerTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5097,7 +5091,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5111,7 +5105,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -5125,7 +5119,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = minihttpserver;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5138,7 +5132,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = minihttpserver;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5153,7 +5147,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetGet;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5166,7 +5160,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetGet;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5181,7 +5175,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = DigestsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5194,7 +5188,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = DigestsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5209,7 +5203,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = CryptoTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5222,7 +5216,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = CryptoTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5237,7 +5231,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StreamsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5250,7 +5244,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StreamsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5265,7 +5259,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5278,7 +5272,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5293,7 +5287,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5306,7 +5300,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5320,7 +5314,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = XmlTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -5333,7 +5327,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = XmlTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5347,7 +5341,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StringsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -5360,7 +5354,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StringsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5375,7 +5369,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetResolve;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5388,7 +5382,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetResolve;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5413,7 +5407,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -5431,7 +5424,6 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};
@@ -5445,7 +5437,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MiscTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5458,7 +5450,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MiscTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5467,7 +5459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ArraysTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5475,7 +5467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ArraysTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -5489,7 +5481,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = BufferedStreamsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5502,7 +5494,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = BufferedStreamsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5517,7 +5509,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5530,7 +5522,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5545,7 +5537,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ListsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5558,7 +5550,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ListsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5573,7 +5565,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5586,7 +5578,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5601,7 +5593,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MapsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5614,7 +5606,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MapsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5629,7 +5621,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5642,7 +5634,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5657,7 +5649,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5670,7 +5662,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest2;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5685,7 +5677,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = RingBufferTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5698,7 +5690,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = RingBufferTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5713,7 +5705,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ThreadsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5726,7 +5718,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ThreadsTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5741,7 +5733,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UdpTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5754,7 +5746,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UdpTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5769,7 +5761,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UrlTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5782,7 +5774,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UrlTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5797,7 +5789,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ZipTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5810,7 +5802,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ZipTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5822,6 +5814,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = Tests;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5831,6 +5824,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = Tests;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5865,7 +5859,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPump;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5878,7 +5872,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPump;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5893,7 +5887,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetEcho;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5906,7 +5900,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetEcho;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5921,7 +5915,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5934,7 +5928,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetConfig;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5949,7 +5943,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPing;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5962,7 +5956,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPing;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -5974,6 +5968,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = Apps;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -5983,6 +5978,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = Apps;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -6011,7 +6007,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -6038,7 +6034,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -6065,7 +6061,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				PRODUCT_NAME = ziphttpserver;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -6092,7 +6088,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				PRODUCT_NAME = ziphttpserver;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -6106,7 +6102,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest1;
-				SUPPORTED_PLATFORMS = macosx;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -6119,6 +6115,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -6412,6 +6409,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = Apps;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6422,6 +6420,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = Tests;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6450,7 +6449,6 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
 			name = "Release-NoCrypto";
@@ -6460,7 +6458,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = "Release-NoCrypto";
 		};
@@ -6579,6 +6578,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = minihttpserver;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6592,6 +6592,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPump;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6605,6 +6606,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetEcho;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6632,6 +6634,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPing;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6645,6 +6648,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetGet;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6675,6 +6679,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetResolve;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6683,6 +6688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ArraysTest1;
+				SDKROOT = macosx;
 			};
 			name = "Release-NoCrypto";
 		};
@@ -6695,6 +6701,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = BufferedStreamsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6707,6 +6714,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpServerTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6720,6 +6728,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6733,6 +6742,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ListsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6746,6 +6756,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6759,6 +6770,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest2;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6772,6 +6784,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MapsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6785,6 +6798,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6798,6 +6812,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest2;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6811,6 +6826,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MiscTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6825,6 +6841,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = "Release-NoCrypto";
 		};
@@ -6837,6 +6854,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = QueueTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6850,6 +6868,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = RingBufferTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6862,6 +6881,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StringsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6875,6 +6895,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ThreadsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6888,6 +6909,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UdpTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6901,6 +6923,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UrlTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6913,6 +6936,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = XmlTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6926,6 +6950,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ZipTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6953,6 +6978,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = "Release-NoCrypto";
 		};
@@ -6965,6 +6991,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StreamsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6978,6 +7005,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -6991,6 +7019,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TlsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7004,6 +7033,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest2;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7017,6 +7047,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TimeTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7030,6 +7061,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest2;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7043,6 +7075,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SocketsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7056,6 +7089,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = DigestsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7069,6 +7103,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = CryptoTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = "Release-NoCrypto";
@@ -7096,6 +7131,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				PRODUCT_NAME = ziphttpserver;
+				SDKROOT = macosx;
 			};
 			name = "Release-NoCrypto";
 		};
@@ -7163,6 +7199,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = Apps;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7173,6 +7210,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = Tests;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7200,7 +7238,6 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
 			name = "Debug-NoCrypto";
@@ -7210,7 +7247,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7328,6 +7366,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = minihttpserver;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7341,6 +7380,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPump;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7354,6 +7394,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetEcho;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7381,6 +7422,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetPing;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7394,6 +7436,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetGet;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7430,6 +7473,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = NetResolve;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7437,6 +7481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = ArraysTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7450,6 +7495,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = BufferedStreamsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7462,6 +7508,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpServerTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = "Debug-NoCrypto";
@@ -7476,6 +7523,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7489,6 +7537,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ListsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7502,6 +7551,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7515,6 +7565,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = LoggingTest2;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7528,6 +7579,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MapsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7541,6 +7593,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7554,6 +7607,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MessagesTest2;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7567,6 +7621,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = MiscTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7584,6 +7639,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7597,6 +7653,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = QueueTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7610,6 +7667,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = RingBufferTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7622,6 +7680,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StringsTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = "Debug-NoCrypto";
@@ -7636,6 +7695,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ThreadsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7649,6 +7709,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UdpTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7662,6 +7723,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = UrlTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7674,6 +7736,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = XmlTest1;
+				SDKROOT = macosx;
 				ZERO_LINK = YES;
 			};
 			name = "Debug-NoCrypto";
@@ -7688,6 +7751,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ZipTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7715,6 +7779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7728,6 +7793,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = StreamsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7741,6 +7807,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7754,6 +7821,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TlsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7767,6 +7835,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = HttpClientTest2;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7780,6 +7849,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = TimeTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7793,6 +7863,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = FileTest2;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7806,6 +7877,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = SocketsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7819,6 +7891,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = DigestsTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7832,6 +7905,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = CryptoTest1;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7858,6 +7932,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				PRODUCT_NAME = ziphttpserver;
+				SDKROOT = macosx;
 			};
 			name = "Debug-NoCrypto";
 		};
@@ -7994,7 +8069,6 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				VALID_ARCHS = "i386 x86_64";
 				ONLY_ACTIVE_ARCH = YES;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -8055,7 +8129,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
 		};
@@ -8064,7 +8139,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Neptune;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Release;
 		};

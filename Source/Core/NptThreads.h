@@ -223,6 +223,7 @@ class NPT_ThreadInterface: public NPT_Runnable, public NPT_Interruptible
     virtual           ~NPT_ThreadInterface() {}
     virtual NPT_Result Start() = 0;
     virtual NPT_Result Wait(NPT_Timeout timeout = NPT_TIMEOUT_INFINITE) = 0;
+	virtual NPT_Result GetPriority(int& priority) = 0;
     virtual NPT_Result SetPriority(int /*priority*/) { return NPT_SUCCESS; } 
     virtual NPT_Result CancelBlockerSocket() = 0;
 };

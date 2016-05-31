@@ -658,21 +658,6 @@ NPT_IpAddress::ResolveName(const char* name, NPT_Timeout)
     // pick the first address
     *this = *(addresses.GetFirstItem());
     
-#else
-    // do a name lookup
-    struct hostent *host_entry = gethostbyname(name);
-    if (host_entry == NULL ||
-        host_entry->h_addrtype != AF_INET) {
-        return NPT_ERROR_HOST_UNKNOWN;
-    }
-    NPT_CopyMemory(m_Address, host_entry->h_addr, 4);
-
-#if defined(_XBOX)
-    delete host_entry;   
-#endif
-
-#endif
-    
     return NPT_SUCCESS;
 }
 
@@ -1235,7 +1220,7 @@ NPT_BsdSocketOutputStream::Write(const void*  buffer,
         }
         
         // update position and return
-        if (bytes_written) *bytes_written = nb_written;
+        if (bytes_written) *bytes_written = (NPT_Size)nb_written;
         m_SocketFdReference->m_Position += nb_written;
         return NPT_SUCCESS;
     }
@@ -1339,15 +1324,11 @@ NPT_BsdSocket::NPT_BsdSocket(SocketFd fd, NPT_Flags flags) :
     // disable the SIGPIPE signal
 #if defined(SO_NOSIGPIPE)
     int option = 1;
-    int io_result = setsockopt(m_SocketFdReference->m_SocketFd,
-               SOL_SOCKET, 
-               SO_NOSIGPIPE, 
-               (SocketOption)&option, 
+    (void)setsockopt(m_SocketFdReference->m_SocketFd,
+                     SOL_SOCKET,
+                     SO_NOSIGPIPE,
                      (SocketOption)&option,
-    if (NPT_BSD_SOCKET_CALL_FAILED(io_result)) {
-        NPT_LOG_FINE_1("setsockopt SO_NOSIGPIPE failed (%d)", MapErrorCode(GetSocketError()));
-    }
-    
+                     sizeof(option));
 #elif defined(SIGPIPE)
     signal(SIGPIPE, SIG_IGN);
 #endif
@@ -1954,12 +1935,9 @@ NPT_BsdUdpMulticastSocket::JoinGroup(const NPT_IpAddress& group,
     // set socket option
     NPT_LOG_FINE_2("joining multicast addr %s group %s",
                    iface.ToString().GetChars(), group.ToString().GetChars());
-    int io_result = setsockopt(m_SocketFdReference->m_SocketFd, 
-                               IPPROTO_IP, IP_ADD_MEMBERSHIP, 
-                               (SocketOption)&mreq, sizeof(mreq));
-    if (io_result == 0) {
-        return NPT_SUCCESS;
-    } else {
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IP, IP_ADD_MEMBERSHIP,
+                   (SocketOption)&mreq, sizeof(mreq))) {
         NPT_Result result = MapErrorCode(GetSocketError());
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
@@ -2025,12 +2003,9 @@ NPT_BsdUdpMulticastSocket::LeaveGroup(const NPT_IpAddress& group,
     // set socket option
     NPT_LOG_FINE_2("leaving multicast addr %s group %s",
                    iface.ToString().GetChars(), group.ToString().GetChars());
-    int io_result = setsockopt(m_SocketFdReference->m_SocketFd, 
-                               IPPROTO_IP, IP_DROP_MEMBERSHIP, 
-                               (SocketOption)&mreq, sizeof(mreq));
-    if (io_result == 0) {
-        return NPT_SUCCESS;
-    } else {
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IP, IP_DROP_MEMBERSHIP,
+                   (SocketOption)&mreq, sizeof(mreq))) {
         NPT_Result result = MapErrorCode(GetSocketError());
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
@@ -2075,13 +2050,10 @@ NPT_BsdUdpMulticastSocket::SetInterface(const NPT_IpAddress& iface)
     iface_addr.s_addr = htonl(iface.AsLong());
 
     // set socket option
-    NPT_LOG_FINE_1("setting multicast interface %s", iface.ToString().GetChars()); 
-    int io_result = setsockopt(m_SocketFdReference->m_SocketFd, 
-                               IPPROTO_IP, IP_MULTICAST_IF, 
-                               (char*)&iface_addr, sizeof(iface_addr));
-    if (io_result == 0) {
-        return NPT_SUCCESS;
-    } else {
+    NPT_LOG_FINE_1("setting multicast interface %s", iface.ToString().GetChars());
+    if (setsockopt(m_SocketFdReference->m_SocketFd,
+                   IPPROTO_IP, IP_MULTICAST_IF,
+                   (char*)&iface_addr, sizeof(iface_addr))) {
         NPT_Result result = MapErrorCode(GetSocketError());
         NPT_LOG_FINE_1("setsockopt error %d", result);
         return result;
