@@ -98,7 +98,7 @@ NPT_IpAddress::ToString() const
     if (string) {
         address = string;
     }
-    
+
     return address;
 }
 #else
@@ -130,7 +130,7 @@ NPT_Result
 NPT_IpAddress::Parse(const char* name)
 {
     int result;
-    
+
     // check the name
     if (name == NULL) return NPT_ERROR_INVALID_PARAMETERS;
 
@@ -152,7 +152,7 @@ NPT_IpAddress::Parse(const char* name)
         m_Type = IPV4;
         return NPT_SUCCESS;
     }
-    
+
     if (result == 0) {
         return NPT_ERROR_INVALID_SYNTAX;
     } else {
@@ -189,7 +189,7 @@ NPT_IpAddress::Parse(const char* name)
             // numerical character
             accumulator = accumulator*10 + (*name - '0');
             if (accumulator > 255) return NPT_ERROR_INVALID_SYNTAX;
-            fragment_empty = false; 
+            fragment_empty = false;
         } else {
             // invalid character
             return NPT_ERROR_INVALID_SYNTAX;
@@ -216,13 +216,13 @@ NPT_Result
 NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& interfaces)
 {
     interfaces.Clear();
-    
+
     struct ifaddrs* addrs = NULL;
     int result = getifaddrs(&addrs);
     if (result != 0) {
         return NPT_ERROR_BASE_UNIX-errno;
     }
-    
+
     for (struct ifaddrs* addr = addrs;
                          addr;
                          addr = addr->ifa_next) {
@@ -270,7 +270,7 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             // add the interface to the list
             interfaces.Add(interface);
         }
-        
+
         if (addr->ifa_addr == NULL) {
             continue;
         }
@@ -303,8 +303,8 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                     broadcast_address,
                     destination_address,
                     netmask);
-                interface->AddAddress(iface_address);  
-                
+                interface->AddAddress(iface_address);
+
                 break;
             }
 
@@ -336,11 +336,11 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                     destination_address,
                     netmask);
                 interface->AddAddress(iface_address);
-                
+
                 break;
-#endif
             }
-            
+#endif
+
 #if defined(AF_LINK) && defined(NPT_CONFIG_HAVE_SOCKADDR_DL)
             case AF_LINK: {
                 struct sockaddr_dl* mac_addr = (struct sockaddr_dl*)addr->ifa_addr;
@@ -354,9 +354,9 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
 #endif
 #if defined(IFT_PPP)
                     case IFT_PPP:   mac_addr_type = NPT_MacAddress::TYPE_PPP;      break;
-#endif                    
+#endif
                 }
-                interface->SetMacAddress(mac_addr_type, 
+                interface->SetMacAddress(mac_addr_type,
                                          (const unsigned char*)(&mac_addr->sdl_data[mac_addr->sdl_nlen]),
                                          mac_addr->sdl_alen);
                 break;
@@ -364,9 +364,9 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
 #endif
         }
     }
-    
+
     freeifaddrs(addrs);
-    
+
     return NPT_SUCCESS;
 }
 #else
@@ -386,11 +386,11 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
     if (net < 0) {
         return NPT_ERROR_BASE_UNIX-errno;
     }
-    
+
     // Try to get the config until we have enough memory for it
     // According to "Unix Network Programming", some implementations
     // do not return an error when the supplied buffer is too small
-    // so we need to try, increasing the buffer size every time, 
+    // so we need to try, increasing the buffer size every time,
     // until we get the same size twice. We cannot assume success when
     // the returned size is smaller than the supplied buffer, because
     // some implementations can return less that the buffer size if
@@ -416,8 +416,8 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             }
             // different size, we need to reallocate
             last_size = config.ifc_len;
-        } 
-        
+        }
+
         // supply 4096 more bytes more next time around
         buffer_size += 4096;
         delete[] buffer;
@@ -427,33 +427,33 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
         close(net);
         return NPT_ERROR_NOT_ENOUGH_SPACE;
     }
-    
+
     // iterate over all objects
     unsigned char *entries;
     for (entries = (unsigned char*)config.ifc_req; entries < (unsigned char*)config.ifc_req+config.ifc_len;) {
         struct ifreq* entry = (struct ifreq*)entries;
-                
+
         // point to the next entry
         entries += NPT_IFREQ_SIZE(entry);
-        
+
         // ignore anything except AF_INET, AF_INET6 (if enabled) and AF_LINK addresses
         if (entry->ifr_addr.sa_family != AF_INET
 #if defined(NPT_CONFIG_ENABLE_IPV6)
             && entry->ifr_addr.sa_family != AF_INET6
 #endif
 #if defined(AF_LINK)
-            && entry->ifr_addr.sa_family != AF_LINK 
+            && entry->ifr_addr.sa_family != AF_LINK
 #endif
         ) {
             continue;
         }
-        
+
         // get detailed info about the interface
         NPT_Flags flags = 0;
 #if defined(SIOCGIFFLAGS)
         struct ifreq query = *entry;
         if (ioctl(net, SIOCGIFFLAGS, &query) < 0) continue;
-        
+
         // process the flags
         if ((query.ifr_flags & IFF_UP) == 0) {
             // the interface is not up, ignore it
@@ -477,7 +477,7 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             flags |= NPT_NETWORK_INTERFACE_FLAG_MULTICAST;
         }
 #endif // defined(SIOCGIFFLAGS)
-  
+
         // get a pointer to an interface we've looped over before
         // or create a new one
         NPT_NetworkInterface* interface = NULL;
@@ -494,9 +494,9 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             interface = new NPT_NetworkInterface(entry->ifr_name, flags);
 
             // add the interface to the list
-            interfaces.Add(interface);   
+            interfaces.Add(interface);
 
-            // get the mac address        
+            // get the mac address
 #if defined(SIOCGIFHWADDR)
             if (ioctl(net, SIOCGIFHWADDR, &query) == 0) {
                 NPT_MacAddress::Type mac_addr_type;
@@ -514,31 +514,31 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                         length = 0;
                         break;
 #endif
-                          
+
 #if defined(ARPHRD_PPP)
                     case ARPHRD_PPP:
                         mac_addr_type = NPT_MacAddress::TYPE_PPP;
                         mac_addr_length = 0;
                         break;
 #endif
-                    
+
 #if defined(ARPHRD_IEEE80211)
                     case ARPHRD_IEEE80211:
                         mac_addr_type = NPT_MacAddress::TYPE_IEEE_802_11;
                         break;
 #endif
-                                   
+
                     default:
                         mac_addr_type = NPT_MacAddress::TYPE_UNKNOWN;
                         mac_addr_length = sizeof(query.ifr_addr.sa_data);
                         break;
                 }
-                
+
                 interface->SetMacAddress(mac_addr_type, (const unsigned char*)query.ifr_addr.sa_data, mac_addr_length);
             }
 #endif
         }
-          
+
         switch (entry->ifr_addr.sa_family) {
             case AF_INET: {
                 // primary address
@@ -578,8 +578,8 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                     broadcast_address,
                     destination_address,
                     netmask);
-                interface->AddAddress(iface_address);  
-                
+                interface->AddAddress(iface_address);
+
                 break;
             }
 
@@ -613,7 +613,7 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                     destination_address,
                     netmask);
                 interface->AddAddress(iface_address);
-                
+
                 break;
             }
 #endif
@@ -631,9 +631,9 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
 #endif
 #if defined(IFT_PPP)
                     case IFT_PPP:   mac_addr_type = NPT_MacAddress::TYPE_PPP;      break;
-#endif                    
+#endif
                 }
-                interface->SetMacAddress(mac_addr_type, 
+                interface->SetMacAddress(mac_addr_type,
                                          (const unsigned char*)(&mac_addr->sdl_data[mac_addr->sdl_nlen]),
                                          mac_addr->sdl_alen);
                 break;
@@ -645,7 +645,7 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
     // free resources
     delete[] buffer;
     close(net);
-    
+
     return NPT_SUCCESS;
 }
 #endif

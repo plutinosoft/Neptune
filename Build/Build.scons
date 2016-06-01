@@ -169,13 +169,19 @@ if os.path.exists(target_config_file):
 extra_cpp_flags = []
 if not env.has_key('NPT_CONFIG_NO_ZIP'):
     env.AppendUnique(CPPDEFINES=['NPT_CONFIG_ENABLE_ZIP'])
-    zlib_sources = ['../ThirdParty/zlib-1.2.8']
+    if env['shared']:
+        zlib_sources = ['../ThirdParty/zlib-1.2.8']
+    else:
+        zlib_sources = ['ThirdParty/zlib-1.2.8']
 else:
     zlib_sources = []
 
 if not env.has_key('NPT_CONFIG_NO_SSL'):
     env.AppendUnique(CPPDEFINES=['NPT_CONFIG_ENABLE_TLS'])
-    axtls_sources  = ['../ThirdParty/axTLS/crypto', '../ThirdParty/axTLS/ssl', '../ThirdParty/axTLS/config/Generic']
+    if env['shared']:
+        axtls_sources  = ['../ThirdParty/axTLS/crypto', '../ThirdParty/axTLS/ssl', '../ThirdParty/axTLS/config/Generic']
+    else:
+        axtls_sources  = ['ThirdParty/axTLS/crypto', 'ThirdParty/axTLS/ssl', 'ThirdParty/axTLS/config/Generic']
     tls_data_dirs  = ['Data/TLS']
     tls_tests      = ['Tls1']
 else:
@@ -183,29 +189,44 @@ else:
     tls_data_dirs = []
     tls_tests     = []
 
+if not env.has_key('NPT_CONFIG_NO_CRYPTO'):
+    env.AppendUnique(CPPDEFINES=['NPT_CONFIG_ENABLE_CRYPTO'])
+    neptune_excluded_files = []
+else:
+    neptune_excluded_files = ['NptCrypto.cpp', 'NptDigest.cpp']
 
+linked_modules = env['NPT_EXTRA_LIBS']
 if env['shared']:
     LibraryModule(name                  = 'Neptune',
                   build_source_dirs     = ['Core']+tls_data_dirs+axtls_sources+zlib_sources,
                   build_source_files    = env['NPT_SYSTEM_SOURCES'],
-                  linked_modules        = env['NPT_EXTRA_LIBS'],
+	              excluded_files        = neptune_excluded_files,
+                  linked_modules        = linked_modules,
                   shared                = True)
 else:
-    LibraryModule(name                  = 'Zlib',
-                  source_root           = '.',
-                  build_source_dirs     = ['ThirdParty/zlib-1.2.3'])
+    if not env.has_key('NPT_CONFIG_NO_ZIP'):
+        LibraryModule(name                  = 'Zlib',
+                      source_root           = '.',
+                      build_source_dirs     = zlib_sources)
+        linked_modules += ['Zlib']
 
-    LibraryModule(name                  = 'axTLS',
-                  source_root           = '.',
-                  build_source_dirs     = ['ThirdParty/axTLS/crypto', 'ThirdParty/axTLS/ssl', 'ThirdParty/axTLS/config/Generic'])
+    if not env.has_key('NPT_CONFIG_NO_SSL'):
+        LibraryModule(name                  = 'axTLS',
+                      source_root           = '.',
+                      build_source_dirs     = axtls_sources)
+        linked_modules += ['axTLS']
 
     LibraryModule(name                  = 'Neptune',
                   build_source_dirs     = ['Core']+tls_data_dirs,
                   build_source_files    = env['NPT_SYSTEM_SOURCES'],
-                  linked_modules        = env['NPT_EXTRA_LIBS']+['Zlib']+['axTLS'])
+	              excluded_files        = neptune_excluded_files,
+                  linked_modules        = linked_modules)
 
-for app in ['NetPump', 'NetConfig', 'NetPing', 'NetEcho', 'NetGet', 'NetResolve', 'NetBench', 'MiniHttpServer', 'ZipHttpServer']:
+for app in ['NetPump', 'NetConfig', 'NetPing', 'NetEcho', 'NetGet', 'NetResolve', 'NetBench', 'MiniHttpServer']:
     Application(app, 'Source/Apps/'+app)
+
+if not env.has_key('NPT_CONFIG_NO_ZIP'):
+	Application('ZipHttpServer', 'Source/Apps/ZipHttpServer')
 
 tests = ['Arrays1',
          'BufferedStreams1',
@@ -225,12 +246,17 @@ tests = ['Arrays1',
          'Messages1',
          'Messages2',
          'Url1',
-         'Zip1',
-         'Zip2',
          'Time1',
          'Sockets1',
          'FileTest1',
-         'FileTest2']+tls_tests
+         'FileTest2']
+
+if not env.has_key('NPT_CONFIG_NO_ZIP'):
+	tests += ['Zip1', 'Zip2']
+
+if not env.has_key('NPT_CONFIG_NO_SSL'):
+	tests += tls_tests
 
 for test in tests:
     Application(test+'Test', 'Source/Tests/'+test)
+

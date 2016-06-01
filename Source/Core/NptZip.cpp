@@ -75,7 +75,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
 {
     // defautl return value
     file = NULL;
-    
+
     // check that we know the size of the stream
     NPT_LargeSize stream_size = 0;
     NPT_Result result = stream.GetSize(stream_size);
@@ -87,7 +87,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         NPT_LOG_WARNING("input stream too short");
         return NPT_ERROR_INVALID_FORMAT;
     }
-    
+
     // seek to the most likely start of the end of central directory record
     unsigned int max_eocdr_size = 22+65536;
     if (max_eocdr_size > stream_size) {
@@ -118,7 +118,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         NPT_LOG_WARNING("eocd record not found at end of stream");
         return NPT_ERROR_INVALID_FORMAT;
     }
-    
+
     // parse the eocdr
     NPT_UInt32   this_disk                = NPT_BytesToInt16Le(&eocdr[ 4]);
     NPT_UInt32   start_disk               = NPT_BytesToInt16Le(&eocdr[ 6]);
@@ -134,7 +134,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
     if (this_disk_entry_count != total_entry_count) {
         return NPT_ERROR_NOT_SUPPORTED;
     }
-    
+
     // check if this is a zip64 file
     if (central_directory_offset == 0xFFFFFFFF) {
         unsigned char zip64_locator[20];
@@ -148,7 +148,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
             NPT_LOG_WARNING_1("read failed (%d)", result);
             return result;
         }
-        
+
         NPT_UInt32 signature = NPT_BytesToInt32Le(&zip64_locator[0]);
         if (signature != NPT_ZIP64_END_OF_CENTRAL_DIRECTORY_LOCATOR_SIGNATURE) {
             NPT_LOG_WARNING("zip64 directory locator signature not found");
@@ -162,13 +162,13 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         if (zip64_disk_start != 0 || zip64_disk_count != 1) {
             return NPT_ERROR_NOT_SUPPORTED;
         }
-        
+
         // size check
         if (zip64_directory_offset > stream_size) {
             NPT_LOG_WARNING("zip64 directory offset too large");
             return NPT_ERROR_INVALID_FORMAT;
         }
-        
+
         // load and parse the eocdr64
         unsigned char eocdr64[56];
         result = stream.Seek(zip64_directory_offset);
@@ -181,13 +181,13 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
             NPT_LOG_WARNING_1("read failed (%d)", result);
             return result;
         }
-        
+
         signature = NPT_BytesToInt32Le(&eocdr64[0]);
         if (signature != NPT_ZIP64_END_OF_CENTRAL_DIRECTORY_SIGNATURE) {
             NPT_LOG_WARNING("zip64 directory signature not found");
             return NPT_ERROR_INVALID_FORMAT;
         }
-        
+
         this_disk                = NPT_BytesToInt32Le(&eocdr64[16]);
         start_disk               = NPT_BytesToInt32Le(&eocdr64[20]);
         this_disk_entry_count    = NPT_BytesToInt64Le(&eocdr64[24]);
@@ -195,7 +195,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         central_directory_size   = NPT_BytesToInt64Le(&eocdr64[40]);
         central_directory_offset = NPT_BytesToInt64Le(&eocdr64[48]);
     }
-    
+
     // format check
     if (this_disk != 0 || start_disk != 0) {
         return NPT_ERROR_NOT_SUPPORTED;
@@ -203,7 +203,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
     if (this_disk_entry_count != total_entry_count) {
         return NPT_ERROR_NOT_SUPPORTED;
     }
-    
+
     // check that the size looks reasonable
     if (central_directory_size > NPT_ZIP_MAX_DIRECTORY_SIZE) {
         NPT_LOG_WARNING("central directory larger than max supported");
@@ -213,7 +213,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         NPT_LOG_WARNING("central directory larger than max supported");
         return NPT_ERROR_OUT_OF_RANGE;
     }
-    
+
     // read the central directory
     NPT_DataBuffer central_directory_buffer;
     result = central_directory_buffer.SetDataSize((NPT_Size)central_directory_size);
@@ -231,11 +231,11 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
         NPT_LOG_WARNING_1("failed to read central directory (%d)", result);
         return result;
     }
-    
+
     // create a new file object
     file = new NPT_ZipFile();
     file->m_Entries.Reserve((NPT_Cardinal)total_entry_count);
-    
+
     // parse all entries
     const unsigned char* buffer = (const unsigned char*)central_directory_buffer.GetData();
     NPT_Size buffer_size = central_directory_buffer.GetDataSize();
@@ -246,7 +246,7 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
             NPT_LOG_WARNING("unexpected signature in central directory");
             break;
         }
-        
+
         NPT_ZipFile::Entry entry(buffer, buffer_size);
         if (entry.m_DirectoryEntrySize == 0) {
             NPT_LOG_WARNING("invalid entry data");
@@ -257,14 +257,14 @@ NPT_ZipFile::Parse(NPT_InputStream& stream, NPT_ZipFile*& file)
             NPT_LOG_WARNING_1("entry size too large (%d)", entry.m_DirectoryEntrySize);
             break;
         }
-        
+
         file->GetEntries().Add(entry);
-        
+
         central_directory_size -= entry.m_DirectoryEntrySize;
         buffer                 += entry.m_DirectoryEntrySize;
         buffer_size            -= entry.m_DirectoryEntrySize;
     }
-    
+
     return NPT_SUCCESS;
 }
 
@@ -276,14 +276,14 @@ NPT_ZipFile::GetInputStream(Entry& entry, NPT_InputStreamReference& zip_stream, 
 {
     // default return value
     file_stream = NULL;
-    
+
     // we don't support encrypted files
     if (entry.m_Flags & NPT_ZIP_FILE_FLAG_ENCRYPTED) {
         return NPT_ERROR_NOT_SUPPORTED;
     }
-    
+
     // check that we support the compression method
-#if NPT_CONFIG_ENABLE_ZIP
+#if defined(NPT_CONFIG_ENABLE_ZIP)
     if (entry.m_CompressionMethod != NPT_ZIP_FILE_COMPRESSION_METHOD_NONE &&
         entry.m_CompressionMethod != NPT_ZIP_FILE_COMPRESSION_METHOD_DEFLATE) {
         return NPT_ERROR_NOT_SUPPORTED;
@@ -300,7 +300,7 @@ NPT_ZipFile::GetInputStream(Entry& entry, NPT_InputStreamReference& zip_stream, 
         NPT_LOG_WARNING_1("seek failed (%d)", result);
         return result;
     }
-    
+
     // read the fixed part of the header
     unsigned char header[30];
     result = zip_stream->ReadFully(header, 30);
@@ -308,10 +308,10 @@ NPT_ZipFile::GetInputStream(Entry& entry, NPT_InputStreamReference& zip_stream, 
         NPT_LOG_WARNING_1("read failed (%d)", result);
         return result;
     }
-    
+
     NPT_UInt16 file_name_length   = NPT_BytesToInt16Le(&header[26]);
     NPT_UInt16 extra_field_length = NPT_BytesToInt16Le(&header[28]);
-    
+
     unsigned int header_size = 30+file_name_length+extra_field_length;
     NPT_LargeSize zip_stream_size = 0;
     zip_stream->GetSize(zip_stream_size);
@@ -319,10 +319,10 @@ NPT_ZipFile::GetInputStream(Entry& entry, NPT_InputStreamReference& zip_stream, 
         // something's wrong here
         return NPT_ERROR_INVALID_FORMAT;
     }
-    
+
     file_stream = new NPT_SubInputStream(zip_stream, entry.m_RelativeOffset+header_size, entry.m_CompressedSize);
-    
-#if NPT_CONFIG_ENABLE_ZIP
+
+#if defined(NPT_CONFIG_ENABLE_ZIP)
     if (entry.m_CompressionMethod == NPT_ZIP_FILE_COMPRESSION_METHOD_DEFLATE) {
         NPT_InputStreamReference file_stream_ref(file_stream);
         file_stream = new NPT_ZipInflatingInputStream(file_stream_ref, true);
@@ -348,7 +348,7 @@ NPT_ZipFile::Entry::Entry(const unsigned char* data, NPT_Size data_available) :
     m_DirectoryEntrySize(0)
 {
     if (data_available < 46) return;
-    
+
     m_Flags                        = NPT_BytesToInt16Le(data+ 8);
     m_CompressionMethod            = NPT_BytesToInt16Le(data+10);
     m_Crc32                        = NPT_BytesToInt32Le(data+16);
@@ -362,13 +362,13 @@ NPT_ZipFile::Entry::Entry(const unsigned char* data, NPT_Size data_available) :
     NPT_UInt16 file_name_length    = NPT_BytesToInt16Le(data+28);
     NPT_UInt16 extra_field_length  = NPT_BytesToInt16Le(data+30);
     NPT_UInt16 file_comment_length = NPT_BytesToInt16Le(data+32);
-    
+
     m_DirectoryEntrySize = 46+file_name_length+extra_field_length+file_comment_length;
     if (m_DirectoryEntrySize > data_available) {
         m_DirectoryEntrySize = 0;
         return;
     }
-    
+
     // extract the file name
     m_Name.Assign((const char*)data+46, file_name_length);
 
@@ -378,7 +378,7 @@ NPT_ZipFile::Entry::Entry(const unsigned char* data, NPT_Size data_available) :
     while (ext_data_size >= 4) {
         unsigned int ext_id   = NPT_BytesToInt16Le(ext_data);
         unsigned int ext_size = NPT_BytesToInt16Le(ext_data+2);
-        
+
         if (ext_id == NPT_ZIP_EXT_DATA_TYPE_ZIP64) {
             const unsigned char* local_data = ext_data+4;
             if (m_UncompressedSize == 0xFFFFFFFF) {
@@ -398,7 +398,7 @@ NPT_ZipFile::Entry::Entry(const unsigned char* data, NPT_Size data_available) :
                 local_data += 4;
             }
         }
-        
+
         ext_data      += 4+ext_size;
         if (ext_data_size >= 4+ext_size) {
             ext_data_size -= 4+ext_size;
@@ -422,7 +422,7 @@ NPT_Result
 NPT_Zip::MapError(int err)
 {
     switch (err) {
-        case Z_OK:            return NPT_SUCCESS;           
+        case Z_OK:            return NPT_SUCCESS;
         case Z_STREAM_END:    return NPT_ERROR_EOS;
         case Z_DATA_ERROR:
         case Z_STREAM_ERROR:  return NPT_ERROR_INVALID_FORMAT;
@@ -490,7 +490,7 @@ NPT_ZipDeflateState::NPT_ZipDeflateState(int             compression_level,
     NPT_SetMemory(&m_Stream, 0, sizeof(m_Stream));
 
     // initialize the compressor
-    deflateInit2(&m_Stream, 
+    deflateInit2(&m_Stream,
                 compression_level,
                 Z_DEFLATED,
                 15 + (format == NPT_Zip::GZIP ? 16 : 0),
@@ -528,27 +528,27 @@ NPT_ZipInflatingInputStream::~NPT_ZipInflatingInputStream()
 /*----------------------------------------------------------------------
 |   NPT_ZipInflatingInputStream::Read
 +---------------------------------------------------------------------*/
-NPT_Result 
-NPT_ZipInflatingInputStream::Read(void*     buffer, 
-                                  NPT_Size  bytes_to_read, 
+NPT_Result
+NPT_ZipInflatingInputStream::Read(void*     buffer,
+                                  NPT_Size  bytes_to_read,
                                   NPT_Size* bytes_read)
 {
     // check state and parameters
     if (m_State == NULL) return NPT_ERROR_INVALID_STATE;
     if (buffer == NULL) return NPT_ERROR_INVALID_PARAMETERS;
     if (bytes_to_read == 0) return NPT_SUCCESS;
-    
+
     // default values
     if (bytes_read) *bytes_read = 0;
-    
+
     // setup the output buffer
     m_State->m_Stream.next_out  = (Bytef*)buffer;
     m_State->m_Stream.avail_out = (uInt)bytes_to_read;
-    
+
     while (m_State->m_Stream.avail_out) {
         // decompress what we can
         int err = inflate(&m_State->m_Stream, Z_NO_FLUSH);
-        
+
         if (err == Z_STREAM_END) {
             // we decompressed everything
             break;
@@ -565,26 +565,26 @@ NPT_ZipInflatingInputStream::Read(void*     buffer,
             m_Buffer.SetDataSize(input_bytes_read);
             m_State->m_Stream.next_in = m_Buffer.UseData();
             m_State->m_Stream.avail_in = m_Buffer.GetDataSize();
-        
+
         } else {
             return NPT_Zip::MapError(err);
         }
     }
-    
+
     // report how much we could decompress
     NPT_Size progress = bytes_to_read - m_State->m_Stream.avail_out;
     if (bytes_read) {
         *bytes_read = progress;
     }
     m_Position += progress;
-    
+
     return progress == 0 ? NPT_ERROR_EOS:NPT_SUCCESS;
 }
 
 /*----------------------------------------------------------------------
 |   NPT_ZipInflatingInputStream::Seek
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipInflatingInputStream::Seek(NPT_Position /* offset */)
 {
     // we can't seek
@@ -594,7 +594,7 @@ NPT_ZipInflatingInputStream::Seek(NPT_Position /* offset */)
 /*----------------------------------------------------------------------
 |   NPT_ZipInflatingInputStream::Tell
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipInflatingInputStream::Tell(NPT_Position& offset)
 {
     offset = m_Position;
@@ -604,7 +604,7 @@ NPT_ZipInflatingInputStream::Tell(NPT_Position& offset)
 /*----------------------------------------------------------------------
 |   NPT_ZipInflatingInputStream::GetSize
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipInflatingInputStream::GetSize(NPT_LargeSize& size)
 {
     // the size is not predictable
@@ -615,7 +615,7 @@ NPT_ZipInflatingInputStream::GetSize(NPT_LargeSize& size)
 /*----------------------------------------------------------------------
 |   NPT_ZipInflatingInputStream::GetAvailable
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipInflatingInputStream::GetAvailable(NPT_LargeSize& available)
 {
     // we don't know
@@ -649,27 +649,27 @@ NPT_ZipDeflatingInputStream::~NPT_ZipDeflatingInputStream()
 /*----------------------------------------------------------------------
 |   NPT_ZipDeflatingInputStream::Read
 +---------------------------------------------------------------------*/
-NPT_Result 
-NPT_ZipDeflatingInputStream::Read(void*     buffer, 
-                                  NPT_Size  bytes_to_read, 
+NPT_Result
+NPT_ZipDeflatingInputStream::Read(void*     buffer,
+                                  NPT_Size  bytes_to_read,
                                   NPT_Size* bytes_read)
 {
     // check state and parameters
     if (m_State == NULL) return NPT_ERROR_INVALID_STATE;
     if (buffer == NULL) return NPT_ERROR_INVALID_PARAMETERS;
     if (bytes_to_read == 0) return NPT_SUCCESS;
-    
+
     // default values
     if (bytes_read) *bytes_read = 0;
-    
+
     // setup the output buffer
     m_State->m_Stream.next_out  = (Bytef*)buffer;
     m_State->m_Stream.avail_out = (uInt)bytes_to_read;
-    
+
     while (m_State->m_Stream.avail_out) {
         // compress what we can
         int err = deflate(&m_State->m_Stream, m_Eos?Z_FINISH:Z_NO_FLUSH);
-        
+
         if (err == Z_STREAM_END) {
             // we compressed everything
             break;
@@ -685,31 +685,31 @@ NPT_ZipDeflatingInputStream::Read(void*     buffer,
             } else {
                 if (NPT_FAILED(result)) return result;
             }
-            
+
             // setup the input buffer
             m_Buffer.SetDataSize(input_bytes_read);
             m_State->m_Stream.next_in = m_Buffer.UseData();
             m_State->m_Stream.avail_in = m_Buffer.GetDataSize();
-        
+
         } else {
             return NPT_Zip::MapError(err);
         }
     }
-    
+
     // report how much we could compress
     NPT_Size progress = bytes_to_read - m_State->m_Stream.avail_out;
     if (bytes_read) {
         *bytes_read = progress;
     }
     m_Position += progress;
-    
+
     return progress == 0 ? NPT_ERROR_EOS:NPT_SUCCESS;
 }
 
 /*----------------------------------------------------------------------
 |   NPT_ZipDeflatingInputStream::Seek
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipDeflatingInputStream::Seek(NPT_Position /* offset */)
 {
     // we can't seek
@@ -719,7 +719,7 @@ NPT_ZipDeflatingInputStream::Seek(NPT_Position /* offset */)
 /*----------------------------------------------------------------------
 |   NPT_ZipDeflatingInputStream::Tell
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipDeflatingInputStream::Tell(NPT_Position& offset)
 {
     offset = m_Position;
@@ -729,7 +729,7 @@ NPT_ZipDeflatingInputStream::Tell(NPT_Position& offset)
 /*----------------------------------------------------------------------
 |   NPT_ZipDeflatingInputStream::GetSize
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipDeflatingInputStream::GetSize(NPT_LargeSize& size)
 {
     // the size is not predictable
@@ -740,7 +740,7 @@ NPT_ZipDeflatingInputStream::GetSize(NPT_LargeSize& size)
 /*----------------------------------------------------------------------
 |   NPT_ZipDeflatingInputStream::GetAvailable
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_ZipDeflatingInputStream::GetAvailable(NPT_LargeSize& available)
 {
     // we don't know
@@ -751,7 +751,7 @@ NPT_ZipDeflatingInputStream::GetAvailable(NPT_LargeSize& available)
 /*----------------------------------------------------------------------
 |   NPT_Zip::Deflate
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_Zip::Deflate(const NPT_DataBuffer& in,
                  NPT_DataBuffer&       out,
                  int                   compression_level,
@@ -759,26 +759,26 @@ NPT_Zip::Deflate(const NPT_DataBuffer& in,
 {
     // default return state
     out.SetDataSize(0);
-    
+
     // check parameters
     if (compression_level < NPT_ZIP_COMPRESSION_LEVEL_DEFAULT ||
         compression_level > NPT_ZIP_COMPRESSION_LEVEL_MAX) {
         return NPT_ERROR_INVALID_PARAMETERS;
     }
-                
+
     // setup the stream
     z_stream stream;
     NPT_SetMemory(&stream, 0, sizeof(stream));
     stream.next_in   = (Bytef*)in.GetData();
     stream.avail_in  = (uInt)in.GetDataSize();
-    
+
     // setup the memory functions
     stream.zalloc = (alloc_func)0;
     stream.zfree = (free_func)0;
     stream.opaque = (voidpf)0;
 
     // initialize the compressor
-    int err = deflateInit2(&stream, 
+    int err = deflateInit2(&stream,
                            compression_level,
                            Z_DEFLATED,
                            15 + (format == GZIP ? 16 : 0),
@@ -797,7 +797,7 @@ NPT_Zip::Deflate(const NPT_DataBuffer& in,
         deflateEnd(&stream);
         return MapError(err);
     }
-    
+
     // update the output size
     out.SetDataSize((NPT_Size)stream.total_out);
 
@@ -805,18 +805,18 @@ NPT_Zip::Deflate(const NPT_DataBuffer& in,
     err = deflateEnd(&stream);
     return MapError(err);
 }
-                              
+
 /*----------------------------------------------------------------------
 |   NPT_Zip::Inflate
-+---------------------------------------------------------------------*/                              
-NPT_Result 
++---------------------------------------------------------------------*/
+NPT_Result
 NPT_Zip::Inflate(const NPT_DataBuffer& in,
                  NPT_DataBuffer&       out,
                  bool                  raw)
 {
     // assume an output buffer twice the size of the input plus a bit
     NPT_CHECK_WARNING(out.Reserve(32+2*in.GetDataSize()));
-    
+
     // setup the stream
     z_stream stream;
     stream.next_in   = (Bytef*)in.GetData();
@@ -832,7 +832,7 @@ NPT_Zip::Inflate(const NPT_DataBuffer& in,
     // initialize the decompressor
     int err = inflateInit2(&stream, raw?-15:15+32); // 15 = default window bits, +32 = automatic header
     if (err != Z_OK) return MapError(err);
-    
+
     // decompress until the end
     do {
         err = inflate(&stream, Z_SYNC_FLUSH);
@@ -846,13 +846,13 @@ NPT_Zip::Inflate(const NPT_DataBuffer& in,
             }
         }
     } while (err == Z_OK);
-    
+
     // check for errors
     if (err != Z_STREAM_END) {
         inflateEnd(&stream);
         return MapError(err);
     }
-    
+
     // cleanup
     err = inflateEnd(&stream);
     return MapError(err);
@@ -862,7 +862,7 @@ NPT_Zip::Inflate(const NPT_DataBuffer& in,
 /*----------------------------------------------------------------------
 |   NPT_Zip::Deflate
 +---------------------------------------------------------------------*/
-NPT_Result 
+NPT_Result
 NPT_Zip::Deflate(NPT_File& in,
                  NPT_File& out,
                  int       compression_level,
@@ -873,12 +873,12 @@ NPT_Zip::Deflate(NPT_File& in,
         compression_level > NPT_ZIP_COMPRESSION_LEVEL_MAX) {
         return NPT_ERROR_INVALID_PARAMETERS;
     }
-    
+
     NPT_InputStreamReference input;
     NPT_CHECK(in.GetInputStream(input));
     NPT_OutputStreamReference output;
     NPT_CHECK(out.GetOutputStream(output));
-    
+
     NPT_ZipDeflatingInputStream deflating_stream(input, compression_level, format);
     return NPT_StreamToStreamCopy(deflating_stream, *output.AsPointer());
 }
