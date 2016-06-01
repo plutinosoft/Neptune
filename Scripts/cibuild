@@ -20,59 +20,59 @@ LOGIN_KEYCHAIN_PATH="$USER_KEYCHAIN_DIR/login.keychain"
 
 main ()
 {
-    import_certs
+	import_certs
 
-	carthage build --platform ios --no-skip-current
-    carthage archive Neptune
-    local status=$?
-    exit $status
+	carthage build --no-skip-current
+	carthage archive Neptune
+	local status=$?
+	exit $status
 }
 
 import_certs ()
 {
-    # If this environment variable is missing, we must not be running on Travis.
-    if [ -z "$KEY_PASSWORD" ]
-    then
-        return 0
-    fi
+	# If this environment variable is missing, we must not be running on Travis.
+	if [ -z "$KEY_PASSWORD" ]
+	then
+		return 0
+	fi
 
 	delete_keychain
 
-    echo "*** Setting up code signing..."
-    local password=cibuild
+	echo "*** Setting up code signing..."
+	local password=cibuild
 
-    # Create a temporary keychain for code signing.
-    security create-keychain -p "$password" "$CI_KEYCHAIN_PATH"
-    security unlock-keychain -p "$password" "$CI_KEYCHAIN_PATH"
-    security set-keychain-settings -lut 7200 "$CI_KEYCHAIN_PATH"
+	# Create a temporary keychain for code signing.
+	security create-keychain -p "$password" "$CI_KEYCHAIN_PATH"
+	security unlock-keychain -p "$password" "$CI_KEYCHAIN_PATH"
+	security set-keychain-settings -lut 7200 "$CI_KEYCHAIN_PATH"
 
-    # Download the certificate for the Apple Worldwide Developer Relations
-    # Certificate Authority.
-    local certpath="$SCRIPT_DIR/apple_wwdr.cer"
-    curl 'https://developer.apple.com/certificationauthority/AppleWWDRCA.cer' > "$certpath"
-    security import "$certpath" -k "$CI_KEYCHAIN_PATH" -T /usr/bin/codesign
+	# Download the certificate for the Apple Worldwide Developer Relations
+	# Certificate Authority.
+	local certpath="$SCRIPT_DIR/apple_wwdr.cer"
+	curl 'https://developer.apple.com/certificationauthority/AppleWWDRCA.cer' > "$certpath"
+	security import "$certpath" -k "$CI_KEYCHAIN_PATH" -T /usr/bin/codesign
 
-    # Import our development certificate.
-    security import "$SCRIPT_DIR/Certificates/development.p12" -k "$CI_KEYCHAIN_PATH" -P "$KEY_PASSWORD" -T /usr/bin/codesign
+	# Import our development certificate.
+	security import "$SCRIPT_DIR/Certificates/development.p12" -k "$CI_KEYCHAIN_PATH" -P "$KEY_PASSWORD" -T /usr/bin/codesign
 
-    # Set the ci keychain to the list of current keychains
-    security list-keychains -s "$CI_KEYCHAIN_PATH"
+	# Set the ci keychain to the list of current keychains
+	security list-keychains -s "$CI_KEYCHAIN_PATH"
 }
 
 delete_keychain ()
 {
-    if [ -z "$KEY_PASSWORD" ]
-    then
-        return 0
-    fi
+	if [ -z "$KEY_PASSWORD" ]
+	then
+		return 0
+	fi
 
-    security list-keychains -s "$LOGIN_KEYCHAIN_PATH" "$SYSTEM_KEYCHAIN_PATH"
+	security list-keychains -s "$LOGIN_KEYCHAIN_PATH" "$SYSTEM_KEYCHAIN_PATH"
 
-    # Remove the keychain if it already exists
-    if [ -e "$CI_KEYCHAIN_PATH" ]; then
-        security delete-keychain "$CI_KEYCHAIN_PATH"
-        rm -f "$CI_KEYCHAIN_PATH"
-    fi
+	# Remove the keychain if it already exists
+	if [ -e "$CI_KEYCHAIN_PATH" ]; then
+		security delete-keychain "$CI_KEYCHAIN_PATH"
+		rm -f "$CI_KEYCHAIN_PATH"
+	fi
 }
 
 trap delete_keychain EXIT
