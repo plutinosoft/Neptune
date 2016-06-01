@@ -63,8 +63,6 @@ if 'NPT_CONFIG_NO_ZIP' in os.environ:
 	env['NPT_CONFIG_NO_ZIP'] = os.environ['NPT_CONFIG_NO_ZIP']
 if 'NPT_CONFIG_NO_CRYPTO' in os.environ:
 	env['NPT_CONFIG_NO_CRYPTO'] = os.environ['NPT_CONFIG_NO_CRYPTO']
-if 'NPT_CONFIG_SHARED_LIB' in os.environ:
-	env['NPT_CONFIG_SHARED_LIB'] = os.environ['NPT_CONFIG_SHARED_LIB']
 
 ### call the actual build script for each build config
 base_env = env
