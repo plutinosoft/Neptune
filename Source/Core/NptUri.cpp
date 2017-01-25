@@ -619,7 +619,12 @@ NPT_Url::NPT_Url(const char* scheme,
     m_Fragment(fragment)
 {
     SetScheme(scheme);
-
+	
+	// Convert local IPv6 addresses back to IPv4 - otherwise PLT_Services don't get their callback
+	if (m_Host.StartsWith("::ffff:")) {
+		m_Host = m_Host.SubString(7,m_Host.GetLength()-7);
+	}
+	
     // deal with IPv6 addresses
     if (m_Host.StartsWith("[") && m_Host.EndsWith("]")) {
         m_HostIsIpv6Address = true;
