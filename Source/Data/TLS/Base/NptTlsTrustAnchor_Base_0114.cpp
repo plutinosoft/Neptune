@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* SecureTrust CA */
 const unsigned char NptTlsTrustAnchor_Base_0114_Data[956] = {
 0x30,0x82,0x03,0xb8,0x30,0x82,0x02,0xa0
@@ -156,5 +154,3 @@ const unsigned char NptTlsTrustAnchor_Base_0114_Data[956] = {
 ,0x4b,0x1d,0x9e,0x2c,0xc2,0xb8,0x68,0xbc
 ,0xed,0x02,0xee,0x31};
 const unsigned int  NptTlsTrustAnchor_Base_0114_Size = 956;
-
-#endif

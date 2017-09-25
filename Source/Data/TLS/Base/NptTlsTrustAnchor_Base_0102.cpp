@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* DigiCert Assured ID Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0102_Data[955] = {
 0x30,0x82,0x03,0xb7,0x30,0x82,0x02,0x9f
@@ -156,5 +154,3 @@ const unsigned char NptTlsTrustAnchor_Base_0102_Data[955] = {
 ,0xe6,0x50,0xb2,0xa7,0xfa,0x0a,0x45,0x2f
 ,0xa2,0xf0,0xf2};
 const unsigned int  NptTlsTrustAnchor_Base_0102_Size = 955;
-
-#endif

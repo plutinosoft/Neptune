@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* ABAecom (sub., Am. Bankers Assn.) Root CA */
 const unsigned char NptTlsTrustAnchor_Extended_0000_Data[953] = {
 0x30,0x82,0x03,0xb5,0x30,0x82,0x02,0x9d
@@ -156,5 +154,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0000_Data[953] = {
 ,0xc9,0x4f,0x31,0x71,0x88,0xd9,0x88,0x7f
 ,0x54};
 const unsigned int  NptTlsTrustAnchor_Extended_0000_Size = 953;
-
-#endif

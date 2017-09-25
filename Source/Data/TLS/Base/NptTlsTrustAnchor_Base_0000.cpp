@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Verisign/RSA Secure Server CA */
 const unsigned char NptTlsTrustAnchor_Base_0000_Data[568] = {
 0x30,0x82,0x02,0x34,0x30,0x82,0x01,0xa1
@@ -108,5 +106,3 @@ const unsigned char NptTlsTrustAnchor_Base_0000_Data[568] = {
 ,0x7b,0xfc,0xe5,0x8e,0x80,0x7c,0xfc,0x50
 };
 const unsigned int  NptTlsTrustAnchor_Base_0000_Size = 568;
-
-#endif

@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* IPS Timestamping root */
 const unsigned char NptTlsTrustAnchor_Base_0074_Data[2108] = {
 0x30,0x82,0x08,0x38,0x30,0x82,0x07,0xa1
@@ -300,5 +298,3 @@ const unsigned char NptTlsTrustAnchor_Base_0074_Data[2108] = {
 ,0x87,0x4a,0x5f,0xdc,0xef,0xe9,0x56,0xf0
 ,0x0a,0x0c,0xe8,0x75};
 const unsigned int  NptTlsTrustAnchor_Base_0074_Size = 2108;
-
-#endif

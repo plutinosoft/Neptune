@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* ApplicationCA - Japanese Government */
 const unsigned char NptTlsTrustAnchor_Base_0132_Data[932] = {
 0x30,0x82,0x03,0xa0,0x30,0x82,0x02,0x88
@@ -153,5 +151,3 @@ const unsigned char NptTlsTrustAnchor_Base_0132_Data[932] = {
 ,0xe6,0xb7,0x5b,0x74,0xe9,0x20,0x19,0x7f
 ,0xb2,0x1b,0x89,0x54};
 const unsigned int  NptTlsTrustAnchor_Base_0132_Size = 932;
-
-#endif

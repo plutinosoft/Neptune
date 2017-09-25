@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* AOL Time Warner Root Certification Authority 2 */
 const unsigned char NptTlsTrustAnchor_Base_0047_Data[1514] = {
 0x30,0x82,0x05,0xe6,0x30,0x82,0x03,0xce
@@ -226,5 +224,3 @@ const unsigned char NptTlsTrustAnchor_Base_0047_Data[1514] = {
 ,0x84,0xd7,0xfa,0xdc,0x72,0x5b,0xf7,0xc1
 ,0x3a,0x68};
 const unsigned int  NptTlsTrustAnchor_Base_0047_Size = 1514;
-
-#endif

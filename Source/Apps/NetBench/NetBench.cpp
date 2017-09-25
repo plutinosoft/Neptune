@@ -52,14 +52,10 @@ public:
         m_Done(false),
         m_ShouldStop(false)
     {
-		NPT_COMPILER_UNUSED(tls_context);
-		NPT_COMPILER_UNUSED(tls_options);
-#if defined(NPT_CONFIG_ENABLE_TLS)
         if (tls_context) {
             m_Connector = new NPT_HttpTlsConnector(*tls_context, tls_options);
             m_Client.SetConnector(m_Connector);
         }
-#endif
     }
     
     ~Worker() {

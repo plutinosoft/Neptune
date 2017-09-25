@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Equifax Secure Global eBusiness CA */
 const unsigned char NptTlsTrustAnchor_Base_0033_Data[660] = {
 0x30,0x82,0x02,0x90,0x30,0x82,0x01,0xf9
@@ -119,5 +117,3 @@ const unsigned char NptTlsTrustAnchor_Base_0033_Data[660] = {
 ,0xbe,0xcb,0xc8,0x3b,0x5a,0x84,0x60,0x19
 ,0x56,0x94,0xa9,0x55};
 const unsigned int  NptTlsTrustAnchor_Base_0033_Size = 660;
-
-#endif

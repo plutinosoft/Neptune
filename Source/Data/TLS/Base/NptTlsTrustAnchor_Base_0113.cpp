@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* VeriSign Class 3 Public Primary Certification Authority - G5 */
 const unsigned char NptTlsTrustAnchor_Base_0113_Data[1239] = {
 0x30,0x82,0x04,0xd3,0x30,0x82,0x03,0xbb
@@ -191,5 +189,3 @@ const unsigned char NptTlsTrustAnchor_Base_0113_Data[1239] = {
 ,0x38,0x54,0x83,0x5f,0xd1,0xe8,0x2c,0xf2
 ,0xac,0x11,0xd6,0xa8,0xed,0x63,0x6a};
 const unsigned int  NptTlsTrustAnchor_Base_0113_Size = 1239;
-
-#endif
