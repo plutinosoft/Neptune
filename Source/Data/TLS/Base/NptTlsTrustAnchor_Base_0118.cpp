@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Network Solutions Certificate Authority */
 const unsigned char NptTlsTrustAnchor_Base_0118_Data[1002] = {
 0x30,0x82,0x03,0xe6,0x30,0x82,0x02,0xce
@@ -162,5 +160,3 @@ const unsigned char NptTlsTrustAnchor_Base_0118_Data[1002] = {
 ,0xa4,0x60,0x4c,0xb0,0x55,0xa0,0xa0,0x7b
 ,0x57,0xb2};
 const unsigned int  NptTlsTrustAnchor_Base_0118_Size = 1002;
-
-#endif

@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* RSA Security 2048 v3 */
 const unsigned char NptTlsTrustAnchor_Base_0052_Data[869] = {
 0x30,0x82,0x03,0x61,0x30,0x82,0x02,0x49
@@ -145,5 +143,3 @@ const unsigned char NptTlsTrustAnchor_Base_0052_Data[869] = {
 ,0xa9,0xd7,0xc2,0x22,0x4f,0x67,0xd7,0x77
 ,0xec,0x20,0x05,0x61,0xde};
 const unsigned int  NptTlsTrustAnchor_Base_0052_Size = 869;
-
-#endif

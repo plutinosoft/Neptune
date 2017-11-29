@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* StartCom Ltd. */
 const unsigned char NptTlsTrustAnchor_Base_0097_Data[1306] = {
 0x30,0x82,0x05,0x16,0x30,0x82,0x04,0x7f
@@ -200,5 +198,3 @@ const unsigned char NptTlsTrustAnchor_Base_0097_Data[1306] = {
 ,0x70,0x23,0xb1,0x80,0xdf,0x1a,0x20,0x38
 ,0xe7,0x7e};
 const unsigned int  NptTlsTrustAnchor_Base_0097_Size = 1306;
-
-#endif

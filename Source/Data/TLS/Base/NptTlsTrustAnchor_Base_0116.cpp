@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* COMODO Certification Authority */
 const unsigned char NptTlsTrustAnchor_Base_0116_Data[1057] = {
 0x30,0x82,0x04,0x1d,0x30,0x82,0x03,0x05
@@ -169,5 +167,3 @@ const unsigned char NptTlsTrustAnchor_Base_0116_Data[1057] = {
 ,0xbe,0x58,0x61,0x38,0xac,0x3b,0xe2,0x01
 ,0x65};
 const unsigned int  NptTlsTrustAnchor_Base_0116_Size = 1057;
-
-#endif

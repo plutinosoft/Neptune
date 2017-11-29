@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Verisign Time Stamping Authority CA */
 const unsigned char NptTlsTrustAnchor_Base_0041_Data[977] = {
 0x30,0x82,0x03,0xcd,0x30,0x82,0x03,0x36
@@ -159,5 +157,3 @@ const unsigned char NptTlsTrustAnchor_Base_0041_Data[977] = {
 ,0x9b,0xc0,0x16,0xed,0xb7,0xca,0x5b,0xf0
 ,0x14};
 const unsigned int  NptTlsTrustAnchor_Base_0041_Size = 977;
-
-#endif

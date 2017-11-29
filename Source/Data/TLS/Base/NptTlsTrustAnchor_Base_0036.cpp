@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Visa International Global Root 2 */
 const unsigned char NptTlsTrustAnchor_Base_0036_Data[900] = {
 0x30,0x82,0x03,0x80,0x30,0x82,0x02,0x68
@@ -149,5 +147,3 @@ const unsigned char NptTlsTrustAnchor_Base_0036_Data[900] = {
 ,0x77,0x23,0xec,0xa0,0xec,0xbb,0x5a,0x39
 ,0xb5,0xcc,0xad,0x06};
 const unsigned int  NptTlsTrustAnchor_Base_0036_Size = 900;
-
-#endif

@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* GlobalSign Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0020_Data[889] = {
 0x30,0x82,0x03,0x75,0x30,0x82,0x02,0x5d
@@ -148,5 +146,3 @@ const unsigned char NptTlsTrustAnchor_Base_0020_Data[889] = {
 ,0x55,0xe2,0xfc,0x48,0xc9,0x29,0x26,0x69
 ,0xe0};
 const unsigned int  NptTlsTrustAnchor_Base_0020_Size = 889;
-
-#endif

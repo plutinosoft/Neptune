@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Thawte Personal Freemail CA */
 const unsigned char NptTlsTrustAnchor_Base_0005_Data[817] = {
 0x30,0x82,0x03,0x2d,0x30,0x82,0x02,0x96
@@ -139,5 +137,3 @@ const unsigned char NptTlsTrustAnchor_Base_0005_Data[817] = {
 ,0x84,0x6b,0xe4,0xf8,0xd1,0xce,0x77,0xa2
 ,0x81};
 const unsigned int  NptTlsTrustAnchor_Base_0005_Size = 817;
-
-#endif

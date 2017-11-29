@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* AddTrust External Root */
 const unsigned char NptTlsTrustAnchor_Base_0038_Data[1082] = {
 0x30,0x82,0x04,0x36,0x30,0x82,0x03,0x1e
@@ -172,5 +170,3 @@ const unsigned char NptTlsTrustAnchor_Base_0038_Data[1082] = {
 ,0x17,0x5a,0x7b,0xd0,0xbc,0xc7,0x8f,0x4e
 ,0x86,0x04};
 const unsigned int  NptTlsTrustAnchor_Base_0038_Size = 1082;
-
-#endif

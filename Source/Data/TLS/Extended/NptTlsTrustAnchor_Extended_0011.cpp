@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* CNNIC ROOT */
 const unsigned char NptTlsTrustAnchor_Extended_0011_Data[857] = {
 0x30,0x82,0x03,0x55,0x30,0x82,0x02,0x3d
@@ -144,5 +142,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0011_Data[857] = {
 ,0x09,0xdb,0x8a,0x41,0x82,0x9e,0x66,0x9b
 ,0x11};
 const unsigned int  NptTlsTrustAnchor_Extended_0011_Size = 857;
-
-#endif

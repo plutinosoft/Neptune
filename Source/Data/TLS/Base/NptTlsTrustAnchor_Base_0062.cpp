@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* TC TrustCenter, Germany, Class 2 CA */
 const unsigned char NptTlsTrustAnchor_Base_0062_Data[864] = {
 0x30,0x82,0x03,0x5c,0x30,0x82,0x02,0xc5
@@ -145,5 +143,3 @@ const unsigned char NptTlsTrustAnchor_Base_0062_Data[864] = {
 ,0x26,0x78,0xb2,0x66,0x47,0x70,0x51,0x64
 };
 const unsigned int  NptTlsTrustAnchor_Base_0062_Size = 864;
-
-#endif

@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Wells Fargo Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0100_Data[1001] = {
 0x30,0x82,0x03,0xe5,0x30,0x82,0x02,0xcd
@@ -162,5 +160,3 @@ const unsigned char NptTlsTrustAnchor_Base_0100_Data[1001] = {
 ,0x4f,0x21,0x65,0x3b,0x4a,0x7f,0x47,0xa3
 ,0xfb};
 const unsigned int  NptTlsTrustAnchor_Base_0100_Size = 1001;
-
-#endif

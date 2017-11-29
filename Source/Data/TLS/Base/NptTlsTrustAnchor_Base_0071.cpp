@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* IPS CLASEA1 root */
 const unsigned char NptTlsTrustAnchor_Base_0071_Data[2043] = {
 0x30,0x82,0x07,0xf7,0x30,0x82,0x07,0x60
@@ -292,5 +290,3 @@ const unsigned char NptTlsTrustAnchor_Base_0071_Data[2043] = {
 ,0xde,0x07,0x23,0x72,0xe6,0xbd,0x20,0x14
 ,0x4b,0xb4,0x86};
 const unsigned int  NptTlsTrustAnchor_Base_0071_Size = 2043;
-
-#endif

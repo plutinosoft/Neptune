@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Microsec e-Szigno Root CA */
 const unsigned char NptTlsTrustAnchor_Extended_0006_Data[1964] = {
 0x30,0x82,0x07,0xa8,0x30,0x82,0x06,0x90
@@ -282,5 +280,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0006_Data[1964] = {
 ,0x43,0xc7,0x03,0xe0,0x37,0x4e,0x5d,0x0a
 ,0xdc,0x59,0x20,0x25};
 const unsigned int  NptTlsTrustAnchor_Extended_0006_Size = 1964;
-
-#endif

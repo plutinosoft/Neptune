@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Entrust.net Global Secure Personal CA */
 const unsigned char NptTlsTrustAnchor_Base_0044_Data[1159] = {
 0x30,0x82,0x04,0x83,0x30,0x82,0x03,0xec
@@ -181,5 +179,3 @@ const unsigned char NptTlsTrustAnchor_Base_0044_Data[1159] = {
 ,0x81,0xc7,0x76,0x0b,0x84,0x3a,0x72,0x9d
 ,0xce,0x65,0x66,0x97,0xae,0x26,0x5e};
 const unsigned int  NptTlsTrustAnchor_Base_0044_Size = 1159;
-
-#endif
