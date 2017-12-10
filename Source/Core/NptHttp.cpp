@@ -767,11 +767,20 @@ skip_first_empty_line:
     NPT_String line;
     NPT_CHECK_FINER(stream.ReadLine(line, NPT_HTTP_PROTOCOL_MAX_LINE_LENGTH));
     NPT_LOG_FINEST_1("http request: %s", line.GetChars());
+
+    // cleanup lines that may contain '\0' as first character, clients such
+    // Spotify desktop app send SSDP M-SEARCH requests followed by an extra
+    // '\0' character which stays in the buffered stream and messes up parsing
+    // the next request.
+    while (line.GetLength() > 0 && line[0] == '\0') {
+        line = line.Erase(0, 1);
+    }
+
     // when using keep-alive connections, clients such as XBox 360
     // incorrectly send a few empty lines as body for GET requests
     // so we try to skip them until we find something to parse
     if (line.GetLength() == 0) goto skip_first_empty_line;
-    
+
     // check the request line
     int first_space = line.Find(' ');
     if (first_space < 0) {
