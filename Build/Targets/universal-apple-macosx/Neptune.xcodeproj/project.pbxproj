@@ -3867,7 +3867,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/iOS\"";
+			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -avL \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/iOS\"";
 		};
 		E4974CD21FC553C8009223E2 /* Copy Products to Carthage/Build/iOS */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3881,7 +3881,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/Mac\"";
+			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -avL \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/Mac\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -4944,6 +4944,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
@@ -4966,6 +4967,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				WARNING_CFLAGS = "";
 			};
@@ -6325,6 +6327,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WARNING_CFLAGS = "";
@@ -6349,6 +6352,7 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				PRODUCT_NAME = axTLS;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WARNING_CFLAGS = "";
