@@ -411,7 +411,7 @@ NPT_PosixThread::NPT_PosixThread(NPT_Thread*   delegator,
     m_ThreadId(0),
     m_Joined(false)
 {
-    NPT_LOG_FINE("NPT_PosixThread::NPT_PosixThread");
+    NPT_LOG_FINER("NPT_PosixThread::NPT_PosixThread");
     m_Done.SetValue(0);
 }
 
@@ -465,7 +465,7 @@ NPT_PosixThread::EntryPoint(void* argument)
 {
     NPT_PosixThread* thread = reinterpret_cast<NPT_PosixThread*>(argument);
 
-    NPT_LOG_FINE("NPT_PosixThread::EntryPoint - in =======================");
+    NPT_LOG_FINER("NPT_PosixThread::EntryPoint - in =======================");
 
     // ensure there is the top level autorelease pool for each thread
     NPT_AutoreleasePool pool;
@@ -504,7 +504,7 @@ NPT_PosixThread::EntryPoint(void* argument)
 NPT_Result
 NPT_PosixThread::Start()
 {
-    NPT_LOG_FINE("NPT_PosixThread::Start - creating thread");
+    NPT_LOG_FINER("NPT_PosixThread::Start - creating thread");
     
     // reset values
     m_Joined = false;
@@ -532,7 +532,7 @@ NPT_PosixThread::Start()
     pthread_t thread_id;
     int result = pthread_create(&thread_id, attributes, EntryPoint, 
                                 static_cast<NPT_PosixThread*>(this));
-    NPT_LOG_FINE_2("NPT_PosixThread::Start - id = %p, res=%d",
+    NPT_LOG_FINER_2("NPT_PosixThread::Start - id = %p, res=%d",
                    (void*)thread_id, result);
     if (result != 0) {
         // failed
