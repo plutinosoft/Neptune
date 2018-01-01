@@ -3867,7 +3867,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/iOS\"";
+			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -avL \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/iOS\"";
 		};
 		E4974CD21FC553C8009223E2 /* Copy Products to Carthage/Build/iOS */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3881,7 +3881,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -av \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/Mac\"";
+			shellScript = "build_dir=\"$SRCROOT/../../../Carthage/Build\"\n\n# Only copy when the Carthage/Build directory is a symlink\nif ! [ -L \"$build_dir\" ]; then exit 0; fi\n\nrsync --delete -avL \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME\"* \"$build_dir/Mac\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
