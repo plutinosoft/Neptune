@@ -222,6 +222,9 @@
     <ClCompile Include="..\..\..\..\Source\System\Bsd\NptBsdResolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\Core\NptAutomaticCleaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\ThirdParty\axTLS\crypto\bigint.h">
@@ -387,6 +390,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Source\Core\NptHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Source\Core\NptAutomaticCleaner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
