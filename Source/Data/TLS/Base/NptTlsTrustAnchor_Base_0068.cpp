@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* IPS Chained CAs root */
 const unsigned char NptTlsTrustAnchor_Base_0068_Data[2043] = {
 0x30,0x82,0x07,0xf7,0x30,0x82,0x07,0x60
@@ -292,5 +290,3 @@ const unsigned char NptTlsTrustAnchor_Base_0068_Data[2043] = {
 ,0x01,0x7f,0x26,0xc4,0x63,0xf5,0x25,0x42
 ,0x5e,0x62,0xbd};
 const unsigned int  NptTlsTrustAnchor_Base_0068_Size = 2043;
-
-#endif

@@ -34,8 +34,6 @@
  that was released into public domain by Tom St Denis. 
 */
 
-#if defined(NPT_CONFIG_ENABLE_CRYPTO)
-
 /*----------------------------------------------------------------------
 |   includes
 +---------------------------------------------------------------------*/
@@ -685,5 +683,3 @@ NPT_Hmac::Create(NPT_Digest::Algorithm algorithm,
         default: return NPT_ERROR_NOT_SUPPORTED;
     }
 }
-
-#endif

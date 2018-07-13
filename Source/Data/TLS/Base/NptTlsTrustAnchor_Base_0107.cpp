@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* DST ACES CA X6 */
 const unsigned char NptTlsTrustAnchor_Base_0107_Data[1037] = {
 0x30,0x82,0x04,0x09,0x30,0x82,0x02,0xf1
@@ -166,5 +164,3 @@ const unsigned char NptTlsTrustAnchor_Base_0107_Data[1037] = {
 ,0xf3,0xb7,0xa0,0xa7,0xcd,0xe5,0x7a,0x33
 ,0x36,0x6a,0xfa,0x9a,0x2b};
 const unsigned int  NptTlsTrustAnchor_Base_0107_Size = 1037;
-
-#endif

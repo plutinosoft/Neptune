@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* GTE CyberTrust Global Root */
 const unsigned char NptTlsTrustAnchor_Base_0002_Data[606] = {
 0x30,0x82,0x02,0x5a,0x30,0x82,0x01,0xc3
@@ -112,5 +110,3 @@ const unsigned char NptTlsTrustAnchor_Base_0002_Data[606] = {
 ,0x1f,0x22,0xb5,0xcd,0x95,0xad,0xba,0xa7
 ,0xcc,0xf9,0xab,0x0b,0x7a,0x7f};
 const unsigned int  NptTlsTrustAnchor_Base_0002_Size = 606;
-
-#endif

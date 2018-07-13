@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* StartCom Certification Authority */
 const unsigned char NptTlsTrustAnchor_Base_0098_Data[1997] = {
 0x30,0x82,0x07,0xc9,0x30,0x82,0x05,0xb1
@@ -286,5 +284,3 @@ const unsigned char NptTlsTrustAnchor_Base_0098_Data[1997] = {
 ,0x6a,0xb3,0xf4,0x88,0x1c,0x80,0x0d,0xfc
 ,0x72,0x8a,0xe8,0x83,0x5e};
 const unsigned int  NptTlsTrustAnchor_Base_0098_Size = 1997;
-
-#endif

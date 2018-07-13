@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Baltimore CyberTrust Root */
 const unsigned char NptTlsTrustAnchor_Base_0032_Data[891] = {
 0x30,0x82,0x03,0x77,0x30,0x82,0x02,0x5f
@@ -148,5 +146,3 @@ const unsigned char NptTlsTrustAnchor_Base_0032_Data[891] = {
 ,0xe7,0x81,0x1d,0x19,0xc3,0x24,0x42,0xea
 ,0x63,0x39,0xa9};
 const unsigned int  NptTlsTrustAnchor_Base_0032_Size = 891;
-
-#endif

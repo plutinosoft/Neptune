@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Comodo AAA Services root */
 const unsigned char NptTlsTrustAnchor_Base_0065_Data[1078] = {
 0x30,0x82,0x04,0x32,0x30,0x82,0x03,0x1a
@@ -171,5 +169,3 @@ const unsigned char NptTlsTrustAnchor_Base_0065_Data[1078] = {
 ,0x6a,0x00,0x41,0x50,0xf1,0x39,0x83,0x9f
 ,0x95,0xe9,0x36,0x96,0x98,0x6e};
 const unsigned int  NptTlsTrustAnchor_Base_0065_Size = 1078;
-
-#endif

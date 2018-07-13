@@ -371,6 +371,7 @@ class NPT_PosixThread : public NPT_ThreadInterface
                ~NPT_PosixThread();
     NPT_Result  Start(); 
     NPT_Result  Wait(NPT_Timeout timeout = NPT_TIMEOUT_INFINITE);
+    NPT_Result  CancelBlockerSocket();
     NPT_Result  SetPriority(int priority);
     NPT_Result  GetPriority(int& priority);
     
@@ -410,7 +411,7 @@ NPT_PosixThread::NPT_PosixThread(NPT_Thread*   delegator,
     m_ThreadId(0),
     m_Joined(false)
 {
-    NPT_LOG_FINE("NPT_PosixThread::NPT_PosixThread");
+    NPT_LOG_FINER("NPT_PosixThread::NPT_PosixThread");
     m_Done.SetValue(0);
 }
 
@@ -419,7 +420,7 @@ NPT_PosixThread::NPT_PosixThread(NPT_Thread*   delegator,
 +---------------------------------------------------------------------*/
 NPT_PosixThread::~NPT_PosixThread()
 {
-//    NPT_LOG_FINE_1("NPT_PosixThread::~NPT_PosixThread %lu\n", (unsigned long)m_ThreadId);
+    //NPT_LOG_FINE_1("NPT_PosixThread::~NPT_PosixThread %lld\n", (NPT_Thread::ThreadId)m_ThreadId);
 
     if (!m_Detached) {
         // we're not detached, and not in the Run() method, so we need to 
@@ -435,7 +436,7 @@ NPT_Thread::ThreadId
 NPT_Thread::GetCurrentThreadId()
 {
     pthread_t pid = pthread_self();
-    return (NPT_Thread::ThreadId)((void*)pid);
+    return (NPT_Thread::ThreadId)pid;
 }
 
 /*----------------------------------------------------------------------
@@ -464,7 +465,7 @@ NPT_PosixThread::EntryPoint(void* argument)
 {
     NPT_PosixThread* thread = reinterpret_cast<NPT_PosixThread*>(argument);
 
-    NPT_LOG_FINE("NPT_PosixThread::EntryPoint - in =======================");
+    NPT_LOG_FINER("NPT_PosixThread::EntryPoint - in =======================");
 
     // ensure there is the top level autorelease pool for each thread
     NPT_AutoreleasePool pool;
@@ -503,7 +504,7 @@ NPT_PosixThread::EntryPoint(void* argument)
 NPT_Result
 NPT_PosixThread::Start()
 {
-    NPT_LOG_FINE("NPT_PosixThread::Start - creating thread");
+    NPT_LOG_FINER("NPT_PosixThread::Start - creating thread");
     
     // reset values
     m_Joined = false;
@@ -524,12 +525,15 @@ NPT_PosixThread::Start()
     // before the pthread_create() function returns
     bool detached = m_Detached;
 
+    // reset the joined flag
+    m_Joined = false;
+
     // create the native thread
     pthread_t thread_id;
     int result = pthread_create(&thread_id, attributes, EntryPoint, 
                                 static_cast<NPT_PosixThread*>(this));
-    NPT_LOG_FINE_2("NPT_PosixThread::Start - id = %lu, res=%d", 
-                   (unsigned long)thread_id, result);
+    NPT_LOG_FINER_2("NPT_PosixThread::Start - id = %p, res=%d",
+                   (void*)thread_id, result);
     if (result != 0) {
         // failed
         return NPT_ERROR_ERRNO(result);
@@ -594,6 +598,15 @@ timedout:
     } else {
         return NPT_SUCCESS;
     }
+}
+
+/*----------------------------------------------------------------------
+|   NPT_PosixThread::CancelBlockerSocket
++---------------------------------------------------------------------*/
+NPT_Result
+NPT_PosixThread::CancelBlockerSocket()
+{
+    return NPT_Socket::CancelBlockerSocket((NPT_Thread::ThreadId)m_ThreadId);
 }
 
 /*----------------------------------------------------------------------

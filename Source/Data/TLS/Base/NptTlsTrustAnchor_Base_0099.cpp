@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Firmaprofesional Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0099_Data[1115] = {
 0x30,0x82,0x04,0x57,0x30,0x82,0x03,0x3f
@@ -176,5 +174,3 @@ const unsigned char NptTlsTrustAnchor_Base_0099_Data[1115] = {
 ,0xaa,0xe1,0xa7,0x33,0xf6,0xfd,0x4a,0x1f
 ,0xf6,0xd9,0x60};
 const unsigned int  NptTlsTrustAnchor_Base_0099_Size = 1115;
-
-#endif

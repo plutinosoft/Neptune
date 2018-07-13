@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* thawte Primary Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0112_Data[1060] = {
 0x30,0x82,0x04,0x20,0x30,0x82,0x03,0x08
@@ -169,5 +167,3 @@ const unsigned char NptTlsTrustAnchor_Base_0112_Data[1060] = {
 ,0x8f,0x5c,0x39,0x2b,0xe4,0x04,0xf0,0x7b
 ,0x8d,0x56,0x8c,0x68};
 const unsigned int  NptTlsTrustAnchor_Base_0112_Size = 1060;
-
-#endif
