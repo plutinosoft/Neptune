@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* OISTE WISeKey Global Root GA CA */
 const unsigned char NptTlsTrustAnchor_Extended_0004_Data[1013] = {
 0x30,0x82,0x03,0xf1,0x30,0x82,0x02,0xd9
@@ -163,5 +161,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0004_Data[1013] = {
 ,0xc5,0x18,0xec,0xdd,0x2f,0xe1,0x98,0xc9
 ,0xfc,0xbe,0xdf,0x0a,0x0d};
 const unsigned int  NptTlsTrustAnchor_Extended_0004_Size = 1013;
-
-#endif

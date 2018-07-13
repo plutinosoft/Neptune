@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* NetLock Business (Class B) Root */
 const unsigned char NptTlsTrustAnchor_Base_0092_Data[1359] = {
 0x30,0x82,0x05,0x4b,0x30,0x82,0x04,0xb4
@@ -206,5 +204,3 @@ const unsigned char NptTlsTrustAnchor_Base_0092_Data[1359] = {
 ,0x36,0x2b,0x63,0xac,0x58,0x01,0x6b,0x33
 ,0x29,0x50,0x86,0x83,0xf1,0x01,0x48};
 const unsigned int  NptTlsTrustAnchor_Base_0092_Size = 1359;
-
-#endif

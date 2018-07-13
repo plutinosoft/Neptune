@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* GTE CyberTrust Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0001_Data[510] = {
 0x30,0x82,0x01,0xfa,0x30,0x82,0x01,0x63
@@ -100,5 +98,3 @@ const unsigned char NptTlsTrustAnchor_Base_0001_Data[510] = {
 ,0xb4,0x7a,0xe1,0xe5,0x5a,0x1f,0x84,0x30
 ,0x9c,0xd3,0x9f,0xa5,0x25,0xd8};
 const unsigned int  NptTlsTrustAnchor_Base_0001_Size = 510;
-
-#endif

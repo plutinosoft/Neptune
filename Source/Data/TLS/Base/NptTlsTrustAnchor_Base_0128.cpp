@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Cybertrust Global Root */
 const unsigned char NptTlsTrustAnchor_Base_0128_Data[933] = {
 0x30,0x82,0x03,0xa1,0x30,0x82,0x02,0x89
@@ -153,5 +151,3 @@ const unsigned char NptTlsTrustAnchor_Base_0128_Data[933] = {
 ,0x21,0xe0,0xb3,0x11,0x91,0x65,0xdb,0xb4
 ,0xa6,0x88,0x38,0xce,0x55};
 const unsigned int  NptTlsTrustAnchor_Base_0128_Size = 933;
-
-#endif

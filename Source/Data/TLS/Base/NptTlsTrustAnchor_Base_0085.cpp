@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* UTN USERFirst Email Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0085_Data[1190] = {
 0x30,0x82,0x04,0xa2,0x30,0x82,0x03,0x8a
@@ -185,5 +183,3 @@ const unsigned char NptTlsTrustAnchor_Base_0085_Data[1190] = {
 ,0x5b,0xa7,0xf0,0xf3,0x36,0x17,0xfc,0xc3
 ,0x05,0xd3,0xca,0x03,0x4a,0x54};
 const unsigned int  NptTlsTrustAnchor_Base_0085_Size = 1190;
-
-#endif

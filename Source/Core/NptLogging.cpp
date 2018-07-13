@@ -107,6 +107,9 @@ public:
     void Log(const NPT_LogRecord& record);
 
 private:
+    // constructor
+    NPT_LogTcpHandler() : m_Port(0) {}
+
     // methods
     NPT_Result Connect();
 
@@ -184,6 +187,10 @@ private:
 #define NPT_LOG_CONSOLE_HANDLER_DEFAULT_COLOR_MODE false
 #else
 #define NPT_LOG_CONSOLE_HANDLER_DEFAULT_COLOR_MODE true
+#endif
+
+#ifndef NPT_CONFIG_DEFAULT_LOG_CONSOLE_HANDLER_OUTPUTS
+#define NPT_CONFIG_DEFAULT_LOG_CONSOLE_HANDLER_OUTPUTS OUTPUT_TO_DEBUG
 #endif
 
 #define NPT_LOG_FILE_HANDLER_MIN_RECYCLE_SIZE   1000000
@@ -966,7 +973,7 @@ NPT_Logger::Log(int          level,
     record.m_SourceLine     = source_line;
     record.m_SourceFunction = source_function;
     NPT_System::GetCurrentTimeStamp(record.m_TimeStamp);
-    record.m_ThreadId       = NPT_Thread::GetCurrentThreadId();
+    record.m_ThreadId       = (NPT_UInt64)NPT_Thread::GetCurrentThreadId();
 
     /* call all handlers for this logger and parents */
     m_Manager.Lock();
@@ -1109,7 +1116,7 @@ NPT_LogConsoleHandler::Create(const char*      logger_name,
     }
 
     NPT_String* outputs;
-    instance->m_Outputs = OUTPUT_TO_DEBUG;
+    instance->m_Outputs = NPT_CONFIG_DEFAULT_LOG_CONSOLE_HANDLER_OUTPUTS;
     outputs = LogManager.GetConfigValue(logger_prefix,".outputs");
     if (outputs) {
         outputs->ToInteger(instance->m_Outputs, true);

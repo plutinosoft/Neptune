@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Certigna */
 const unsigned char NptTlsTrustAnchor_Extended_0007_Data[940] = {
 0x30,0x82,0x03,0xa8,0x30,0x82,0x02,0x90
@@ -154,5 +152,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0007_Data[940] = {
 ,0xc0,0x96,0x58,0x2f,0xea,0xbb,0x46,0xd7
 ,0xbb,0xe4,0xd9,0x2e};
 const unsigned int  NptTlsTrustAnchor_Extended_0007_Size = 940;
-
-#endif

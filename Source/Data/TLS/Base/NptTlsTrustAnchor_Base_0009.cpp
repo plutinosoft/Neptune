@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Digital Signature Trust Co. Global CA 1 */
 const unsigned char NptTlsTrustAnchor_Base_0009_Data[813] = {
 0x30,0x82,0x03,0x29,0x30,0x82,0x02,0x92
@@ -138,5 +136,3 @@ const unsigned char NptTlsTrustAnchor_Base_0009_Data[813] = {
 ,0xa1,0x93,0x04,0xbb,0x86,0x9f,0x3a,0x5b
 ,0x43,0x7a,0xc3,0x8a,0x65};
 const unsigned int  NptTlsTrustAnchor_Base_0009_Size = 813;
-
-#endif

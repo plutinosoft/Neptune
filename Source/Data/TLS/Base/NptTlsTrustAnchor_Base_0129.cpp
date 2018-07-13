@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Buypass Class 2 CA 1 */
 const unsigned char NptTlsTrustAnchor_Base_0129_Data[855] = {
 0x30,0x82,0x03,0x53,0x30,0x82,0x02,0x3b
@@ -143,5 +141,3 @@ const unsigned char NptTlsTrustAnchor_Base_0129_Data[855] = {
 ,0x0b,0x94,0xa0,0x62,0x20,0x32,0x9c,0x1d
 ,0xf6,0xd4,0xef,0xbf,0x4c,0x88,0x68};
 const unsigned int  NptTlsTrustAnchor_Base_0129_Size = 855;
-
-#endif

@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Deutsche Telekom Root CA 2 */
 const unsigned char NptTlsTrustAnchor_Base_0125_Data[931] = {
 0x30,0x82,0x03,0x9f,0x30,0x82,0x02,0x87
@@ -153,5 +151,3 @@ const unsigned char NptTlsTrustAnchor_Base_0125_Data[931] = {
 ,0xf3,0x18,0x84,0xd8,0xfb,0xd1,0xcf,0x05
 ,0x56,0x64,0x57};
 const unsigned int  NptTlsTrustAnchor_Base_0125_Size = 931;
-
-#endif

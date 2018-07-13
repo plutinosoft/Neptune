@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* GeoTrust Primary Certification Authority */
 const unsigned char NptTlsTrustAnchor_Base_0111_Data[896] = {
 0x30,0x82,0x03,0x7c,0x30,0x82,0x02,0x64
@@ -149,5 +147,3 @@ const unsigned char NptTlsTrustAnchor_Base_0111_Data[896] = {
 ,0x7c,0xe8,0x0f,0x22,0x1d,0x5a,0xe9,0x59
 };
 const unsigned int  NptTlsTrustAnchor_Base_0111_Size = 896;
-
-#endif

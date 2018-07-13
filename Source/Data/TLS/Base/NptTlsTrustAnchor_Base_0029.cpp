@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Entrust.net Secure Server CA */
 const unsigned char NptTlsTrustAnchor_Base_0029_Data[1244] = {
 0x30,0x82,0x04,0xd8,0x30,0x82,0x04,0x41
@@ -192,5 +190,3 @@ const unsigned char NptTlsTrustAnchor_Base_0029_Data[1244] = {
 ,0x6d,0x2d,0x45,0x0b,0xf7,0x0a,0x93,0xea
 ,0xed,0x06,0xf9,0xb2};
 const unsigned int  NptTlsTrustAnchor_Base_0029_Size = 1244;
-
-#endif

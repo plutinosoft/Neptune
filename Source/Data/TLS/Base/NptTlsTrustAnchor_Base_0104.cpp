@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* DigiCert High Assurance EV Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0104_Data[969] = {
 0x30,0x82,0x03,0xc5,0x30,0x82,0x02,0xad
@@ -158,5 +156,3 @@ const unsigned char NptTlsTrustAnchor_Base_0104_Data[969] = {
 ,0xf8,0xe9,0x2e,0x13,0xa3,0x77,0xe8,0x1f
 ,0x4a};
 const unsigned int  NptTlsTrustAnchor_Base_0104_Size = 969;
-
-#endif

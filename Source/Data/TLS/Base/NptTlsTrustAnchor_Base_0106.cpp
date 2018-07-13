@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* DST Root CA X3 */
 const unsigned char NptTlsTrustAnchor_Base_0106_Data[846] = {
 0x30,0x82,0x03,0x4a,0x30,0x82,0x02,0x32
@@ -142,5 +140,3 @@ const unsigned char NptTlsTrustAnchor_Base_0106_Data[846] = {
 ,0x0b,0x04,0x8e,0x07,0xdb,0x29,0xb6,0x0a
 ,0xee,0x9d,0x82,0x35,0x35,0x10};
 const unsigned int  NptTlsTrustAnchor_Base_0106_Size = 846;
-
-#endif

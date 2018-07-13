@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Thawte Time Stamping CA */
 const unsigned char NptTlsTrustAnchor_Base_0042_Data[677] = {
 0x30,0x82,0x02,0xa1,0x30,0x82,0x02,0x0a
@@ -121,5 +119,3 @@ const unsigned char NptTlsTrustAnchor_Base_0042_Data[677] = {
 ,0xaf,0x28,0xca,0xfc,0xb1,0x50,0x19,0x19
 ,0x09,0xac,0x89,0x49,0xd3};
 const unsigned int  NptTlsTrustAnchor_Base_0042_Size = 677;
-
-#endif

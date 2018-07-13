@@ -50,20 +50,12 @@ options = Variables()
 options.AddVariables(
     EnumVariable('target', 'Build Target', DefaultTarget(), allowed_values=TARGET_PLATFORMS),
     BoolVariable('stop_on_warning', 'Stop the build on warnings', False),
+    BoolVariable('shared', 'Build a shared library', False),
     ListVariable('build_config', 'build configurations', 'Debug', names=['Debug', 'Release'])
 )
 
 env = Environment(variables=options)
 Help(options.GenerateHelpText(env))
-
-if 'NPT_CONFIG_NO_SSL' in os.environ:
-	env['NPT_CONFIG_NO_SSL'] = os.environ['NPT_CONFIG_NO_SSL']
-if 'NPT_CONFIG_NO_ZIP' in os.environ:
-	env['NPT_CONFIG_NO_ZIP'] = os.environ['NPT_CONFIG_NO_ZIP']
-if 'NPT_CONFIG_NO_CRYPTO' in os.environ:
-	env['NPT_CONFIG_NO_CRYPTO'] = os.environ['NPT_CONFIG_NO_CRYPTO']
-if 'NPT_CONFIG_SHARED_LIB' in os.environ:
-	env['NPT_CONFIG_SHARED_LIB'] = os.environ['NPT_CONFIG_SHARED_LIB']
 
 ### call the actual build script for each build config
 base_env = env

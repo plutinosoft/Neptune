@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Secure Global CA */
 const unsigned char NptTlsTrustAnchor_Base_0115_Data[960] = {
 0x30,0x82,0x03,0xbc,0x30,0x82,0x02,0xa4
@@ -157,5 +155,3 @@ const unsigned char NptTlsTrustAnchor_Base_0115_Data[960] = {
 ,0xe1,0xdd,0x23,0x78,0x51,0x5b,0xc7,0x16
 };
 const unsigned int  NptTlsTrustAnchor_Base_0115_Size = 960;
-
-#endif

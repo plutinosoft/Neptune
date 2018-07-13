@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Taiwan GRCA */
 const unsigned char NptTlsTrustAnchor_Extended_0001_Data[1398] = {
 0x30,0x82,0x05,0x72,0x30,0x82,0x03,0x5a
@@ -211,5 +209,3 @@ const unsigned char NptTlsTrustAnchor_Extended_0001_Data[1398] = {
 ,0x45,0x0d,0x13,0x5c,0x83,0x32,0xe0,0x25
 ,0xa5,0x86,0x2c,0x7c,0xf4,0x12};
 const unsigned int  NptTlsTrustAnchor_Extended_0001_Size = 1398;
-
-#endif

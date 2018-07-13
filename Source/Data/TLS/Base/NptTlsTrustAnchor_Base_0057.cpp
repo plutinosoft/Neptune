@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* GeoTrust Universal CA 2 */
 const unsigned char NptTlsTrustAnchor_Base_0057_Data[1392] = {
 0x30,0x82,0x05,0x6c,0x30,0x82,0x03,0x54
@@ -211,5 +209,3 @@ const unsigned char NptTlsTrustAnchor_Base_0057_Data[1392] = {
 ,0x56,0xd0,0x2f,0x57,0x53,0x47,0xe8,0x92
 };
 const unsigned int  NptTlsTrustAnchor_Base_0057_Size = 1392;
-
-#endif

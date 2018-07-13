@@ -31,8 +31,6 @@
 |
  ****************************************************************/
 
-#if defined(NPT_CONFIG_ENABLE_TLS)
-
  /* Security Communication Root CA */
 const unsigned char NptTlsTrustAnchor_Base_0078_Data[862] = {
 0x30,0x82,0x03,0x5a,0x30,0x82,0x02,0x42
@@ -144,5 +142,3 @@ const unsigned char NptTlsTrustAnchor_Base_0078_Data[862] = {
 ,0x2f,0xcf,0xa6,0xee,0xc9,0x70,0x22,0x14
 ,0xbd,0xfd,0xbe,0x6c,0x0b,0x03};
 const unsigned int  NptTlsTrustAnchor_Base_0078_Size = 862;
-
-#endif
