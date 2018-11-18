@@ -383,7 +383,7 @@ EXP_FUNC int STDCALL ssl_verify_cert(const SSL *ssl);
  * This will usually be used by a client to check that the server's common 
  * name matches the URL.
  *
- * @param ssl [in] An SSL_X509_CERT object reference. [GBG: modified]
+ * @param cert [in] An SSL_X509_CERT object reference. [GBG: modified]
  * @param component [in] one of:
  * - SSL_X509_CERT_COMMON_NAME
  * - SSL_X509_CERT_ORGANIZATION
@@ -406,7 +406,7 @@ EXP_FUNC const char * STDCALL ssl_cert_get_dn(const SSL_X509_CERT *cert, int com
  * This will usually be used by a client to check that the server's DNS  
  * name matches the URL.
  *
- * @param ssl [in] An SSL_X509_CERT object reference. [GBG: modified]
+ * @param cert [in] An SSL_X509_CERT object reference. [GBG: modified]
  * @param dnsindex [in] The index of the DNS name to retrieve.
  * @return The appropriate string (or null if not defined)
  * @note Verification build mode must be enabled.

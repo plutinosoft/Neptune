@@ -966,7 +966,7 @@ NPT_Logger::Log(int          level,
     NPT_Logger*   logger = this;
     
     /* setup the log record */
-    record.m_LoggerName     = logger->m_Name,
+    static_cast<void>(record.m_LoggerName     = logger->m_Name),
     record.m_Level          = level;
     record.m_Message        = message;
     record.m_SourceFile     = source_file;
