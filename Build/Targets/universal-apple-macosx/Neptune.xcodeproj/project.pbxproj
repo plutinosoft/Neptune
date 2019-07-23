@@ -2697,13 +2697,14 @@
 			};
 			buildConfigurationList = F912B6880B8EB12700C1E90D /* Build configuration list for PBXProject "Neptune" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				Base,
+				ja,
+				fr,
+				en,
+				de,
 			);
 			mainGroup = F912B6850B8EB12700C1E90D;
 			productRefGroup = F912B6A00B8EB1C700C1E90D /* Products */;
@@ -4928,6 +4929,30 @@
 					"-framework",
 					SystemConfiguration,
 				);
+				"OTHER_LDFLAGS[sdk=appletvos*]" = (
+					"-framework",
+					UIKit,
+				);
+				"OTHER_LDFLAGS[sdk=appletvsimulator*]" = (
+					"-framework",
+					UIKit,
+				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"-framework",
+					UIKit,
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-framework",
+					UIKit,
+				);
+				"OTHER_LDFLAGS[sdk=watchos*]" = (
+					"-framework",
+					WatchKit,
+				);
+				"OTHER_LDFLAGS[sdk=watchsimulator*]" = (
+					"-framework",
+					WatchKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.axiomatic.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Neptune;
 				SKIP_INSTALL = YES;
@@ -4955,6 +4980,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -5034,6 +5060,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
