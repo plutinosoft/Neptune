@@ -156,7 +156,7 @@ main(int argc, char** argv)
         exit(1);
     }
 
-    port = strtoul(argv[2], NULL, 10);
+    port = (int)strtoul(argv[2], NULL, 10);
 
     switch (server_type) {
         case SERVER_TYPE_TCP: TcpServerLoop(port); break;

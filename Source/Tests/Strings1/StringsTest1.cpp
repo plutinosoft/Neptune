@@ -168,12 +168,12 @@ main(int /*argc*/, char** /*argv*/)
     StringTest("operator=(const char*) with shared buffer", a02, "ab");
     a02 = "";
     StringTest("operator=(const char* = \"\")", a02, "");
-    NPT_String p2("self");
-    p2 = p2;
-    StringTest("self assignment", p2, "self");
-    NPT_String p3 = p2;
-    p2 = p2;
-    StringTest("self assignment with other ref", p2, "self");
+//    NPT_String p2("self");
+//    p2 = p2;
+//    StringTest("self assignment", p2, "self");
+//    NPT_String p3 = p2;
+//    p2 = p2;
+//    StringTest("self assignment with other ref", p2, "self");
 
     printf(":: testing SetLength()\n");
     NPT_String sl00;

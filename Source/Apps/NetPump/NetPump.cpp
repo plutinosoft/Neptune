@@ -431,7 +431,7 @@ main(int argc, char** argv)
         }
                  
         if (NPT_StringsEqual(arg, "--packet-size")) {
-            packet_size = strtoul(*argv++, NULL, 10);
+            packet_size = (unsigned int)strtoul(*argv++, NULL, 10);
             if (packet_size == 0 || packet_size > PUMP_MAX_PACKET_SIZE) {
                 fprintf(stderr, "ERROR: invalid packet size\n");
                 return 1;
@@ -451,7 +451,7 @@ main(int argc, char** argv)
                         exit(1);
                     }
                     current_endpoint->type = ENDPOINT_TYPE_UDP_SERVER;
-                    current_endpoint->info.udp_server.port = strtoul(argv[1], NULL, 10);
+                    current_endpoint->info.udp_server.port = (int)strtoul(argv[1], NULL, 10);
                     argv += 2;
                     if (argv[0] && NPT_StringsEqual(argv[0], "-r")) {
                         current_endpoint->info.udp_server.reuse_addr = false;
@@ -467,7 +467,7 @@ main(int argc, char** argv)
                     if (argv[2]) {
                         current_endpoint->type = ENDPOINT_TYPE_UDP_CLIENT;
                         current_endpoint->info.udp_client.hostname = argv[1];
-                        current_endpoint->info.udp_client.port = strtoul(argv[2], NULL, 10);
+                        current_endpoint->info.udp_client.port = (int)strtoul(argv[2], NULL, 10);
                         argv += 3;                        
                     } else {
                         printf("ERROR: missing argument for 'udp client'\n");
@@ -488,7 +488,7 @@ main(int argc, char** argv)
                     if (argv[2]) {
                         current_endpoint->type = ENDPOINT_TYPE_MULTICAST_SERVER;
                         current_endpoint->info.multicast_server.groupname = argv[1];
-                        current_endpoint->info.multicast_server.port = strtoul(argv[2], NULL, 10);
+                        current_endpoint->info.multicast_server.port = (int)strtoul(argv[2], NULL, 10);
                         argv += 3;                        
                     } else {
                         printf("ERROR: missing argument for 'multicast server'\n");
@@ -508,8 +508,8 @@ main(int argc, char** argv)
                     if (argv[2] && argv[3]) {
                         current_endpoint->type = ENDPOINT_TYPE_MULTICAST_CLIENT;
                         current_endpoint->info.multicast_client.groupname = argv[1];
-                        current_endpoint->info.multicast_client.port = strtoul(argv[2], NULL, 10);
-                        current_endpoint->info.multicast_client.ttl = strtoul(argv[3], NULL, 10);
+                        current_endpoint->info.multicast_client.port = (int)strtoul(argv[2], NULL, 10);
+                        current_endpoint->info.multicast_client.ttl = (int)strtoul(argv[3], NULL, 10);
                         argv += 4;                        
                     } else {
                         printf("ERROR: missing argument for 'multicast client'\n");
@@ -524,7 +524,7 @@ main(int argc, char** argv)
             if (argv[0] && argv[1]) {
                 if (NPT_StringsEqual(argv[0], "server")) {
                     current_endpoint->type = ENDPOINT_TYPE_TCP_SERVER;
-                    current_endpoint->info.tcp_server.port = strtoul(argv[1], NULL, 10);
+                    current_endpoint->info.tcp_server.port = (int)strtoul(argv[1], NULL, 10);
                     argv += 2;
                     if (argv[0] && NPT_StringsEqual(argv[0], "-r")) {
                         current_endpoint->info.tcp_server.reuse_addr = false;
@@ -536,7 +536,7 @@ main(int argc, char** argv)
                     if (argv[2]) {
                         current_endpoint->type = ENDPOINT_TYPE_TCP_CLIENT;
                         current_endpoint->info.tcp_client.hostname = argv[1];
-                        current_endpoint->info.tcp_client.port = strtoul(argv[2], NULL, 10);
+                        current_endpoint->info.tcp_client.port = (int)strtoul(argv[2], NULL, 10);
                         argv += 3;                        
                     } else {
                         printf("ERROR: missing argument for 'tcp client'\n");
