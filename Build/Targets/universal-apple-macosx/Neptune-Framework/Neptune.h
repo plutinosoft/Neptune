@@ -57,3 +57,9 @@
 // optional modules
 #include <Neptune/NptZip.h>
 #include <Neptune/NptTls.h>
+
+#if TARGET_OS_IPHONE || TARGET_OS_SIMULATOR || TARGET_OS_TV
+#import <UIKit/UIKit.h>
+#else
+#import <SystemConfiguration/SystemConfiguration.h>
+#endif

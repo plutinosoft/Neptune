@@ -42,7 +42,7 @@ MiniServer(const char* root, unsigned int port, bool verbose)
         output = NULL;
     } 
 
-    delete file_handler;
+    //delete file_handler;
 }
 
 /*----------------------------------------------------------------------

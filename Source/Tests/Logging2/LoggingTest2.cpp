@@ -52,8 +52,8 @@ main(int, char**)
         }
     }
 
-    server->Wait();
-    delete server;
+//    server->Wait();
+//    delete server;
 
     return 0;
 }

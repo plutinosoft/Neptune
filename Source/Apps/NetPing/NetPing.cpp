@@ -202,7 +202,7 @@ main(int argc, char** argv)
     }
 
     hostname = argv[2];
-    port = strtoul(argv[3], NULL, 10);
+    port = (int)strtoul(argv[3], NULL, 10);
 
     switch (client_type) {
         case CLIENT_TYPE_TCP: TcpPing(hostname, port); break;
