@@ -49,7 +49,7 @@
       <Optimization>Disabled</Optimization>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <AdditionalIncludeDirectories>..\..\..\..\Source\Core;..\..\..\..\Source\System\Win32;..\..\..\..\ThirdParty\axTLS\config\Win32;..\..\..\..\ThirdParty\axTLS\crypto;..\..\..\..\ThirdParty\axTLS\ssl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NPT_DEBUG;NPT_CONFIG_ENABLE_LOGGING;NPT_CONFIG_ENABLE_TLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NPT_DEBUG;NPT_CONFIG_ENABLE_LOGGING;NPT_CONFIG_ENABLE_TLS;_CRT_NO_POSIX_ERROR_CODES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>false</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -72,7 +72,7 @@
       <OmitFramePointers>true</OmitFramePointers>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <AdditionalIncludeDirectories>..\..\..\..\Source\Core;..\..\..\..\Source\System\Win32;..\..\..\..\ThirdParty\axTLS\config\Win32;..\..\..\..\ThirdParty\axTLS\crypto;..\..\..\..\ThirdParty\axTLS\ssl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;NPT_CONFIG_ENABLE_TLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;NPT_CONFIG_ENABLE_TLS;_CRT_NO_POSIX_ERROR_CODES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
