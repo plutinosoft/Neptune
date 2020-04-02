@@ -103,7 +103,6 @@
 		CA1A5EB80EC0155300A9040C /* rc4.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E700EC0145900A9040C /* rc4.c */; };
 		CA1A5EBA0EC0155400A9040C /* p12.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E7D0EC0145900A9040C /* p12.c */; };
 		CA1A5EBE0EC0155700A9040C /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6F0EC0145900A9040C /* md5.c */; };
-		CA1A5EBF0EC0155800A9040C /* md2.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6E0EC0145900A9040C /* md2.c */; };
 		CA1A5EC00EC0155900A9040C /* loader.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E790EC0145900A9040C /* loader.c */; };
 		CA1A5EC10EC0155900A9040C /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E6D0EC0145900A9040C /* hmac.c */; };
 		CA1A5EC20EC0155A00A9040C /* gen_cert.c in Sources */ = {isa = PBXBuildFile; fileRef = CA1A5E780EC0145900A9040C /* gen_cert.c */; };
@@ -273,6 +272,9 @@
 		E44E2B141AE75CD20092347B /* NptTlsDefaultTrustAnchorsBase.h in Headers */ = {isa = PBXBuildFile; fileRef = E40D8D671ADB808A0041A617 /* NptTlsDefaultTrustAnchorsBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44E2B151AE75CD20092347B /* NptTlsDefaultTrustAnchorsExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = E40D8D681ADB808A0041A617 /* NptTlsDefaultTrustAnchorsExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E44E2B161AE75CD20092347B /* NptZip.h in Headers */ = {isa = PBXBuildFile; fileRef = CA84EC7A0C7E5A7000CC9622 /* NptZip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E46C9C842436A7CC000B66AD /* sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = E46C9C812436A7CC000B66AD /* sha256.c */; };
+		E46C9C852436A7CC000B66AD /* sha384.c in Sources */ = {isa = PBXBuildFile; fileRef = E46C9C822436A7CC000B66AD /* sha384.c */; };
+		E46C9C862436A7CC000B66AD /* sha512.c in Sources */ = {isa = PBXBuildFile; fileRef = E46C9C832436A7CC000B66AD /* sha512.c */; };
 		E4AD606F22E6DC6C00F9FE08 /* libaxTLS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1A5EA90EC0152A00A9040C /* libaxTLS.a */; };
 		E4AD607C22E6F3D900F9FE08 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B1B1AE75CD20092347B /* Neptune.framework */; };
 		E4AD607D22E6F3DE00F9FE08 /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44E2B1B1AE75CD20092347B /* Neptune.framework */; };
@@ -613,7 +615,6 @@
 		CA1A5E6B0EC0145900A9040C /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
 		CA1A5E6C0EC0145900A9040C /* crypto_misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_misc.c; sourceTree = "<group>"; };
 		CA1A5E6D0EC0145900A9040C /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
-		CA1A5E6E0EC0145900A9040C /* md2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md2.c; sourceTree = "<group>"; };
 		CA1A5E6F0EC0145900A9040C /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md5.c; sourceTree = "<group>"; };
 		CA1A5E700EC0145900A9040C /* rc4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rc4.c; sourceTree = "<group>"; };
 		CA1A5E710EC0145900A9040C /* rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rsa.c; sourceTree = "<group>"; };
@@ -773,6 +774,9 @@
 		E40D8D671ADB808A0041A617 /* NptTlsDefaultTrustAnchorsBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsBase.h; sourceTree = "<group>"; };
 		E40D8D681ADB808A0041A617 /* NptTlsDefaultTrustAnchorsExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NptTlsDefaultTrustAnchorsExtended.h; sourceTree = "<group>"; };
 		E44E2B1B1AE75CD20092347B /* Neptune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Neptune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46C9C812436A7CC000B66AD /* sha256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha256.c; sourceTree = "<group>"; };
+		E46C9C822436A7CC000B66AD /* sha384.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha384.c; sourceTree = "<group>"; };
+		E46C9C832436A7CC000B66AD /* sha512.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha512.c; sourceTree = "<group>"; };
 		E4AD607522E6E93800F9FE08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E4AD607722E6E94800F9FE08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F912B6B00B8EB27400C1E90D /* Neptune.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = Neptune.cpp; sourceTree = "<group>"; };
@@ -1219,6 +1223,9 @@
 		CA1A5E650EC0145900A9040C /* crypto */ = {
 			isa = PBXGroup;
 			children = (
+				E46C9C812436A7CC000B66AD /* sha256.c */,
+				E46C9C822436A7CC000B66AD /* sha384.c */,
+				E46C9C832436A7CC000B66AD /* sha512.c */,
 				CA1A5E670EC0145900A9040C /* aes.c */,
 				CA1A5E680EC0145900A9040C /* bigint.c */,
 				CA1A5E690EC0145900A9040C /* bigint.h */,
@@ -1226,7 +1233,6 @@
 				CA1A5E6B0EC0145900A9040C /* crypto.h */,
 				CA1A5E6C0EC0145900A9040C /* crypto_misc.c */,
 				CA1A5E6D0EC0145900A9040C /* hmac.c */,
-				CA1A5E6E0EC0145900A9040C /* md2.c */,
 				CA1A5E6F0EC0145900A9040C /* md5.c */,
 				CA1A5E700EC0145900A9040C /* rc4.c */,
 				CA1A5E710EC0145900A9040C /* rsa.c */,
@@ -2809,14 +2815,16 @@
 				CA1A5EB80EC0155300A9040C /* rc4.c in Sources */,
 				CA1A5EBA0EC0155400A9040C /* p12.c in Sources */,
 				CA1A5EBE0EC0155700A9040C /* md5.c in Sources */,
-				CA1A5EBF0EC0155800A9040C /* md2.c in Sources */,
+				E46C9C862436A7CC000B66AD /* sha512.c in Sources */,
 				CA1A5EC00EC0155900A9040C /* loader.c in Sources */,
 				CA1A5EC10EC0155900A9040C /* hmac.c in Sources */,
 				CA1A5EC20EC0155A00A9040C /* gen_cert.c in Sources */,
 				CA1A5EC40EC0155B00A9040C /* crypto_misc.c in Sources */,
 				CA1A5ECA0EC0156000A9040C /* bigint.c in Sources */,
 				CA1A5ECB0EC0156100A9040C /* asn1.c in Sources */,
+				E46C9C842436A7CC000B66AD /* sha256.c in Sources */,
 				CA1A5ECC0EC0156100A9040C /* aes.c in Sources */,
+				E46C9C852436A7CC000B66AD /* sha384.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
