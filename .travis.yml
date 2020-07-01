@@ -4,8 +4,7 @@ install: true
 script: Scripts/cibuild
 deploy:
   provider: releases
-  api_key:
-    secure: yAw9fBdYC32YRpzaVIyAMXX5OMDG/+O4pTq8HwH7KmdWakbOSdoFzIWnSZnNc2SAB3DdGNcON26y9ZltIWokpN5Nc5KWhjR9bqzPitOANW8w+rc5AdAE9PcnI4KYjfWPOYAAlbtGBzHyxjcztzYdp8WgHAYVeRrDVqEDRanHo1qSbctoTI4qDe7tRr+Lnk2+yYlH4IvvQHAQeR+lWoMKTybxMLo5uSHee60XNpeFSEPpPm3OeR8yy20eLMGacDCq26//u2uEqJlzjwHjEbxWP7vFCVd4TshbiP2Oe1FuO/BHd9WjLaenaguIemvIMNuLtMuysbVa2TLguJQK0DyrwMpRPazpDMgo9HhbyNsDQd/tnkTWeLpTfyxf8KZUqb/m0hprN4GFiQ3ELRClPgw6y8q1nc5jxnh1Eg4IgrjZGxmA0A7GqFtfxtUFBY0lAkpFQUa1++Urul9SECZ/wiVKsk5u+44YwN1ouX+8uJM6JdY/kp82JYujHCihLSmd6qDUD4eGv+rW4S4ac7hzlxuffjWP1WeZw9KOYsYG6LM8P/YfhZ1N2aaVh9oedj/NRJkJV2wL28CBkEINsnAHZW5vrFmCIq+zWp8h+uk406O1mn/YSfBjEnbdnpyY0yz+65GLagUBN5QP7OJ0JMXjQTrstYSc67aWOTgVE4jOrmRHZLU=
+  api_key: "$GITHUB_OAUTH_TOKEN"
   file: Neptune.framework.zip
   skip_cleanup: true
   on:
