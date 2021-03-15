@@ -30,4 +30,4 @@ Build/Targets/x86-microsoft-win32-vs20*/*/Release
 Build/Targets/arm-android-linux/Debug
 Build/Targets/arm-android-linux/Release
 Build/Targets/x86-unknown-linux/Debug
-Build/Targets/arm-unknown-linux/Debug
+IDEWorkspaceChecks.plist
