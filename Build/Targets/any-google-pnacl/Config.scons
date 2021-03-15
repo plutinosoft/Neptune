@@ -9,5 +9,5 @@ env['RANLIB'] = 'pnacl-ranlib'
 env['AR']     = 'pnacl-ar'
 
 ### Neptune System Files
-env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Posix':'NptPosixThreads.cpp NptPosixSystem.cpp', 'System/Nacl':'*.cpp', 'System/Null':'NptNullSerialPort.cpp'}
+env['NPT_SYSTEM_SOURCES']={'System/StdC':'*.cpp', 'System/Posix':'NptPosixThreads.cpp NptPosixSystem.cpp', 'System/Nacl':'*.cpp', 'System/Null':'NptNullAutoreleasePool.cpp NptNullSerialPort.cpp'}
 env['NPT_EXTRA_LIBS']=['m', 'pthread']
