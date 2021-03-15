@@ -35,7 +35,7 @@ def DeclareBuildDir(dir):
 def GetIncludeDirs(modules, exclude=None):
     dirs = []
     for module in Split(modules):
-        if Modules.has_key(module) and not module == exclude:
+        if module in Modules and not module == exclude:
             dirs += Modules[module].GetIncludeDirs()
         else:
             dirs += [GetDirPath(module)]
@@ -44,7 +44,7 @@ def GetIncludeDirs(modules, exclude=None):
 def GetLibraries(modules):
     libs = []
     for module in Split(modules):
-        if Modules.has_key(module):
+        if module in Modules:
             libs += Modules[module].GetLibraries()
         else:
             libs += [module]
@@ -139,7 +139,7 @@ def Application(name, dir):
                        GlobSources(dir, ['*.c', '*.cpp']) + env['NPT_EXTRA_EXECUTABLE_OBJECTS'],
                        LIBS=libs, CPPPATH=cpp_path)
     #env.Alias(name, prog)
-    if env.has_key('NPT_EXECUTABLE_POST_PROCESSOR'):
+    if 'NPT_EXECUTABLE_POST_PROCESSOR' in env:
         env.AddPostAction(prog, env['NPT_EXECUTABLE_POST_PROCESSOR'])
 
 #######################################################
@@ -160,7 +160,7 @@ else:
 target_config_file = env.GetBuildPath('#/Build/Targets/'+env['target']+'/Config.scons')
 if os.path.exists(target_config_file):
     # Load the target-specific config file
-    execfile(target_config_file)
+    exec(open(target_config_file).read())
 
 #######################################################
 # modules
